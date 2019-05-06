@@ -1,0 +1,8 @@
+version: "2.1"
+
+services:
+  cli:
+    environment:
+      # Pass additional variables (used in custom commands) from host to cli
+      - MODULES_ENABLED
+      - MODULES_DISABLED
