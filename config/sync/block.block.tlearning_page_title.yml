@@ -1,0 +1,20 @@
+uuid: d712cded-e415-468e-8292-5d8f08330738
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tlearning
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: tlearning_page_title
+theme: tlearning
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

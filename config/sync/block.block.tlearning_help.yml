@@ -1,0 +1,22 @@
+uuid: c1d04d81-70e1-4286-8979-9f3be11fc262
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - tlearning
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: tlearning_help
+theme: tlearning
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

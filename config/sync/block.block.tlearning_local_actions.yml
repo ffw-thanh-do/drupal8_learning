@@ -1,0 +1,20 @@
+uuid: 9a1b8bd1-75df-4d6c-9c6a-236d87bc3ade
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tlearning
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: tlearning_local_actions
+theme: tlearning
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 98449db6-1008-44bd-86c7-68e62d44c3ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tlearning
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: tlearning_messages
+theme: tlearning
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }
