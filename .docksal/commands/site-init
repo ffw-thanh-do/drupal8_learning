@@ -42,12 +42,14 @@ local_settings ()
 {
   cd $DOCROOT_PATH
 
-  # These are configured in docksal.env
-  drush en ${MODULES_ENABLED} -y
-  drush dis ${MODULES_DISABLED} -y
+  drush sql-cli < ../.docksal/db/db.sql
+
+  drush cim -y
 }
 
 cd ${PROJECT_ROOT}
+
+fix_permissions
 
 # Check if the vendor directory exists. If not, install dependencies.
 if [[ ! -d "vendor" ]]; then
@@ -55,11 +57,11 @@ if [[ ! -d "vendor" ]]; then
   composer install
 fi
 
-echo -e "\nSite install..."
+echo -e "Site install..."
 site_install
 
-echo "\nApplying local dev settings..."
-# local_settings
+echo "Applying local dev settings..."
+local_settings
 
 echo -en "${green_bg} DONE! ${NC} "
 echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup."

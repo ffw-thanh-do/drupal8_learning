@@ -5,4 +5,4 @@ services:
     environment:
       # Pass additional variables (used in custom commands) from host to cli
       - MODULES_ENABLED
-      - MODULES_DISABLED
+      - MODULES_UNINSTALL
