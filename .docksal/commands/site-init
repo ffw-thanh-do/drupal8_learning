@@ -33,8 +33,8 @@ site_install() {
     echo "Error: Database backup not found in ${local_dump_file}."
   fi
 
-  drush @docksal sql-drop -y
-  drush @docksal sql-cli < ${local_dump_file}
+  drush sql-drop -y
+  drush sql-cli < ${local_dump_file}
 }
 
 # Fix file/folder permissions
