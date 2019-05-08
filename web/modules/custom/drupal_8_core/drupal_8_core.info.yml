@@ -1,0 +1,5 @@
+name: 'Drupal 8 core'
+description: 'Implement Drupal 8 core functions'
+core: 8.x
+type: module
+package: Custom
