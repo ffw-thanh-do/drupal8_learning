@@ -27,7 +27,14 @@ SITEDIR_PATH="${DOCROOT_PATH}/sites/${SITE_DIRECTORY}"
 
 # site install
 site_install() {
-  drush si -y --account-pass=admin --db-url=mysql://user:user@db:3306/default --site-name="Drupal 8" --root=/var/www/web
+  local_dump_file="${PROJECT_ROOT}/.docksal/db/db.sql"
+
+  if [[ ! -f ${local_dump_file} ]]; then
+    echo "Error: Database backup not found in ${local_dump_file}."
+  fi
+
+  drush @docksal sql-drop -y
+  drush @docksal sql-cli < ${local_dump_file}
 }
 
 # Fix file/folder permissions
@@ -41,9 +48,6 @@ fix_permissions ()
 local_settings ()
 {
   cd $DOCROOT_PATH
-
-  drush sql-cli < ../.docksal/db/db.sql
-
   drush cim -y
 }
 
