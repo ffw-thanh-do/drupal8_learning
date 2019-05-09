@@ -1,0 +1,24 @@
+uuid: cf8aec6a-39af-49ce-92a3-92658056cf6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.banner.field_image
+    - field.field.paragraph.banner.field_title
+    - paragraphs.paragraphs_type.banner
+id: paragraph.banner.preview
+targetEntityType: paragraph
+bundle: banner
+mode: preview
+content:
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_image: true
