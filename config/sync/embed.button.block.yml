@@ -1,0 +1,20 @@
+uuid: bb417841-6a11-47dd-ae24-ba1e8f851205
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.block_content.full
+  module:
+    - block_content
+    - entity_embed
+label: Block
+id: block
+type_id: entity
+type_settings:
+  entity_type: block_content
+  bundles: {  }
+  display_plugins:
+    - 'view_mode:block_content.full'
+  entity_browser: ''
+  entity_browser_settings: null
+icon_uuid: null
