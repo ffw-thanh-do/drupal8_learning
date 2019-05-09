@@ -1,0 +1,25 @@
+uuid: 09f765a2-88ee-4bee-896c-ccb2ace58866
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: default
+label: Default
+description: ''
+attributes:
+  target:
+    id: target
+    weight: 0
+    settings:
+      widget_type: simple_checkbox
+matchers:
+  b949b137-2194-4818-9bd1-cc1df6bb583d:
+    uuid: b949b137-2194-4818-9bd1-cc1df6bb583d
+    id: 'entity:node'
+    weight: 0
+    settings:
+      result_description: '[node:title]/[node:author]'
+      bundles: {  }
+      group_by_bundle: false
+      include_unpublished: false
