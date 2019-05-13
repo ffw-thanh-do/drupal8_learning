@@ -1,0 +1,25 @@
+uuid: 83d2e895-3922-457b-9e76-a7857bca6f87
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_banner.field_views
+    - paragraphs.paragraphs_type.hero_banner
+  module:
+    - viewfield
+id: paragraph.hero_banner.default
+targetEntityType: paragraph
+bundle: hero_banner
+mode: default
+content:
+  field_views:
+    weight: 0
+    label: above
+    settings:
+      view_title: hidden
+      always_build_output: 0
+      empty_view_title: hidden
+    third_party_settings: {  }
+    type: viewfield_default
+    region: content
+hidden: {  }
