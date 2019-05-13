@@ -1,0 +1,27 @@
+uuid: 10aa5310-7364-44bc-9a90-8e7a06296dfb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_category
+field_name: field_category
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: blog
+      label: Blog
+    -
+      value: news
+      label: News
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
