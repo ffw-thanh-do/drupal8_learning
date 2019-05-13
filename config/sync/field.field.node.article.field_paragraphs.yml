@@ -1,0 +1,31 @@
+uuid: f6abd843-e531-4bf8-8443-dd9e26de46eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.article
+    - paragraphs.paragraphs_type.hero_banner
+  module:
+    - entity_reference_revisions
+id: node.article.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: article
+label: Paragraphs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      hero_banner: hero_banner
+    target_bundles_drag_drop:
+      hero_banner:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions
