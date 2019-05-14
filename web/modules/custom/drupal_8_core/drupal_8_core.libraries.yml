@@ -1,0 +1,12 @@
+fonticonpicker:
+  version: 1.x
+  css:
+    base:
+      libraries/fontIconPicker/css/jquery.fonticonpicker.css: {}
+      libraries/fontIconPicker/themes/grey-theme/jquery.fonticonpicker.grey.css: {}
+      /themes/custom/tlearning/libraries/fontawesome/css/all.css: {}
+  js:
+    libraries/fontIconPicker/js/jquery.fonticonpicker.js: {}
+    js/scripts.js: {}
+  dependencies:
+    - core/jquery

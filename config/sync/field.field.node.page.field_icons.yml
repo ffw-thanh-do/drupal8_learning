@@ -1,0 +1,21 @@
+uuid: 082fe78a-712a-497b-9e14-6657f9335cda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_icons
+    - node.type.page
+  module:
+    - options
+id: node.page.field_icons
+field_name: field_icons
+entity_type: node
+bundle: page
+label: Icons
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
