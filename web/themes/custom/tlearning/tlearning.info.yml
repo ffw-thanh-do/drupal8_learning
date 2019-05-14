@@ -20,6 +20,7 @@ version: VERSION
 core: 8.x
 libraries:
   - tlearning/global-styling
+  - tlearning/fontawesome
 ckeditor_stylesheets:
   - css/base/elements.css
   - css/components/captions.css

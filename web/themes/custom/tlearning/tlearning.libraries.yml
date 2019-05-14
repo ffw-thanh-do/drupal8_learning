@@ -86,3 +86,11 @@ maintenance_page:
   dependencies:
     - system/maintenance
     - bartik/global-styling
+
+fontawesome:
+  version:
+  # css:
+  #   theme:
+  #     libraries/fontawesome/css/all.css: {}
+  js:
+    libraries/fontawesome/js/all.js: {}
