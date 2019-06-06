@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_icons
     - node.type.page
   module:
+    - options
     - text
     - user
 _core:
@@ -22,7 +24,16 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_icons:
+    weight: 102
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
   links:
     weight: 101
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }
