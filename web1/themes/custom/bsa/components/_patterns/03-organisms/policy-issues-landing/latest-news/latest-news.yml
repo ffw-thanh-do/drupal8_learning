@@ -1,0 +1,101 @@
+top_heading_base_class:
+  "line-heading"
+top_heading_content:
+  "THE LATEST POLICY NEWS"
+
+more_link_base_class:
+  colored-link
+more_link_modifiers:
+  1:
+    blue
+more_link_attributes:
+  target:
+    _blank
+  href:
+    "#"
+more_link_url:
+  https://github.com/fourkitchens/bsa
+more_link_content:
+  "See all"
+news:
+  0:
+    tags:
+      0:
+        href:
+          '#'
+        background_color:
+          '#0fd439'
+        tag_content:
+          'tag name 1'
+        target:
+          '_blank'
+      1:
+        href:
+          '#'
+        background_color:
+          '#b32fda'
+        tag_content:
+          'tag name 2'
+        target:
+          '_blank'
+    heading_level:
+      4
+    heading:
+      "BSA Urges Administration to Exclude Commercially Available Technologies from Export Control Rulemaking"
+    date_content:
+      "Jan 25, 2019"
+    country_region:
+      "US"
+    news_teaser:
+      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. "
+    read_more_link_attributes:
+      href:
+        "#"
+    read_more_link_url:
+      "https://github.com/fourkitchens/bsa"
+    read_more_link_content:
+      "Read more"
+  1:
+    tags:
+      0:
+        href:
+          '#'
+        background_color:
+          '#0fd439'
+        tag_content:
+          'tag name 1'
+        target:
+          '_blank'
+      1:
+        href:
+          '#'
+        background_color:
+          '#b32fda'
+        tag_content:
+          'tag name 2'
+        target:
+          '_blank'
+    heading_level:
+      4
+    heading:
+      "BSA Welcomes Passage of OPEN Government Data Act"
+    date_content:
+      "Jan 25, 2019"
+    country_region:
+      "US"
+    news_teaser:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. "
+    read_more_link_attributes:
+      href:
+        "#"
+    read_more_link_url:
+      "https://github.com/fourkitchens/bsa"
+    read_more_link_content:
+      "Read more"
+
+
+
+
+
+
+

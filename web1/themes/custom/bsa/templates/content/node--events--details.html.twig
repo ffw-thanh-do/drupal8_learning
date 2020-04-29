@@ -1,0 +1,22 @@
+{% extends "node--details.html.twig" %}
+
+{% set tags = content.field_event_type.0 %}
+{% set event_date = content.field_start_date.0|render %}
+{% if content.field_end_date.0 %}
+  {% set event_date = event_date ~ " - " ~ content.field_end_date.0|render %}
+{% endif %}
+
+{% block tags %}
+  {% if content.field_policy_issue %}
+    {{ content.field_policy_issue }}
+  {% endif %}
+{% endblock %}
+
+{% block date %}
+  {{ bsa_date('', [event_date]|merge(bsa_region(node))) }}
+{% endblock %}
+
+{% block content %}
+  {{ content.body }}
+  {{ content.field_event_link }}
+{% endblock %}

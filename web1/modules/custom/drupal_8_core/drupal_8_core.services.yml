@@ -1,0 +1,6 @@
+services:
+  thanh:
+    class: Drupal\drupal_8_core\EventSubscriber\ThanhSubscriber
+    arguments: []
+    tags:
+      - { name: event_subscriber }

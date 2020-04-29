@@ -1,0 +1,46 @@
+bg_color:
+  '#007bd8'
+font_color:
+  '#fff'
+block_heading_copy:
+  "Nullam ante enim, sollicitudin at."
+block_paragraph_copy:
+  "Lorem ipsum uspendisse eu mi. Aliquam erat volutpat."
+link_class:
+  "arrow-link"
+link_image_alt:
+  "alt for image"
+link_target:
+  "_blank"
+link_href:
+  "https://github.com/fourkitchens/bsa"
+link_image_src:
+  "../../images/arrow-right-dark-blue.png"
+link_content:
+  "Lorem Ipsum"
+
+
+
+bg_color_second:
+  '#003c91'
+font_color_second:
+  '#fff'
+block_heading_copy_second:
+  "Nullam ante enim, sollicitudin at."
+block_paragraph_copy_second:
+  "Lorem ipsum uspendisse eu mi. Aliquam erat volutpat."
+link_class_second:
+  "arrow-link"
+link_image_alt_second:
+  "alt for image"
+link_target_second:
+  "_blank"
+link_href_second:
+  "https://github.com/fourkitchens/bsa"
+link_image_src_second:
+  "../../images/right-blue-arrow.png"
+link_content_second:
+  "Lorem Ipsum"
+
+
+

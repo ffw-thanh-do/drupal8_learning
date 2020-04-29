@@ -1,0 +1,79 @@
+tags:
+  0:
+    href:
+      '#'
+    background_color:
+      '#0fd439'
+    tag_content:
+      'tag name 1'
+    target:
+      '_blank'
+  1:
+    href:
+      '#'
+    background_color:
+      '#b32fda'
+    tag_content:
+      'tag name 2'
+    target:
+      '_blank'
+
+date:
+  "Jan 25, 2019 | REGION | Document TYPE"
+
+links:
+  0:
+    link_base_class:
+      colored-link
+    link_modifiers:
+      1:
+        blue
+    link_attributes:
+      target:
+        _blank
+      href:
+        "#"
+    link_url:
+      https://github.com/fourkitchens/bsa
+    link_content:
+      "Download pdf"
+  1:
+    link_base_class:
+      bordered-link
+    link_modifiers:
+      1:
+        blue
+    link_attributes:
+      target:
+        _blank
+      href:
+        "#"
+    link_url:
+      https://github.com/fourkitchens/bsa
+    link_content:
+      "Read blog post"
+  2:
+    link_base_class:
+      bordered-link
+    link_modifiers:
+      1:
+        blue
+    link_attributes:
+      target:
+        _blank
+      href:
+        "#"
+    link_url:
+      https://github.com/fourkitchens/bsa
+    link_content:
+      "Visit site"
+
+heading_base_class:
+  "line-heading"
+heading_content:
+  "Heading with top line"
+heading_modifiers:
+  0:
+    'top'
+paragraph_content:
+  "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. "

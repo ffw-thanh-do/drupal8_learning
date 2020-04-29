@@ -1,0 +1,17 @@
+<div class="policy-item-block">
+  <div class="policy-item">
+    <a href="{{ policy_href }}" class="policy-link">
+      {% block icon %}
+        {% include "@atoms/04-images/00-image/_picture.twig" with {
+          img_src: policy_item_img_src,
+          img_alt: policy_item_img_alt,
+        } %}
+      {% endblock %}
+      {% block title %}
+        {% include "@atoms/02-text/text/01-paragraph.twig" with {
+          paragraph_content: policy_item_copy
+        } %}
+      {% endblock %}
+    </a>
+  </div>
+</div>

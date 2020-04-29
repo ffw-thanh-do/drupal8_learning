@@ -1,0 +1,63 @@
+article_heading:
+  'Staff Name'
+article_heading_level:
+  3
+
+job_title:
+  'Staff Title'
+job_title_level:
+  4
+
+sical_block_title:
+  'Staff Name’s Blogs & Social Media'
+sical_block_level:
+  4
+
+paragraph_content:
+  "Lorem ipsum uspendisse eu mi. Aliquam erat volutpat. Mauris lobortis tempus mauris. Sed euismod velit at diam. Vivamus at dolor. Lorem eu mi. Aliquam erat volutpat. Consectitur ipsum uspendisse eu mi. Aliquam erat volutpat. Mauris lobortis tempus mauris. Sed euismod velit at diam. Vivamus at dolor. Lorem eu mi. Lorem ipsum uspendisse eu mi. Aliquam erat volutpat. Mauris lobortis tempus mauris lorem ipsum uspendisse eu mi. Vivamus at dolor. Lorem eu mi. Aliquam erat volutpat. Consectitur ipsum uspendisse eu mi. Aliquam erat volutpat. Vivamus at dolor. Lorem eu mi. Aliquam erat volutpat. Consectitur ipsum uspendisse eu mi. Aliquam erat volutpat.
+  Nunc quis suscipit erat, id varius leo. Proin placerat urna vitae turpis consequat pretium. In at orci justo. Sed quis sem et ex faucibus fringilla. Cras vitae lacus eu tellus tristique iaculis. Suspendisse vel tempus ipsum, a commodo ipsum. Cras suscipit tincidunt purus eget mattis. Donec blandit iaculis pulvinar. Donec volutpat enim nec tortor ultricies, id porta lacus lacinia. Vivamus feugiat erat nulla, iaculis tempor nunc sollicitudin quis. Quisque quis ipsum a turpis varius ornare. Proin in augue orci. Donec auctor velit quis tellus dictum maximus a eget mauris. Quisque dignissim turpis dui, non molestie lacus dapibus sed.
+  Nulla in lacus sed libero ultrices dapibus. Sed tempus neque et purus tincidunt, ac tristique est feugiat. Donec convallis fringilla mi. Vestibulum id aliquet nunc. Phasellus a nibh quis sapien faucibus volutpat. Sed at egestas nisl, id vulputate nibh. Integer aliquet dictum tempor. Maecenas blandit semper blandit. Proin egestas ornare arcu, ut varius elit rutrum lacinia.Lorem ipsum uspendisse eu mi. Aliquam erat volutpat. Mauris lobortis tempus mauris. Sed euismod velit at diam. Vivamus at dolor. Lorem eu mi. Aliquam erat volutpat. Consectitur ipsum uspendisse eu mi. Aliquam erat volutpat. Mauris lobortis tempus mauris. Sed euismod velit at diam. Vivamus at dolor. Lorem eu mi. Lorem ipsum uspendisse eu mi. Aliquam erat volutpat. Mauris lobortis tempus mauris lorem ipsum uspendisse eu mi. Vivamus at dolor. Lorem eu mi. Aliquam erat volutpat. Consectitur ipsum uspendisse eu mi. Aliquam erat volutpat. Vivamus at dolor. Lorem eu mi. Aliquam erat volutpat. Consectitur ipsum uspendisse eu mi. Aliquam erat volutpat.
+  Nunc quis suscipit erat, id varius leo. Proin placerat urna vitae turpis consequat pretium. In at orci justo. Sed quis sem et ex faucibus fringilla. Cras vitae lacus eu tellus tristique iaculis. Suspendisse vel tempus ipsum, a commodo ipsum. Cras suscipit tincidunt purus eget mattis. Donec blandit iaculis pulvinar. Donec volutpat enim nec tortor ultricies, id porta lacus lacinia. Vivamus feugiat erat nulla, iaculis tempor nunc sollicitudin quis. Quisque quis ipsum a turpis varius ornare. Proin in augue orci. Donec auctor velit quis tellus dictum maximus a eget mauris. Quisque dignissim turpis dui, non molestie lacus dapibus sed.
+  Nulla in lacus sed libero ultrices dapibus. Sed tempus neque et purus tincidunt, ac tristique est feugiat. Donec convallis fringilla mi. Vestibulum id aliquet nunc. Phasellus a nibh quis sapien faucibus volutpat. Sed at egestas nisl, id vulputate nibh. Integer aliquet dictum tempor. Maecenas blandit semper blandit. Proin egestas ornare arcu, ut varius elit rutrum lacinia.Lorem ipsum uspendisse eu mi. Aliquam erat volutpat. Mauris lobortis tempus mauris. Sed euismod velit at diam. Vivamus at dolor. Lorem eu mi. Aliquam erat volutpat. Consectitur ipsum uspendisse eu mi. Aliquam erat volutpat. Mauris lobortis tempus mauris. Sed euismod velit at diam. Vivamus at dolor. Lorem eu mi. Lorem ipsum uspendisse eu mi. Aliquam erat volutpat. Mauris lobortis tempus mauris lorem ipsum uspendisse eu mi. Vivamus at dolor. Lorem eu mi. Aliquam erat volutpat. Consectitur ipsum uspendisse eu mi. Aliquam erat volutpat. Vivamus at dolor. Lorem eu mi. Aliquam erat volutpat. Consectitur ipsum uspendisse eu mi. Aliquam erat volutpat."
+
+links:
+  0:
+    href:
+      "#"
+    src:
+      "../../images/social-icons/staff/facebook.png"
+    alt:
+      "alt"
+  1:
+    href:
+      "#"
+    src:
+      "../../images/social-icons/staff/linkedin.png"
+    alt:
+      "alt"
+  2:
+    href:
+      "#"
+    src:
+      "../../images/social-icons/staff/rss.png"
+    alt:
+      "alt"
+  3:
+    href:
+      "#"
+    src:
+      "../../images/social-icons/staff/twitter.png"
+    alt:
+      "alt"
+  4:
+    href:
+      "#"
+    src:
+      "../../images/social-icons/staff/youtube.png"
+    alt:
+      "alt"
+
+portrait_src:
+  "../../images/bsa-portraits/jim.jpg"
+portrait_alt:
+  "jim"

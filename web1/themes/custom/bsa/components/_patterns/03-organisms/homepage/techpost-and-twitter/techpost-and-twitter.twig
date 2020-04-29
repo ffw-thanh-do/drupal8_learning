@@ -1,0 +1,33 @@
+<div class="techpost-and-twitter">
+  <div class="teachpost">
+    {% include "@atoms/02-text/text/07-line-heading.twig" with {
+      "heading_base_class": top_heading_base_class,
+      "heading_content": top_heading_content
+    } %}
+    {% block content %}
+      {% for new in news %}
+        {% include "@molecules/latest-news/latest-news.twig" with {
+          "heading_level": new.heading_level,
+          "heading": new.heading,
+          "date_content": new.date_content,
+          "country_region": new.country_region,
+        } %}
+      {% endfor %}
+      {% include "@atoms/01-links/link/link.twig" with {
+        "link_base_class": more_link_base_class,
+        "link_modifiers": more_link_modifiers,
+        "link_attributes": more_link_attributes,
+        "link_url": more_link_url,
+        "link_content": more_link_content
+      } %}
+    {% endblock %}
+  </div>
+  <div class="twitter-block">
+    {% include "@atoms/02-text/text/07-line-heading.twig" with {
+      "heading_base_class": twitter_heading_base_class,
+      "heading_content": twitter_top_heading_content
+    } %}
+    ToDo: Temp solution!!!! Should be twitter block.
+  </div>
+</div>
+

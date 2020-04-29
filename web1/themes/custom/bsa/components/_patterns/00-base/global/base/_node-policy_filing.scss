@@ -1,0 +1,12 @@
+.node-policy_filing {
+  .layout.layout-bsa-twocols.bg-white.ratio-60-40 {
+    .width-60 {
+      @include medium {
+        width: 100%;
+      }
+      @include xl {
+        width: 60%;
+      }
+    }
+  }
+}

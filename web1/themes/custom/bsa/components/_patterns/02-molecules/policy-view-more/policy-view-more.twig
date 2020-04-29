@@ -1,0 +1,37 @@
+{{ attach_library('bsa/policyViewMore') }}
+<div class="policy-view-more-block">
+  <div class="icon">
+    {% block icon %}
+      {% include "@atoms/04-images/00-image/_image.twig" with {
+        "img_src": icon_src
+      } %}
+    {% endblock %}
+  </div>
+  <div class="copy">
+    {% include "@atoms/02-text/00-headings/_heading.twig" with {
+      "heading_level": heading_level,
+      "heading": heading,
+    } %}
+    {% if copy|length > 2000 %}
+      <div class="dynamic-copy is-hidden">
+        <div class="view-more-copy">
+          {{ copy }}
+        </div>
+      </div>
+      <div class="view-more">
+        <a href="#" class="view-more-policy">
+          <span class="js-view-more">{{ 'View more'|t }}</span>
+          <span class="js-view-less hidden">{{ 'View less'|t }}</span>
+          <img src="{{ view_more_img_src }}" alt="{{ view_more_img_alt }}">
+        </a>
+      </div>
+    {% else %}
+      <div class="hidden-copy">
+        <div class="view-more-copy">
+          {{ copy }}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
+

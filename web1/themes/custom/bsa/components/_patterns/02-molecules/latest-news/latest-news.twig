@@ -1,0 +1,48 @@
+<div class="latest-news">
+  {% if tags %}
+    <div class="news-tags">
+      {% block tags %}
+        {% for tag in tags %}
+          {% include "@atoms/12-colored-tag/colored-tag.twig" with {
+            "href": tag.href,
+            "background_color": tag.background_color,
+            "tag_content": tag.tag_content,
+            "target": tag.target
+          } %}
+        {% endfor %}
+      {% endblock %}
+    </div>
+  {% endif %}
+  <div class="news-headline">
+    {% block headline %}
+      {% include "@atoms/02-text/00-headings/_heading.twig" with {
+        "heading_level": heading_level,
+        "heading": heading,
+        "heading_url": url
+      } %}
+    {% endblock %}
+  </div>
+  <div class="news-date">
+    {% block date %}
+      {% include "@atoms/02-text/text/01-paragraph.twig" with {
+        "paragraph_content": date_content ~ " | " ~ country_region
+      } %}
+    {% endblock %}
+  </div>
+  <div class="news-teaser">
+    {% block teaser %}
+      {% embed "@atoms/02-text/text/01-paragraph.twig" %}
+        {% block paragraph_content %}
+          {{ news_teaser }}
+          {% include "@atoms/01-links/link/link.twig" with {
+            "link_content": read_more_link_content,
+            "link_attributes": read_more_link_attributes,
+            "link_url": read_more_link_url
+          } %}
+        {% endblock %}
+      {% endembed %}
+    {% endblock %}
+  </div>
+  {% block tags_bottom %}
+  {% endblock %}
+</div>

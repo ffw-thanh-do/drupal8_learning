@@ -1,0 +1,68 @@
+global:
+  css:
+    theme:
+      libraries/select/jquery.multiselect.css: {}
+      dist/style.css: {}
+  js:
+    js/bsa.js: {}
+    libraries/select/jquery.multiselect.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
+    - user_agent_class/user-agent-class-check
+
+main-menu:
+  js:
+    dist/02-molecules/menus/main-menu/main-menu.js: {}
+  dependencies:
+    - core/drupal
+
+sprite:
+  js:
+    components/js/svgxuse.min.js: { attributes: { defer: true } }
+
+accordion:
+  js:
+    dist/02-molecules/accordion-item/accordion-item.js: {}
+
+tabs:
+  js:
+    dist/02-molecules/menus/tabs/tabs.js: {}
+
+jquery:
+  js:
+    libraries/jquery/jquery.js: {}
+
+sliderlib:
+  js:
+    libraries/slick/slick.js:
+  dependencies:
+    - core/jquery
+
+#select:
+#  css:
+#    theme:
+#      libraries/select/jquery.multiselect.css: {}
+#  js:
+#    libraries/select/jquery.multiselect.js: {}
+#  dependencies:
+#    - core/jquery
+
+slider:
+  js:
+    dist/03-organisms/policy-issues-landing/article-slider/article-slider.js: {}
+  dependencies:
+    - bsa/sliderlib
+
+mobileMenu:
+  js:
+    dist/03-organisms/site/site-header/header.js: {}
+  dependencies:
+    - core/jquery
+
+policyViewMore:
+  js:
+    dist/02-molecules/policy-view-more/policy-view-more.js: {}
+  dependencies:
+    - core/jquery

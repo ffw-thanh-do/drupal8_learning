@@ -1,0 +1,13 @@
+{% for item in items %}
+  {% if not label_hidden %}
+    {{ 'Email'|t }}:
+  {% endif %}
+  {% include "@atoms/01-links/link/link.twig" with {
+    "link_base_class": "media-contact-mail",
+    "link_modifiers": [],
+    "link_attributes": [],
+    "link_url": 'mailto:' ~ item.content|render|lower|trim,
+    "link_content": item.content|render|trim
+  } %}
+{% endfor %}
+<br />

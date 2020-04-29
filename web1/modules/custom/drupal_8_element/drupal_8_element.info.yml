@@ -1,0 +1,5 @@
+name: 'Drupal 8 element'
+description: 'Implement Drupal 8 element functions'
+core: 8.x
+type: module
+package: Custom

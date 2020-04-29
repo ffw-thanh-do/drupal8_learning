@@ -1,0 +1,43 @@
+.media-contacts-section {
+  text-align: center;
+  padding: 0;
+  h2 {
+    font-stretch: normal;
+    letter-spacing: 3px;
+    text-align: center;
+    color: $black;
+  }
+
+  .contact-items {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    box-shadow: 0 2px 10px 0 rgba(42, 39, 35, 0.1);
+    text-align: center;
+    background: $white;
+    @include medium {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    .media-contact-item {
+      width: 100%;
+      border-bottom: 1px solid $section-bg;
+      &:last-child {
+        border-bottom: none;
+      }
+      @include medium {
+        border-bottom: none;
+        width: auto;
+        min-width: calc(100% / 3);
+        flex: 1;
+        border-right: 1px solid $section-bg;
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,56 @@
+top_heading_base_class:
+  "line-heading"
+top_heading_content:
+  "BSA TECHPOST"
+
+more_link_base_class:
+  colored-link
+more_link_modifiers:
+  1:
+    blue
+more_link_attributes:
+  target:
+    _blank
+  href:
+    "#"
+more_link_url:
+  https://github.com/fourkitchens/bsa
+more_link_content:
+  "See all"
+news:
+  0:
+    heading_level:
+      4
+    heading:
+      "BSA Urges Administration to Exclude Commercially Available Technologies from Export Control Rulemaking"
+    date_content:
+      "Jan 25, 2019"
+    country_region:
+      "US"
+  1:
+    heading_level:
+      4
+    heading:
+      "BSA Urges Administration to Exclude Commercially Available Technologies from Export Control Rulemaking"
+    date_content:
+      "Jan 25, 2019"
+    country_region:
+      "US"
+  2:
+    heading_level:
+      4
+    heading:
+      "BSA Urges Administration to Exclude Commercially Available Technologies from Export Control Rulemaking"
+    date_content:
+      "Jan 25, 2019"
+    country_region:
+      "US"
+
+
+
+
+
+twitter_heading_base_class:
+  "line-heading"
+twitter_top_heading_content:
+  "FOLLOW BSA"

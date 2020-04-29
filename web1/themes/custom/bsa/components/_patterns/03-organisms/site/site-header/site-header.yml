@@ -1,0 +1,34 @@
+logo_link_url: "#"
+
+main_menu_items:
+  - title: "About BSA"
+    url: "#"
+  - title: "Policy Issues"
+    url: "#"
+  - title: "Compliance & Enforce"
+    url: "#"
+  - title: "Membership"
+    url: "#"
+  - title: "Reports"
+    url: "#"
+  - title: "News & Events"
+    url: "#"
+
+top_menu_items:
+  - title: "BSA FOUNDATION"
+    url: "/"
+  - title: "BSA VERAFIRM"
+    url: "/"
+  - title: "BSA SSI"
+    url: "/"
+
+logo_src:
+  '../../images/logo.png'
+logo_alt:
+  'Logo'
+logo_url:
+  logo_link_url|default('/')
+logo_figure_base_class:
+  'logo'
+logo_link_blockname:
+  'logo'

@@ -1,0 +1,18 @@
+
+# People menu items definition
+entity.people.collection:
+  title: 'People list'
+  route_name: entity.people.collection
+  description: 'List People entities'
+  parent: system.admin_structure
+  weight: 100
+
+
+# People type menu items definition
+entity.people_type.collection:
+  title: 'People type'
+  route_name: entity.people_type.collection
+  description: 'List People type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+

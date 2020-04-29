@@ -1,0 +1,9 @@
+{% for item in items %}
+  {% set icon = item.content['#options'].entity.field_ico.getValue() %}
+  {% include "@atoms/12-colored-tag/colored-tag.twig" with {
+    "tag_content": item.content['#title'],
+    "href": item.content['#url'],
+    "background_color": icon.0.color,
+    "target": ""
+  } %}
+{% endfor %}

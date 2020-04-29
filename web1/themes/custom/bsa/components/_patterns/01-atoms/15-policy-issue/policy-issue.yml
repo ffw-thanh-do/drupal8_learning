@@ -1,0 +1,8 @@
+policy_issue_img_src:
+  '../../images/policy-icons/icon-1.png'
+policy_issue_img_alt:
+  'Logo'
+policy_issue_copy:
+  'AI & Emerging Tech'
+policy_href:
+  '#'

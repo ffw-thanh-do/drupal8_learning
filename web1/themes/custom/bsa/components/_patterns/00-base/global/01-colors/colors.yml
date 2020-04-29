@@ -1,0 +1,65 @@
+items:
+  - name: $white
+    value: white
+  - name: $near-white
+    value: '#f2f2f2'
+  - name: $gray-lightest
+    value: '#e5e5e5'
+  - name: $gray-lighter
+    value: '#ccc'
+  - name: $gray-light
+    value: '#999'
+  - name: $gray
+    value: '#666'
+  - name: $gray-dark
+    value: '#4c4c4c'
+  - name: $gray-darker
+    value: '#333'
+  - name: $black
+    value: black
+  - name: $black2
+    value: '#2a2723'
+  - name: $section-bg
+    value: '#f4f4f4'
+  - name: $blue
+    value: '#007AD7'
+  - name: $blue-light
+    value: '#35c8cc'
+  - name: $button-blue
+    value: '#007bd8'
+  - name: $navy
+    value: '#003e6a'
+  - name: $aqua
+    value: '#00b9c9'
+  - name: $cyan
+    value: '#007bd8'
+  - name: $dark-blue
+    value: '#003c91'
+  - name: $teal
+    value: '#00587e'
+  - name: $green-light
+    value: '#46cc30'
+  - name: $purple
+    value: '#6e3092'
+  - name: $lime
+    value: '#84c441'
+  - name: $dark-grey-two
+    value: '#807d7b'
+  - name: $dark-grey-one
+    value: '#605d5a'
+  - name: $grey
+    value: '#cac9c8'
+  - name: $orange
+    value: '#e64f00'
+  - name: $light-grey
+    value: '#e9e9e9'
+  - name: $yellow
+    value: '#f9c20a'
+  - name: $green
+    value: '#00ac89'
+  - name: $magenta
+    value: '#9f3794'
+meta:
+  description: >-
+    To add to these items, use Sass variables that start with <code>$</code> in
+    <code>.//components/_patterns/00-base/global/01-colors/_color-vars.scss</code>

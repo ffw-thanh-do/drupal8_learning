@@ -1,0 +1,18 @@
+{% extends "@molecules/article-slide/article-slide.twig" %}
+
+{% set date = bsa_date(node.created.value, [content.field_country_region.0['#plain_text']]) %}
+{% set link_base_class = "colored-link" %}
+{% set link_modifiers = ["blue"] %}
+{% set link_url = url %}
+{% set link_content = "Read more"|t|upper %}
+{% set article_heading = label %}
+{% set article_heading_level = 4 %}
+{% set paragraph_content = bsa_summary(content.body, 1, 0) %}
+
+{% block image %}
+  {{ content.field_image }}
+{% endblock %}
+
+{% block tags %}
+  {{ content.field_policy_issue }}
+{% endblock %}

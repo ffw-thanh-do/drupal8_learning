@@ -1,0 +1,37 @@
+@mixin img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+img,
+picture {
+  @include img;
+}
+
+figure {
+  margin: 0; //override normalize
+}
+
+.figure__caption {
+  font-style: italic;
+}
+
+.policy-item,
+.policy-issue {
+  img.b-lazy {
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    &.b-loaded {
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    img.b-lazy {
+      &.b-loaded {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+issues:
+  1:
+    item_img_src:
+      "../../images/policy-issues-icons/icon-1.png"
+    item_copy:
+      "AI & Emerging Technology"
+    item_img_alt:
+      "Image alt"
+    policy_href:
+      "#"
+  2:
+    item_img_src:
+      "../../images/policy-issues-icons/icon-2.png"
+    item_copy:
+      "Data Privacy"
+    item_img_alt:
+      "Image alt"
+    policy_href:
+      "#"
+  3:
+    item_img_src:
+      "../../images/policy-issues-icons/icon-3.png"
+    item_copy:
+      "Cross-Border Data Flow"
+    item_img_alt:
+      "Image alt"
+    policy_href:
+      "#"
+  4:
+    item_img_src:
+      "../../images/policy-issues-icons/icon-4.png"
+    item_copy:
+      "Cybersecurity"
+    item_img_alt:
+      "Image alt"
+    policy_href:
+      "#"
+  5:
+    item_img_src:
+      "../../images/policy-issues-icons/icon-5.png"
+    item_copy:
+      "Procurement"
+    item_img_alt:
+      "Image alt"
+    policy_href:
+      "#"
+  6:
+    item_img_src:
+      "../../images/policy-issues-icons/icon-6.png"
+    item_copy:
+      "IP & Innovation"
+    item_img_alt:
+      "Image alt"
+    policy_href:
+      "#"
+  7:
+    item_img_src:
+      "../../images/policy-issues-icons/icon-7.png"
+    item_copy:
+      "Workforce Development & Immigration"
+    item_img_alt:
+      "Image alt"
+    policy_href:
+      "#"
+  8:
+    item_img_src:
+      "../../images/policy-issues-icons/icon-8.png"
+    item_copy:
+      "Trade & Market Access"
+    item_img_alt:
+      "Image alt"
+    policy_href:
+      "#"
+  9:
+    item_img_src:
+      "../../images/policy-issues-icons/icon-9.png"
+    item_copy:
+      "Law Enforcement & Government Access"
+    item_img_alt:
+      "Image alt"
+    policy_href:
+      "#"
+top_heading_base_class:
+  "line-heading"
+top_heading_content:
+  "GLOBAL POLICY ISSUES"
+more_link_base_class:
+  colored-link
+more_link_modifiers:
+  1:
+    blue
+more_link_attributes:
+  target:
+    _blank
+  href:
+    "#"
+more_link_url:
+  https://github.com/fourkitchens/bsa
+more_link_content:
+  "VIEW ALL POLICY FILINGS"
+

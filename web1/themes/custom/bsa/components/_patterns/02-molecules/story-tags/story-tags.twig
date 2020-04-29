@@ -1,0 +1,13 @@
+<div class="bottom-tags">
+  {% block tags %}
+    {% for item in items %}
+      {% include "@atoms/19-story-tag/story-tag.twig" with {
+        "href": item.href,
+        "target": item.target,
+        "content": item.content
+      } %}
+    {% endfor %}
+  {% endblock %}
+</div>
+
+

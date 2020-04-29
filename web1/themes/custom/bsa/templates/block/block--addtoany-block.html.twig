@@ -1,0 +1,10 @@
+{% extends "@molecules/_block_custom.twig" %}
+
+{% block main %}
+  {% embed "@molecules/share-block/share-block.twig" %}
+    {% set share_copy = label %}
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}

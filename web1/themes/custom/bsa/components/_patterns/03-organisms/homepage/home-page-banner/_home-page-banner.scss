@@ -1,0 +1,28 @@
+.home-page-banner {
+  @include wrapper;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+  picture {
+    width: 100%;
+    height: auto;
+    display: block;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  .heading {
+    background: rgba(555,555,555, 0.5);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    display: inline-block;
+    h3 {
+      margin: auto;
+    }
+  }
+}

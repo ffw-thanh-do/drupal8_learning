@@ -1,0 +1,16 @@
+search_label:
+  "search"
+search_type:
+  "text"
+
+search_name:
+  "name"
+
+
+listItems:
+  0:
+    title:
+      "one"
+  1:
+    title:
+      "two"

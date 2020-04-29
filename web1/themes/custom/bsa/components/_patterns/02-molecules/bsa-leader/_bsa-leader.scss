@@ -1,0 +1,88 @@
+.bsa-leader-item {
+  padding: 20px;
+  border-bottom: 2px solid rgba(42, 39, 35, 0.25);
+  .leader-image {
+    margin-bottom: 10px;
+    img {
+      border-radius: 100%;
+      display: block;
+      margin: 0 auto;
+      @include mobile {
+        width: 150px;
+        height: auto;
+      }
+    }
+    @include medium {
+      margin-bottom: 0;
+    }
+    @include medium {
+      margin-bottom: 0;
+    }
+  }
+  .leader-name {
+    h3 {
+      font-style: normal;
+      font-stretch: normal;
+      letter-spacing: normal;
+      a {
+        color: $black;
+        text-decoration: none;
+      }
+    }
+    @include medium {
+      padding-top: 25px;
+    }
+  }
+  p.leader-position {
+    font-family: $nunito;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color: $dark-grey-two;
+    margin: 0 0 10px 0;
+  }
+  .leader-copy {
+    font-family: $nunito;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.63;
+    letter-spacing: 0.3px;
+    color: $black2;
+    p {
+      font-family: $nunito;
+      font-size: 16px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.63;
+      letter-spacing: 0.3px;
+      color: $black2;
+    }
+    a {
+      color: inherit;
+      font: inherit;
+    }
+  }
+  @include medium {
+    padding: 40px 60px 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    .leader-image {
+      width: 184px;
+      margin-top: 10px;
+      img {
+        width: 100%;
+      }
+    }
+    .leader-content {
+      width: calc(100% - 250px);
+    }
+  }
+}

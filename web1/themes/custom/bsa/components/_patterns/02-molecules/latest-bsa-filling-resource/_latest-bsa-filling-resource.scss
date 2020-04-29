@@ -1,0 +1,101 @@
+.bsa-filing-resource-item {
+  padding: 10px;
+  background: $white;
+  position: relative;
+  .item-tags {
+    display: none;
+    @include medium {
+      display: block;
+    }
+    margin-bottom: 5px;
+    a {
+      margin: 0 10px 10px 0;
+    }
+  }
+
+  .item-tag-links {
+    a, span {
+      text-transform: uppercase;
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
+
+  .item-date {
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      color: rgba(42,39,35,.5);
+    }
+  }
+
+  @include large {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 30px 60px;
+    .left-column {
+      width: 65%;
+    }
+    .right-column {
+      width: 30%;
+    }
+
+    .item_heading {
+      h3 {
+        font-style: normal;
+        font-stretch: normal;
+        letter-spacing: normal;
+        margin-bottom: 20px;
+        @include medium {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .item-tag-links {
+      a, span {
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 1.63;
+        letter-spacing: 0.3px;
+        color: #2a2723;
+      }
+    }
+    .item-date {
+      text-align: right;
+
+      p {
+        font-family: $nunito;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        letter-spacing: 2px;
+        text-align: right;
+        color: $dark-grey-two;
+        text-transform: uppercase;
+      }
+    }
+    .item-secondary-info {
+      position: absolute;
+      right: 60px;
+      bottom: 20px;
+      p {
+        margin: 0;
+        text-transform: uppercase;
+        font-family: $nunito;
+        font-size: 16px;
+        font-weight: 800;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 2.25;
+        letter-spacing: 2px;
+        text-align: right;
+        color: $dark-grey-two;
+      }
+    }
+  }
+}

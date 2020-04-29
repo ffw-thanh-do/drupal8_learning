@@ -1,0 +1,28 @@
+{{ attach_library('bsa/accordion') }}
+
+<div class="report-accordion-section">
+  {% for item in items %}
+    {% include "@molecules/accordion-item/accordion-item.twig" with {
+      "accordion-term": 'accordion-term',
+      "accordion-def": 'accordion-def',
+      "accordion_term": item.accordion_term,
+      "accordion_def": item.accordion_def
+    } %}
+  {% endfor %}
+
+  <div class="report-accordion-actions">
+    {% for link in links %}
+      {% include "@atoms/01-links/link/link.twig" with {
+        "link_content": link.link_content,
+        "link_url": link.link_attributes,
+        "link_attributes": link.link_url,
+        "link_base_class": link.link_base_class,
+        "link_modifiers": link.link_modifiers,
+      } %}
+    {% endfor %}
+  </div>
+
+</div>
+
+
+

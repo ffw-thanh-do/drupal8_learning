@@ -1,0 +1,183 @@
+//
+// Generic header styles:
+// All arguments are optional. If not defined, the defaults below will be used
+//
+
+$color-heading: $black;
+
+// h1
+@mixin heading-xl($font-family: $font-heading, $font-size: 35px, $line-height: 45px, $color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $font-weight: 700, $margin: 0 0 25px) {
+  color: #{$color};
+  font-family: #{$font-family};
+  font-weight: #{$font-weight};
+  font-style: normal;
+  margin: #{$margin};
+  width: auto;
+  letter-spacing: 0.25px;
+  font-size: 26px;
+  line-height: 36px;
+  @include medium {
+    font-size: #{$font-size};
+    line-height: #{$line-height};
+  }
+  &__link {
+    color: $color-link;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      color: $color-link-hover;
+    }
+  }
+}
+
+
+// h2
+@mixin heading-large($font-family: $font-heading, $font-size: 27px, $line-height: 37px, $color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $font-weight: 300, $margin: 0 0 0.5em) {
+  color: #{$color};
+  font-family: #{$font-family};
+  font-weight: #{$font-weight};
+  font-style: normal;
+  font-size: 27px;
+  line-height: 38px;
+  margin: #{$margin};
+  width: auto;
+  letter-spacing: 0.25px;
+  @include medium {
+    font-size: #{$font-size};
+    line-height: #{$line-height};
+  }
+  &__link {
+    color: $color-link;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      color: $color-link-hover;
+    }
+  }
+}
+
+
+// h3
+@mixin heading-medium($font-family: $font-heading, $font-size: 26px, $line-height: 36px, $color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $font-weight: 600, $margin: 0 0 0.5em) {
+  color: #{$color};
+  font-family: #{$font-family};
+  font-weight: #{$font-weight};
+  font-style: normal;
+  margin: #{$margin};
+  width: auto;
+  font-size: 22px;
+  line-height: 32px;
+  @include medium {
+    font-size: #{$font-size};
+    line-height: #{$line-height};
+  }
+  &__link {
+    color: $color-link;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      color: $color-link-hover;
+    }
+  }
+}
+
+// h4
+@mixin heading-small($font-family: $font-heading, $font-size: 23px, $line-height: 33px, $color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $font-weight: 300, $margin: 0 0 0.5em) {
+  color: #{$color};
+  font-family: #{$font-family};
+  font-weight: #{$font-weight};
+  font-style: normal;
+  margin: #{$margin};
+  width: auto;
+  font-size: 20px;
+  line-height: 30px;
+  @include medium {
+    font-size: #{$font-size};
+    line-height: #{$line-height};
+  }
+  &__link {
+    color: $color-link;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      color: $color-link-hover;
+    }
+  }
+}
+
+// h5
+@mixin heading-xs($font-family: $font-heading, $font-size: 16px, $line-height: 26px, $color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $font-weight: 600, $margin: 0 0 0.5em) {
+  color: #{$color};
+  font-family: #{$font-family};
+  font-weight: #{$font-weight};
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  margin: #{$margin};
+  width: auto;
+  @include medium {
+    font-size: #{$font-size};
+    line-height: #{$line-height};
+  }
+
+  &__link {
+    color: $color-link;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      color: $color-link-hover;
+    }
+  }
+}
+
+.h1 {
+  @include heading-xl();
+}
+
+.h2 {
+  @include heading-large();
+}
+
+.h3 {
+  @include heading-medium();
+}
+
+.h4 {
+  @include heading-small();
+}
+
+.h5,
+.h6 {
+  @include heading-xs();
+}
+
+.h6 {
+  @include heading-xs();
+  font-weight: 300;
+}
+
+
+h1 {
+  @extend .h1;
+}
+
+h2 {
+  @extend .h2;
+}
+
+h3 {
+  @extend .h3;
+}
+
+h4 {
+  @extend .h4;
+}
+
+h5 {
+  @extend .h5;
+}
+
+h6 {
+  @extend .h6;
+}
+

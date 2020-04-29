@@ -1,0 +1,22 @@
+{% extends "@molecules/_block_custom.twig" %}
+
+{% block main %}
+  <div class="bsa-global-members">
+    <div class="heading">
+      {% include "@atoms/02-text/00-headings/_heading.twig" with {
+        "heading": label|upper,
+        "heading_level": heading_level
+      } %}
+    </div>
+    {% block content %}
+      {% for item in items %}
+        {% include "@atoms/16-global-member/global-member.twig" with {
+          "target": item.target,
+          "href": item.href,
+          "image_src": item.image_src,
+          "image_alt": item.image_alt
+        } %}
+      {% endfor %}
+    {% endblock %}
+  </div>
+{% endblock %}

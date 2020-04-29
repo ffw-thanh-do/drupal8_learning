@@ -1,0 +1,20 @@
+{
+    "name": "drupal/acquia_contenthub",
+    "type": "drupal-module",
+    "description": "Module allowing Drupal sites to connect to Acquia Content Hub.",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "acquia/content-hub-php": "^2.0.0-rc3",
+        "drupal/depcalc": "^1.0",
+        "symfony/psr-http-message-bridge": "^1.0 || ^2.0",
+        "laminas/laminas-diactoros": "^1.8 || ^2.2"
+    },
+    "require-dev": {
+      "drupal/paragraphs": "^1.5"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-8.x-2.x": "2.x-dev"
+        }
+    }
+}

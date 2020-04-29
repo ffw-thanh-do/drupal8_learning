@@ -1,0 +1,59 @@
+.techpost-and-twitter {
+  @include wrapper;
+  background: $white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  .teachpost {
+    margin-bottom: 40px;
+    .colored-link {
+      margin-top: 10px;
+    }
+  }
+
+  //.line-heading {
+  //  font-size: 24px;
+  //  line-height: 1;
+  //  letter-spacing: 3px;
+  //  @include medium {
+  //    font-size: 36px;
+  //  }
+  //}
+
+  .latest-news {
+    margin-bottom: 15px;
+    @include medium {
+      margin-bottom: 25px;
+    }
+  }
+
+  .news-date {
+    p {
+      font-family: $nunito;
+      font-weight: 300;
+      color: $dark-grey-two;
+    }
+  }
+
+  @include medium {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    .twitter-block,
+    .teachpost {
+      width: 45%;
+    }
+  }
+
+  @include large {
+    padding: 40px 135px 70px;
+    .teachpost {
+      width: 60%;
+    }
+    .twitter-block {
+      width: 30%;
+    }
+  }
+
+}

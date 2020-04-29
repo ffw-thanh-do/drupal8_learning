@@ -1,0 +1,17 @@
+{% extends "@molecules/_block_simple.twig" %}
+
+{% set classes = ["bsa-regional-members"] %}
+
+{% block content %}
+  {% for item in items %}
+    <div class="item">
+      {% include "@atoms/18-bsa-regional-member/bsa-regional-member.twig" with {
+        "href": item.href,
+        "target": item.target,
+        "img_src": item.img_src,
+        "img_alt": item.img_alt,
+        "member_name": item.member_name
+      } %}
+    </div>
+  {% endfor %}
+{% endblock %}

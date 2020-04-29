@@ -1,0 +1,26 @@
+.bsa-member-item {
+  text-decoration: none;
+  border:none;
+  display: inline-block;
+  background: $white;
+  overflow: hidden;
+  img {
+    position: relative;
+    @include large {
+      transition: all 0.3s;
+    }
+  }
+  &:hover,
+  &:active,
+  &:visited {
+    text-decoration: none;
+  }
+  &:hover {
+    @include large {
+      img {
+        transform: scale(1.2);
+        transform-origin: center;
+      }
+    }
+  }
+}

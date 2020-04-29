@@ -1,0 +1,23 @@
+# People routing definition
+
+entity.people.canonical:
+  route_name: entity.people.canonical
+  base_route: entity.people.canonical
+  title: 'View'
+
+entity.people.edit_form:
+  route_name: entity.people.edit_form
+  base_route: entity.people.canonical
+  title: 'Edit'
+
+entity.people.version_history:
+  route_name: entity.people.version_history
+  base_route: entity.people.canonical
+  title: 'Revisions'
+
+entity.people.delete_form:
+  route_name:  entity.people.delete_form
+  base_route:  entity.people.canonical
+  title: Delete
+  weight: 10
+

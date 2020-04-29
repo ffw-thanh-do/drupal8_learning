@@ -1,0 +1,67 @@
+<?php
+
+/**
+ * @file
+ * Contains paragraphs_report.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_help().
+ */
+function paragraphs_report_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the paragraphs_report module.
+    case 'help.page.paragraphs_report':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Get an inventory of paragraphs in use.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ *
+ * Add report data from new node.
+ *
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ *   Pass full node.
+ *
+ * @throws
+ */
+function paragraphs_report_node_insert(EntityInterface $entity) {
+  \Drupal::service('paragraphs_report.report')->insertParagraphs($entity);
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_update().
+ *
+ * Update report data with paragraph changes in node.
+ *
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ *   Pass full node.
+ *
+ * @throws
+ */
+function paragraphs_report_node_update(EntityInterface $entity) {
+  \Drupal::service('paragraphs_report.report')->updateParagraphs($entity);
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_delete().
+ *
+ * Remove deleted node path from report data.
+ *
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ *   Pass full node.
+ *
+ * @throws
+ */
+function paragraphs_report_node_delete(EntityInterface $entity) {
+  \Drupal::service('paragraphs_report.report')->deleteParagraphs($entity);
+}

@@ -1,0 +1,50 @@
+<article {{ attributes }}>
+  <div class="teaser-item">
+    <div class="teaser-info">
+      {% if tags %}
+        <div class="teaser-tags">
+          {% block tags %}
+            {{ tags }}
+          {% endblock %}
+        </div>
+      {% endif %}
+      <div class="teaser-headline">
+        {% block headline %}
+          {% include "@atoms/02-text/00-headings/_heading.twig" with {
+            "heading_level": heading_level|default(3),
+            "heading": label,
+            "heading_url": url
+          } %}
+        {% endblock %}
+      </div>
+      <div class="teaser-copy">
+        {% block body %}
+          {% include "@atoms/02-text/text/01-paragraph.twig" with {
+            "paragraph_content": body
+          } %}
+        {% endblock %}
+      </div>
+      <div class="teaser-date-type">
+        {% if type %}
+          <div class="teaser-type">
+            {% block type %}
+              {% include "@atoms/02-text/text/01-paragraph.twig" with {
+                "paragraph_content": type
+              } %}
+            {% endblock %}
+          </div>
+        {% endif %}
+        {% if date_info %}
+          <div class="teaser-date">
+            {% block date %}
+              {% include "@atoms/02-text/text/01-paragraph.twig" with {
+                "paragraph_content": date_info
+              } %}
+            {% endblock %}
+          </div>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+</article>

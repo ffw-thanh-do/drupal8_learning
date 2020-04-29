@@ -1,0 +1,12 @@
+<div class="bsa-member-item">
+  {% block member_icon %}
+    <a href="{{ href }}">
+      {% block img %}
+        {% include "@atoms/04-images/00-image/_image.twig" with {
+          img_src: image_src,
+          img_alt: image_alt,
+        } %}
+      {% endblock %}
+    </a>
+  {% endblock %}
+</div>

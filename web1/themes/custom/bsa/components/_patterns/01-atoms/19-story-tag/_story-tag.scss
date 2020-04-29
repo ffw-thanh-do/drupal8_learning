@@ -1,0 +1,22 @@
+.filing-tags {
+  font-size: 14px;
+}
+.story-tag {
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 5px;
+  font-weight: normal;
+  line-height: 1.63;
+  letter-spacing: 0.3px;
+  color: #2a2723;
+  font-size: 14px;
+  &:hover {
+    text-decoration: none;
+  }
+  a {
+    color: #2a2723;
+    font-size: 14px;
+  }
+}
+
+

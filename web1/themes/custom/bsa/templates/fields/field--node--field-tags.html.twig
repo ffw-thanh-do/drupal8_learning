@@ -1,0 +1,10 @@
+{% extends "@molecules/story-tags/story-tags.twig" %}
+
+{% block tags %}
+  {% for item in items %}
+    {% include "@atoms/19-story-tag/story-tag.twig" with {
+      "content": item.content['#title'],
+      "href": item['list_path']
+    } %}
+  {% endfor %}
+{% endblock %}

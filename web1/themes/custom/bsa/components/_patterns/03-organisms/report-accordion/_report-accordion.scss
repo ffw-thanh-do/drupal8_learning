@@ -1,0 +1,39 @@
+.report-accordion-section {
+  @include wrapper;
+  background: $blue;
+  padding: 10px;
+  @include medium {
+    padding: 60px;
+  }
+  .accordion-term,
+  .accordion-def {
+    background: $white;
+  }
+}
+
+.report-accordion-actions {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  margin-top: 20px;
+  a {
+    width: auto;
+    display: inline-block;
+    max-width: 320px;
+    margin: 0 auto 10px;
+  }
+  @include medium {
+    padding: 30px 0 0 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: left;
+    a {
+      width: auto;
+      max-width: none;
+      margin: 0 15px 15px 0;
+    }
+  }
+}

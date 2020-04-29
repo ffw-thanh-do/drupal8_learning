@@ -1,0 +1,29 @@
+{{ attach_library('bsa/mobileMenu') }}
+<div class="header-wrapper">
+  <header class="header">
+    <div class="mobile-header">
+      <div class="mobile-menu-trigger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    {% block header_content %}
+      {% block logo_block %}
+        {% include "@atoms/10-logo/logo.twig" %}
+      {% endblock %}
+      {% block top_sub_menu %}
+        {% include "@molecules/menus/header-top-menu/header-top-menu.twig" with {
+          items: top_menu_items
+        } %}
+      {% endblock %}
+      {% block main_menu %}
+        {% include "@molecules/menus/header-main-menu/header-main-menu.twig" with {
+          items: main_menu_items,
+        } %}
+      {% endblock %}
+    {% endblock %}
+    <div class="search-trigger"></div>
+  </header>
+</div>
+

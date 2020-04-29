@@ -1,0 +1,42 @@
+.node-landing_page {
+  .block-with-social-share {
+    @include medium {
+      .share-block-wrapper {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .policies-filter {
+    .views-row {
+      article .teaser-item {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+
+  .news-landing-events,
+  .news-landing-news,
+  .news-landing-press {
+    .views-row {
+      margin-bottom: 30px;
+      @include medium {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+
+  .ratio-70-30 {
+    .width-70 {
+      .block .simple-content .text-long {
+        h3 {
+          font-size: 25px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+}

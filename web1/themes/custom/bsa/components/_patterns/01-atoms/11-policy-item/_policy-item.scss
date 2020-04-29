@@ -1,0 +1,55 @@
+.policy-item {
+  padding: 0 10px;
+  margin-bottom: 10px;
+  @include medium {
+    padding: 25px 30px 10px;
+  }
+  img,
+  picture {
+    display: block;
+
+    @include medium {
+      margin: 0 auto 15px;
+      max-width: 72px;
+      img {
+        margin: 0 auto;
+      }
+    }
+
+  }
+
+  .policy-link {
+    color: $black;
+    text-decoration: none;
+    font-size: 1rem;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  a {
+    @media screen and (max-width: 767px) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      align-content: center;
+      img {
+        max-width: 42px;
+        margin-right: 13px;
+      }
+      > p {
+        width: calc(100% - 50px);
+        font-size: 16px;
+      }
+    }
+
+    @include medium {
+      > div,
+      > p {
+        text-align: center;
+      }
+    }
+  }
+
+}

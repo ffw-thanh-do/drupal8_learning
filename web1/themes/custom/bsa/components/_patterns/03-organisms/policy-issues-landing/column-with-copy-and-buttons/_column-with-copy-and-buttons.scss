@@ -1,0 +1,68 @@
+.copy-and-buttons {
+  background: $white;
+  width: 100%;
+  margin: 0 auto;
+  flex-direction: row;
+  @include wrapper;
+  padding: 0;
+  .copy {
+    width: 100%;
+    margin-bottom: 20px;
+    p {
+      margin-bottom: 40px;
+      font-size: 1rem;
+    }
+    h2 {
+      font-family: $montserrat;
+      font-style: normal;
+      font-stretch: normal;
+      letter-spacing: normal;
+      color: #000000;
+    }
+    .links {
+      a {
+        margin-right: 20px;
+        @include mobile {
+          margin-bottom: 20px
+        }
+      }
+    }
+  }
+  .share {
+    width: 100%;
+    text-align: center;
+  }
+  @include medium {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    .copy {
+      text-align: left;
+    }
+    .share {
+      text-align: center;
+      width: 39%;
+    }
+  }
+}
+
+
+@include medium {
+  .layout-bsa-onecol,
+  .layout--onecol {
+    .copy-and-buttons {
+      .copy {
+        width: 55%;
+      }
+    }
+  }
+}
+
+@include medium {
+  .layout-bsa-twocols {
+    .copy-and-buttons {
+      padding-right: 30px;
+    }
+  }
+}

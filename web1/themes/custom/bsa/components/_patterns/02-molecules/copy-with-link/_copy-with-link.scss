@@ -1,0 +1,120 @@
+.copy-with-link {
+  background: $white;
+  padding: 20px;
+  margin-bottom: 0;
+  &--default {
+    background-color: #fff;
+    color: #000;
+  }
+  &--blue {
+    background-color: #007bd8;
+    h1, span, p, div {
+      color: #fff;
+    }
+  }
+  &--dark-blue {
+    background-color: #003c91;
+    h1, span, p, div {
+      color: #fff;
+    }
+  }
+
+  .block-copy {
+    p {
+      @extend .h4;
+      //font-family: $nunito;
+      //font-size: 25px;
+      //font-weight: 300;
+      //font-style: normal;
+      //font-stretch: normal;
+      //line-height: 1.44;
+      letter-spacing: 0.3px;
+      color: inherit;
+    }
+  }
+
+  .arrow-link-block {
+    text-align: right;
+  }
+
+  .arrow-link {
+    text-align: right;
+
+    span {
+      font-size: 18px;
+    }
+
+    img {
+      width: 20px;
+    }
+  }
+
+  p {
+    //font-size: 1rem;
+  }
+
+  @include medium {
+    p {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.44;
+      letter-spacing: 0.3px;
+    }
+  }
+
+  div.arrow-link-block {
+    width: 100%;
+    text-align: right;
+  }
+
+  @include large {
+    padding: 45px;
+    h1 {
+      letter-spacing: 0.3px;
+    }
+    p {
+      font-size: 25px;
+      font-weight: 300;
+      line-height: 1.44;
+      letter-spacing: 0.3px;
+    }
+    div.arrow-link-block {
+      width: 100%;
+
+      a {
+        display: inline-block;
+      }
+
+      span {
+        font-size: 23px;
+        line-height: 2;
+        font-weight: 700;
+      }
+
+      img {
+        width: 40px;
+      }
+    }
+  }
+
+  .image {
+    margin-bottom: 20px;
+    img {
+      max-height: 150px;
+      width: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    @include medium {
+      &.image-align-right {
+        float: right;
+        margin-left: 35px;
+      }
+      &.image-align-left {
+        float: left;
+        margin-right: 35px;
+      }
+    }
+  }
+
+}

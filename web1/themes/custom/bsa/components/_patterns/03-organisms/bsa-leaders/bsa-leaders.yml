@@ -1,0 +1,45 @@
+heading_level:
+  3
+label:
+  "BSA LEADERSHIP TEAM"
+
+items:
+  0:
+    img_src:
+      "../../images/bsa-portraits/jim.jpg"
+    img_alt:
+      "image alt"
+    heading_level:
+      3
+    heading:
+      "Bobby Jenkins"
+    position:
+      "Job Title"
+    copy:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat gravida venenatis. Mauris interdum, nisi pulvinar suscipit sagittis, dolor quam viverra, tempor semper orci lacus sed mauris. Nulla tincidunt odio tortor, ac maximus magna luctus nec. Sed pellentesque pellentesque velit, at dignissim est rutrum vitae… <a href='#'>Read more</a>"
+  1:
+    img_src:
+      "../../images/bsa-portraits/jim.jpg"
+    img_alt:
+      "image alt"
+    heading_level:
+      3
+    heading:
+      "Bobby Jenkins"
+    position:
+      "Job Title"
+    copy:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat gravida venenatis. Mauris interdum, nisi pulvinar suscipit sagittis, dolor quam viverra, tempor semper orci lacus sed mauris. Nulla tincidunt odio tortor, ac maximus magna luctus nec. Sed pellentesque pellentesque velit, at dignissim est rutrum vitae… <a href='#'>Read more</a>"
+  2:
+    img_src:
+      "../../images/bsa-portraits/jim.jpg"
+    img_alt:
+      "image alt"
+    heading_level:
+      3
+    heading:
+      "Bobby Jenkins"
+    position:
+      "Job Title"
+    copy:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat gravida venenatis. Mauris interdum, nisi pulvinar suscipit sagittis, dolor quam viverra, tempor semper orci lacus sed mauris. Nulla tincidunt odio tortor, ac maximus magna luctus nec. Sed pellentesque pellentesque velit, at dignissim est rutrum vitae… <a href='#'>Read more</a>"

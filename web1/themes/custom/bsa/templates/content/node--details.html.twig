@@ -1,0 +1,27 @@
+{% extends "@organisms/node-detail/node-detail.twig" %}
+
+{% set date = custom_date|default(bsa_date(node.created.value, bsa_region(node))) %}
+{% set heading_content = label %}
+
+{% block tags %}
+  {% if content.field_policy_issue %}
+    {{ content.field_policy_issue }}
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  {{ content|without(
+    "field_country_region",
+    "field_policy_type",
+    "field_policy_issue",
+    "field_tags",
+    "field_event_date"
+  ) }}
+{% endblock %}
+
+{% if content.field_tags.0 %}
+  {% set tags_copy = "Tags:"|t|upper %}
+  {% block tags_bottom %}
+    {{ content.field_tags }}
+  {% endblock %}
+{% endif %}

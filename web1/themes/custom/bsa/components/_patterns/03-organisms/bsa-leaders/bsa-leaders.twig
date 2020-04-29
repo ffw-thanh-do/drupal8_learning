@@ -1,0 +1,26 @@
+{% extends "@molecules/_block_custom.twig" %}
+
+{% block main %}
+  <div class="bsa-leaders-section">
+    <div class="section-name">
+      {% include "@atoms/02-text/00-headings/_heading.twig" with {
+        "heading_level": heading_level|default(3),
+        "heading": label|upper,
+      } %}
+    </div>
+    <div class="bsa-leader-items">
+      {% block content %}
+        {% for item in items %}
+          {% include "@molecules/bsa-leader/bsa-leader.twig" with {
+            "img_src": item.img_src,
+            "img_alt": item.img_alt,
+            "heading_level": item.heading_level,
+            "heading": item.heading,
+            "position": item.position,
+            "copy": item.copy
+          } %}
+        {% endfor %}
+      {% endblock %}
+    </div>
+  </div>
+{% endblock %}

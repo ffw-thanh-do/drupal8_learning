@@ -1,0 +1,17 @@
+link_base_class:
+  slide-arrow
+slider_next_modifier:
+  1:
+    next
+slider_prev_modifier:
+  1:
+    next
+link_attributes:
+  target:
+    _blank
+  href:
+    "#"
+link_url:
+  https://github.com/fourkitchens/bsa
+link_content:
+  ""

@@ -1,0 +1,37 @@
+.arrow-link {
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  outline: none;
+
+  img,
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  span {
+    font-family: $montserrat;
+    font-size: 23px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0.3px;
+    text-align: right;
+    color: #000000;
+    margin-right: 10px;
+  }
+
+  img {
+    width: auto;
+  }
+
+  &--left {
+    img {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}

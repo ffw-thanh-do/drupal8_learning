@@ -1,0 +1,45 @@
+bg_color:
+  '#007bd8'
+font_color:
+  '#fff'
+block_heading_copy:
+  "Nullam ante enim, sollicitudin at."
+block_paragraph_copy:
+  "Lorem ipsum uspendisse eu mi. Aliquam erat volutpat. Lorem ipsum uspendisse eu mi."
+link_class:
+  "arrow-link"
+link_image_alt:
+  "alt for image"
+link_target:
+  "_blank"
+link_href:
+  "https://github.com/fourkitchens/bsa"
+link_image_src:
+  "../../images/arrow-right-dark-blue.png"
+link_content:
+  "Lorem Ipsum"
+
+
+copy_block_top_heading_base_class:
+  "heading"
+copy_block_heading_copy:
+  "Membership Inquiries"
+copy_block_paragraph_copy:
+  "Lorem ipsum uspendisse eu mi. Aliquam erat volutpat. Mauris lobortis tempus mauris. Sed euismod velit at diam. Vivamus at dolor. Lorem eu mi. Aliquam erat volutpat. Consectitur ipsum uspendisse eu mi. Aliquam erat volutpat. Mauris lobortis tempus mauris. Sed euismod velit at diam. Vivamus at dolor. Lorem eu mi. Aliquam erat volutpat. Lorem ipsum uspendisse eu mi. Mauris lobortis tempus mauris. Sed euismod velit at diam. "
+copy_block_more_link_base_class:
+  colored-link
+copy_block_more_link_modifiers:
+  1:
+    blue
+copy_block_more_link_attributes:
+  target:
+    _blank
+  href:
+    "#"
+copy_block_more_link_url:
+  https://github.com/fourkitchens/bsa
+copy_block_more_link_content:
+  "Read more"
+
+
+

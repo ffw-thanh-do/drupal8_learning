@@ -1,0 +1,15 @@
+heading:
+  'Home page banner copy.'
+heading_level:
+  3
+
+picture_src:
+  "https://placeimg.com/1440/480/nature"
+picture_alt:
+  "image alt"
+pictureSrcDesktop:
+  "https://placeimg.com/1440/480/nature"
+pictureSrcTablet:
+  "https://placeimg.com/769/300/nature"
+pictureSrcMobile:
+  "https://placeimg.com/300/200/nature"

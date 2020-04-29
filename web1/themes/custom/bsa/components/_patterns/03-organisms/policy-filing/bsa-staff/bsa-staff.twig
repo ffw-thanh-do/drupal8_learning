@@ -1,0 +1,19 @@
+{% extends "@molecules/_block_simple.twig" %}
+
+{% set classes = ["bsa-staff-container"] %}
+
+{% block content %}
+  {% for item in items %}
+
+    {% include "@molecules/bsa-staff/bsa-staff.twig" with {
+      "tags": item.tags,
+      "img_src": item.img_src,
+      "heading_level": item.heading_level,
+      "heading": item.heading,
+      "position": item.position,
+      "paragraph_content": item.paragraph_content
+    } %}
+
+  {% endfor %}
+{% endblock %}
+

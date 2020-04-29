@@ -1,0 +1,58 @@
+<?php
+
+use Drupal\file\Entity\File;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements template_preprocess_image_formatter().
+ */
+function animated_gif_preprocess_image_formatter(&$variables) {
+  $image = $variables['item'];
+  $imageValues = $image->getValue();
+  $file = File::load($imageValues['target_id']);
+
+  if ($file && $file->getMimeType() == 'image/gif') {
+    $variables['image']['#theme'] = 'image';
+    unset($variables['image']['#style_name']);
+    unset($variables['image_style']);
+  }
+
+}
+
+/**
+ * Implements template_preprocess_responsive_image_formatter().
+ */
+function animated_gif_preprocess_responsive_image_formatter(&$variables) {
+  $image = $variables['item'];
+  $imageValues = $image->getValue();
+  $file = File::load($imageValues['target_id']);
+
+  if ($file && $file->getMimeType() == 'image/gif') {
+    $variables['responsive_image']['#theme'] = 'image';
+    unset($variables['image']['#responsive_image_style_id']);
+    unset($variables['image_style']);
+  }
+
+}
+
+/**
+ * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ */
+function animated_gif_field_widget_image_image_form_alter(&$element, FormStateInterface $form_state, $context) {
+  if (!empty($element['#default_value']['fids'])) {
+    $fid = reset($element['#default_value']['fids']);
+    $file = File::load($fid);
+    if ($file && $file->getMimeType() === 'image/gif') {
+      $element[] = [
+        '#type' => 'container',
+        '#markup' => t('GIF images are not being processed by image styles, use with caution!'),
+        '#attributes' => [
+          'class' => [
+            'messages',
+            'messages--warning',
+          ],
+        ],
+      ];
+    }
+  }
+}

@@ -1,0 +1,143 @@
+// Create a mixin for paragraph styles that can be implemented
+// in components with other classnames.
+@mixin paragraph($margin: 0 0 1em) {
+  margin: #{$margin};
+  font-family: $nunito;
+  font-size: 16px;
+  line-height: 28px;
+  color: $black;
+  font-weight: 300;
+  letter-spacing: 0.25px;
+}
+
+@mixin body-copy {
+  font-family: $font-body;
+  font-size: 0.9rem;
+  line-height: 1.6em;
+}
+
+body {
+  color: $gray;
+
+  @include body-copy;
+}
+
+p,
+.paragraph {
+  @include paragraph;
+}
+
+.blockquote {
+  font-style: italic;
+  border-left: solid 3px $color-border;
+  margin-left: 1em;
+  padding-left: 1em;
+}
+
+.hr {
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: currentColor;
+}
+
+// TODO: BEM selectors should be applied to wysiwyg-created content
+
+.text-long {
+  p {
+    @extend .paragraph;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  blockquote {
+    @extend .blockquote;
+  }
+
+  hr {
+    @extend .hr;
+  }
+}
+
+.line-heading {
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 50px;
+  margin-top: 10px;
+  font-weight: 300;
+  color: #000;
+  letter-spacing: 3px;
+  @include large {
+    margin-bottom: 50px;
+    &:after {
+      bottom: -30px;
+    }
+  }
+
+
+  &:after {
+    content: '';
+    display: block;
+    width: 85px;
+    height: 4px;
+    background: $blue;
+    position: absolute;
+    left: 0;
+    bottom: -25px;
+    @include large {
+      height: 6px;
+    }
+  }
+  &--top {
+    margin-bottom: 10px;
+    margin-top: 40px;
+    &:after {
+      display: none;
+    }
+    &:before {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: $blue;
+      position: absolute;
+      left: 0;
+      top: -20px;
+      @include medium {
+        width: 85px;
+      }
+    }
+  }
+}
+
+.date {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: 2px;
+  margin: 5px 0;
+  color: rgba(42, 39, 35, 0.5);
+  font-family: $nunito;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+
+.main-content .simple-content {
+  p,
+  .long-copy,
+  .text-long {
+    em,
+    i {
+      font-style: italic;
+      color: inherit;
+    }
+    strong,
+    b {
+      font-weight: 600;
+      color: inherit;
+    }
+  }
+}

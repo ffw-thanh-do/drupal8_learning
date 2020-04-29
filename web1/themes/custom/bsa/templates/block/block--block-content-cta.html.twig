@@ -1,0 +1,40 @@
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ */
+#}
+{% extends "@molecules/copy-with-link/copy-with-link.twig" %}
+
+{% set block_heading_copy = label %}
+{% set block_paragraph_copy = content.field_summary %}
+{% set font_color = font_color|default("#000") %}
+{% set bg_color = bg_color|default("#fff") %}
+{% set link_image_src = link_image_src|default("/themes/custom/bsa/components/images/right-blue-arrow.png") %}
+{% set link_class = "arrow-link" %}
+{% set link_href = content.field_cta_link.0['#url'] %}
+{% set link_content = content.field_cta_link.0['#title'] %}
+{% set img = content.field_image %}
+{% set align = content.field_img_align.0['#markup'] %}
+

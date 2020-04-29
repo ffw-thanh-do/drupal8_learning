@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Drupal Module: Acquia Content Hub S3.
+ *
+ * Integrate s3fs module capabilities to Acquia Content Hub.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_ENTITY_TYPE_delete().
+ */
+function acquia_contenthub_s3_file_delete(EntityInterface $entity) {
+  $file_map = \Drupal::getContainer()->get('acquia_contenthub_s3.file_map');
+  $uuid = $entity->uuid();
+  $tracked_file = $file_map->getFileByUuid($uuid);
+  if ($tracked_file) {
+    $file_map->remove($uuid);
+  }
+}

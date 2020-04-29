@@ -1,0 +1,38 @@
+.home-two-columns-with-link {
+  @include wrapper;
+  background: $white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include small {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+  }
+  .right,
+  .left {
+    .copy-with-link {
+      padding: 15px;
+      @include medium {
+        padding: 30px;
+      }
+      @include large {
+        padding: 50px 25px 50px 55px;
+      }
+    }
+  }
+  @include large {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 70px 83px;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    .left {
+      width: 50%;
+    }
+    .right {
+      width: 50%;
+    }
+  }
+}

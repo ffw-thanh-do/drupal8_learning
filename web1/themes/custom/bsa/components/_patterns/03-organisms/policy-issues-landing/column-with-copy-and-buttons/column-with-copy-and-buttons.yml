@@ -1,0 +1,38 @@
+heading_level:
+  1
+heading:
+  'Policy Agenda'
+paragraph_content:
+  "Lorem ipsum uspendisse eu mi. Aliquam erat volutpat. Mauris lobortis tempus mauris. Sed euismod velit at diam. Vivamus at dolor. Lorem eu mi. Aliquam erat volutpat. Consectitur ipsum uspendisse eu mi. Aliquam erat volutpat. Mauris lobortis tempus mauris. Sed euismod velit at diam. Vivamus at dolor. Lorem eu mi. Lorem ipsum uspendisse eu mi. Aliquam erat volutpat. Mauris lobortis tempus mauris. Sed euismod velit at diam. Vivamus at dolor. "
+
+links:
+  0:
+    link_base_class:
+      colored-link
+    link_modifiers:
+      1:
+        blue
+    link_attributes:
+      target:
+        _blank
+      href:
+        "#"
+    link_url:
+      https://github.com/fourkitchens/bsa
+    link_content:
+      "Read More"
+  1:
+    link_base_class:
+      bordered-link
+    link_modifiers:
+      1:
+        blue
+    link_attributes:
+      target:
+        _blank
+      href:
+        "#"
+    link_url:
+      https://github.com/fourkitchens/bsa
+    link_content:
+      "Download"

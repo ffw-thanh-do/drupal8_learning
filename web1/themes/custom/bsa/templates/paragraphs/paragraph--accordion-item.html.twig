@@ -1,0 +1,4 @@
+{% include "@molecules/accordion-item/accordion-item.twig" with {
+  accordion_term: content.field_title|render,
+  accordion_def: content|without("field_title")|render
+} %}

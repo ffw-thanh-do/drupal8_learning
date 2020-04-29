@@ -1,0 +1,135 @@
+.form-item--checkboxes,
+.form-item--checkbox__item {
+  @include list-reset;
+}
+
+
+.item-list__checkbox {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  li {
+    padding: 0;
+    margin: 0 0 20px 0;
+  }
+}
+
+input.form-checkbox,
+.facets-checkbox {
+  display: none;
+}
+
+.ms-options-wrap > .ms-options ul {
+  > li {
+    background: none;
+    padding: 5px;
+    &:hover {
+      background-color: $section-bg;
+    }
+    > label {
+      padding: 0;
+      cursor: pointer;
+      background: none;
+      outline: none;
+      border: none;
+      &:hover {
+        background: none;
+        outline: none;
+        border: none;
+      }
+    }
+  }
+}
+
+.ms-options-wrap > .ms-options > ul li.selected  {
+  background: $section-bg;
+  label {
+    background: none;
+  }
+}
+
+.form-checkbox + label.form-item__label,
+.ms-options-wrap > .ms-options ul > li > label,
+.facets-checkbox + label {
+  position: relative;
+  padding-left: 80px;
+  display: inline-block;
+  padding-top: 0;
+  padding-bottom: 0;
+  @include large {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  &:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    width: 24px;
+    height: 24px;
+    display: block;
+    background: $white;
+    border: 1px solid rgba(42, 39, 35, 0.25);
+  }
+
+  span {
+    font-family: $nunito;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.63;
+    letter-spacing: 0.3px;
+    color: $black;
+    //position: relative;
+    // top: 0;
+    img {
+      position: absolute;
+      display: inline-block;
+      vertical-align: top;
+      left: 35px;
+      top: -6px;
+      margin-right: 7px;
+      @include medium {
+        top: -5px;
+      }
+    }
+  }
+}
+
+
+.fieldgroup.form-composite.form-checkboxes {
+  .form-item {
+    label {
+      img {
+        width: 34px;
+        height: auto;
+        position: absolute;
+        display: inline-block;
+        vertical-align: top;
+        left: 35px;
+        top: -6px;
+        margin-right: 7px;
+        @include medium {
+          top: -5px;
+        }
+      }
+    }
+  }
+}
+
+.ms-options-wrap {
+  position: relative;
+}
+
+
+.form-checkbox:checked + label.form-item__label,
+.ms-options-wrap > .ms-options ul > li.selected > label,
+.facets-checkbox:checked + label {
+  &:after {
+    background: $white url('/themes/custom/bsa/images/checkbox.png') no-repeat center;
+    background-size: 82% auto;
+  }
+}
+
+

@@ -1,0 +1,20 @@
+{#
+/**
+ * Available variables:
+ * - heading_base_class - the base classname
+ * - heading_modifiers - array of modifiers to add to the base classname
+ * - heading_blockname - blockname prepended to the base classname
+ * - heading_content - the content of the paragraph (typically text)
+ *
+ * Available blocks:
+ * - heading_content - used to replace the content of the paragraph with something other than plain text
+ *   for example: A formatted text field in Drupal
+ */
+#}
+{% set heading_base_class = heading_base_class|default('line-heading') %}
+
+<h2 {{ bem(heading_base_class, (heading_modifiers), heading_blockname) }}>
+  {% block heading_content %}
+    {{ heading_content }}
+  {% endblock %}
+</h2>

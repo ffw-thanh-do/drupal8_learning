@@ -1,0 +1,14 @@
+<div class="teaser-items">
+  {% for item in items %}
+  {% include "@molecules/report-item/report-item.twig" with {
+    "image_url": item.image_url,
+    "tags": item.tags,
+    "heading_level": item.heading_level,
+    "label": item.label,
+    "url": item.url,
+    "date": item.date,
+    "copy": item.copy,
+    "links": item.links
+  } %}
+  {% endfor %}
+</div>

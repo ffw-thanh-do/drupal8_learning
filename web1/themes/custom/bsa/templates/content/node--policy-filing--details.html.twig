@@ -1,0 +1,5 @@
+{% extends "node--details.html.twig" %}
+
+{% set fields = bsa_region(node) %}
+{% set custom_date = bsa_date(node.created.value, fields|merge([content.field_policy_type.0['#plain_text']])) %}
+

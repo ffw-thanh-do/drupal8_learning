@@ -1,0 +1,121 @@
+heading:
+  'Section title'
+heading_level:
+  2
+slider_arrow_class:
+  slide-arrow
+link_modifiers_next:
+  1:
+    next
+link_modifiers_prev:
+  1:
+    prev
+slides:
+  0:
+    heading:
+      'Section title'
+    heading_level:
+      3
+
+    article_heading:
+      'Article slide title'
+    article_heading_level:
+      4
+
+    date:
+      "Jan 25, 2019 | US"
+
+    img_url: "#"
+    img_src: "../../images/article-slide.png"
+    img_alt: "This is the alt text"
+    img_caption: "This is an image caption."
+    paragraph_content:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. "
+    tags:
+      0:
+        href:
+          '#'
+        background_color:
+          '#0fd439'
+        tag_content:
+          'tag name 1'
+        target:
+          '_blank'
+      1:
+        href:
+          '#'
+        background_color:
+          '#b32fda'
+        tag_content:
+          'tag name 2'
+        target:
+          '_blank'
+
+    link_base_class:
+      colored-link
+    link_modifiers:
+      1:
+        blue
+    link_attributes:
+      target:
+        _blank
+      href:
+        "#"
+    link_url:
+      https://github.com/fourkitchens/bsa
+    link_content:
+      "Read more"
+  1:
+    heading:
+      'Section title'
+    heading_level:
+      3
+
+    article_heading:
+      'Article slide title'
+    article_heading_level:
+      4
+
+    date:
+      "Jan 25, 2019 | US"
+
+    img_url: "#"
+    img_src: "../../images/article-slide.png"
+    img_alt: "This is the alt text"
+    img_caption: "This is an image caption."
+    paragraph_content:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. "
+    tags:
+      0:
+        href:
+          '#'
+        background_color:
+          '#0fd439'
+        tag_content:
+          'tag name 1'
+        target:
+          '_blank'
+      1:
+        href:
+          '#'
+        background_color:
+          '#b32fda'
+        tag_content:
+          'tag name 2'
+        target:
+          '_blank'
+
+    link_base_class:
+      colored-link
+    link_modifiers:
+      1:
+        blue
+    link_attributes:
+      target:
+        _blank
+      href:
+        "#"
+    link_url:
+      https://github.com/fourkitchens/bsa
+    link_content:
+      "Read more"

@@ -1,0 +1,23 @@
+<div class="bsa-leader-item">
+  <div class="leader-image">
+    {% block photo %}
+      <img src="{{ img_src }}" alt="{{ img_alt }}">
+    {% endblock %}
+  </div>
+  <div class="leader-content">
+    <div class="leader-name">
+      {% block headline %}
+        {% include "@atoms/02-text/00-headings/_heading.twig" with {
+          "heading_level": heading_level|default(3),
+          "heading": heading,
+        } %}
+      {% endblock %}
+    </div>
+    <p class="leader-position">
+      {% block position position %}
+    </p>
+    <p class="leader-copy">
+      {% block copy copy|raw %}
+    </p>
+  </div>
+</div>

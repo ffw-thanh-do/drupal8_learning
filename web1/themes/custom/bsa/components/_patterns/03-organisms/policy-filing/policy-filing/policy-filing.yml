@@ -1,0 +1,94 @@
+tags:
+  0:
+    href:
+      '#'
+    background_color:
+      '#0fd439'
+    tag_content:
+      'AI & Emerging Tech'
+    target:
+      '_blank'
+  1:
+    href:
+      '#'
+    background_color:
+      '#b32fda'
+    tag_content:
+      'Cross-Border Data Flow'
+    target:
+      '_blank'
+
+
+
+date:
+  "JAN 31, 2019  |  REGION  |  DOCUMENT TYPE  "
+
+heading_base_class:
+  "line-heading"
+heading_content:
+  "Policy Filing Title"
+heading_modifiers:
+  0:
+    'top'
+paragraph_content:
+  "Lorem ipsum uspendisse eu mi. Aliquam erat volutpat. Mauris lobortis tempus mauris. Sed euismod velit at diam. Vivamus at dolor. Lorem eu mi. Aliquam erat volutpat. Consectitur ipsum uspendisse eu mi. Aliquam erat volutpat. Mauris lobortis tempus mauris. Sed euismod velit at diam. Vivamus at dolor. Lorem eu mi. Lorem ipsum uspendisse eu mi. Aliquam erat volutpat. Mauris lobortis tempus mauris lorem ipsum uspendisse eu mi. Vivamus at dolor. Lorem eu mi. Aliquam erat volutpat. Consectitur ipsum uspendisse eu mi. Aliquam erat volutpat. Vivamus at dolor. Lorem eu mi. Aliquam erat volutpat. Consectitur ipsum uspendisse eu mi. Aliquam erat volutpat.
+   Nunc quis suscipit erat, id varius leo. Proin placerat urna vitae turpis consequat pretium. In at orci justo. Sed quis sem et ex faucibus fringilla. Cras vitae lacus eu tellus tristique iaculis. Suspendisse vel tempus ipsum, a commodo ipsum. Cras suscipit tincidunt purus eget mattis. Donec blandit iaculis pulvinar. Donec volutpat enim nec tortor ultricies, id porta lacus lacinia. Vivamus feugiat erat nulla, iaculis tempor nunc sollicitudin quis. Quisque quis ipsum a turpis varius ornare. Proin in augue orci. Donec auctor velit quis tellus dictum maximus a eget mauris. Quisque dignissim turpis dui, non molestie lacus dapibus sed.
+   Nulla in lacus sed libero ultrices dapibus. Sed tempus neque et purus tincidunt, ac tristique est feugiat. Donec convallis fringilla mi. Vestibulum id aliquet nunc. Phasellus a nibh quis sapien faucibus volutpat. Sed at egestas nisl, id vulputate nibh. Integer aliquet dictum tempor. Maecenas blandit semper blandit. Proin egestas ornare arcu, ut varius elit rutrum lacinia."
+
+
+
+link_base_class:
+  colored-link
+link_modifiers:
+  1:
+    blue
+link_attributes:
+  target:
+    _blank
+  href:
+    "#"
+link_url:
+  https://github.com/fourkitchens/bsa
+button_text:
+  "Download pdf"
+
+filing_tag_copy:
+  "Tags: "
+
+filing_tags:
+  0:
+    link_base_class:
+      "link"
+    link_attributes:
+      target:
+        _blank
+      href:
+        "#"
+    link_url:
+      https://github.com/fourkitchens/bsa
+    link_content:
+      "all"
+  1:
+    link_base_class:
+      "link"
+    link_attributes:
+      target:
+        _blank
+      href:
+        "#"
+    link_url:
+      https://github.com/fourkitchens/bsa
+    link_content:
+      "CYBERSECURITY"
+  2:
+    link_base_class:
+      "link"
+    link_attributes:
+      target:
+        _blank
+      href:
+        "#"
+    link_url:
+      https://github.com/fourkitchens/bsa
+    link_content:
+      "SMART CITIES"

@@ -1,0 +1,59 @@
+tags:
+  0:
+    href:
+      '#'
+    background_color:
+      '#0fd439'
+    tag_content:
+      'tag name 1'
+    target:
+      '_blank'
+  1:
+    href:
+      '#'
+    background_color:
+      '#b32fda'
+    tag_content:
+      'tag name with 2'
+    target:
+      '_blank'
+
+heading_level:
+  3
+heading:
+  "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. "
+
+link_tags:
+  0:
+    tag_attr:
+      href:
+        "#"
+    tag_url:
+      "https://github.com/fourkitchens/bsa"
+    tag_content:
+      "tag"
+  1:
+    tag_attr:
+      href:
+        "#"
+    tag_url:
+      "https://github.com/fourkitchens/bsa"
+    tag_content:
+      "tag 2"
+  2:
+    tag_attr:
+      href:
+        "#"
+    tag_url:
+      "https://github.com/fourkitchens/bsa"
+    tag_content:
+      "tag 3"
+
+date:
+  "JAN 25, 2019"
+
+document_type:
+  "DOCUMENT TYPE1"
+
+paragraph_content:
+  "LOCATION"

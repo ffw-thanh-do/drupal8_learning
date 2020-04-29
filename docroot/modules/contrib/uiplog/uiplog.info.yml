@@ -1,0 +1,15 @@
+name: User IP Log
+description: Logs users IP to db stable on user login.
+type: module
+# version: 8.x-1.0
+# core: 8.x
+package: uiplog
+
+dependencies:
+  - views
+
+# Information added by Drupal.org packaging script on 2016-03-22
+version: '8.x-1.0'
+core: '8.x'
+project: 'uiplog'
+datestamp: 1458645636

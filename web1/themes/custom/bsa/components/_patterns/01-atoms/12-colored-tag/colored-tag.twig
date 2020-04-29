@@ -1,0 +1,19 @@
+{#
+/**
+ *
+ * Available variables:
+ * - href: link href.
+ * - target: link target.
+ * - link: A rendered link element.
+ * - tag_content: link content.
+ * - background_color: circle background.
+ *
+ */
+#}
+
+<a href="{{ href }}" target="{{ target }}" class="colored-tag">
+  {% if background_color %}
+    <span style="background-color: {{ background_color }};" ></span>
+  {% endif %}
+  {{ tag_content }}
+</a>

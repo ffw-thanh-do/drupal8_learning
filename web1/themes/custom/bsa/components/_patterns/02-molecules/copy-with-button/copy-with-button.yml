@@ -1,0 +1,20 @@
+copy_block_top_heading_base_class:
+  "line-heading"
+copy_block_heading_copy:
+  "CONTACT BSA"
+copy_block_paragraph_copy:
+  "Lorem ipsum uspendisse eu mi. Aliquam erat volutpat. Lorem ipsum dolor sit amet. info@bsa.org"
+copy_block_more_link_base_class:
+  colored-link
+copy_block_more_link_modifiers:
+  1:
+    blue
+copy_block_more_link_attributes:
+  target:
+    _blank
+  href:
+    "#"
+copy_block_more_link_url:
+  https://github.com/fourkitchens/bsa
+copy_block_more_link_content:
+  "GO TO ALL CONTACTS"

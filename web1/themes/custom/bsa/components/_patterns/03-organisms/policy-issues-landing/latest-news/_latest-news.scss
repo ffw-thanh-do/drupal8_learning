@@ -1,0 +1,31 @@
+.latest-news-section {
+  @include wrapper;
+  background: $white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @include medium {
+    padding: 50px 130px;
+  }
+  .line-heading {
+    font-family: $montserrat;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 2px;
+    color: #2a2723;
+    font-weight: 400;
+  }
+  .latest-news {
+    margin-bottom: 40px;
+  }
+  .news-date p {
+    margin-bottom: 10px;
+  }
+  .news-tags {
+    margin-bottom: 5px;
+  }
+
+  .colored-link {
+    min-width: 160px;
+  }
+
+}

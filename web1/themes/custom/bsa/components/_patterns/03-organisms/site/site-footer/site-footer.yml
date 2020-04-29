@@ -1,0 +1,72 @@
+footer_menu_items:
+  - title: "Privacy Policy"
+    url: "/"
+  - title: "Terms of Use"
+    url: "/"
+  - title: "Site Map"
+    url: "/"
+
+footer_copyright:
+  "© 2019 BSA  |  The Software Alliance. All Rights Reserved."
+
+link_base_class:
+  bordered-link
+link_modifiers:
+  1:
+    white
+link_attributes:
+  target:
+    _blank
+  href:
+    "#"
+link_url:
+  https://github.com/fourkitchens/bsa
+link_content:
+  "Contact BSA"
+
+social_links:
+  0:
+    href:
+      '#'
+    target:
+      '_blank'
+    icon_url:
+      '../../images/social-icons/youtube.png'
+    alt:
+      'youtube link'
+  1:
+    href:
+      '#'
+    target:
+      '_blank'
+    icon_url:
+      '../../images/social-icons/facebook.png'
+    alt:
+      'facebook link'
+  2:
+    href:
+      '#'
+    target:
+      '_blank'
+    icon_url:
+      '../../images/social-icons/twitter.png'
+    alt:
+      'twitter link'
+  3:
+    href:
+      '#'
+    target:
+      '_blank'
+    icon_url:
+      '../../images/social-icons/rss.png'
+    alt:
+      'rss link'
+  4:
+    href:
+      '#'
+    target:
+      '_blank'
+    icon_url:
+      '../../images/social-icons/email.png'
+    alt:
+      'email link'

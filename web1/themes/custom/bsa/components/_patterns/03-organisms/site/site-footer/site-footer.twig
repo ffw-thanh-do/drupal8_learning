@@ -1,0 +1,55 @@
+<div class="footer-wrapper">
+  <footer class="footer">
+    {% block footer_content %}
+
+      {#button#}
+      {% block footer_contact_block %}
+        <div class="footer-button">
+          {% include "@atoms/01-links/link/link.twig" with {
+            "link_base_class": link_base_class,
+            "link_modifiers": link_modifiers,
+            "link_url": link_url,
+            "link_attributes": link_attributes,
+            "link_content": link_content
+          }%}
+        </div>
+      {% endblock %}
+
+      {#paragraph with coppyright#}
+      {% block footer_copyright %}
+        <div class="footer-copyright">
+          {% include "@atoms/02-text/text/01-paragraph.twig" with {
+            paragraph_content: footer_copyright
+          }%}
+        </div>
+      {% endblock %}
+
+
+      {% block footer_menu %}
+        <div class="footer-menu">
+          {% include "@molecules/menus/inline-menu/inline-menu.twig" with {
+            items: footer_menu_items
+          } %}
+        </div>
+      {% endblock %}
+
+      {% block social_block %}
+        <ul class="social-links">
+          {% for social_link in social_links %}
+            <li>
+              {% include "@atoms/13-social-icon/social-icon.twig" with {
+                "href": social_link.href,
+                "target": social_link.target,
+                "icon_url": social_link.icon_url,
+                "alt": social_link.alt
+              } %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endblock %}
+
+    {% endblock %}
+  </footer>
+</div>
+
+

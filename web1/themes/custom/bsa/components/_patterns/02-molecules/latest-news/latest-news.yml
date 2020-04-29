@@ -1,0 +1,36 @@
+tags:
+  0:
+    href:
+      '#'
+    background_color:
+      '#0fd439'
+    tag_content:
+      'tag name 1'
+    target:
+      '_blank'
+  1:
+    href:
+      '#'
+    background_color:
+      '#b32fda'
+    tag_content:
+      'tag name with 2'
+    target:
+      '_blank'
+heading_level:
+  3
+heading:
+  "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. "
+date_content:
+  "Jan 25, 2019"
+country_region:
+  "US"
+news_teaser:
+  "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. "
+read_more_link_attributes:
+  href:
+    "#"
+read_more_link_url:
+  "https://github.com/fourkitchens/bsa"
+read_more_link_content:
+  "Read more"

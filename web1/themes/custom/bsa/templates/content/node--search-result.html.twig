@@ -1,0 +1,12 @@
+{% extends "@molecules/_search-result.twig" %}
+
+{% set tags = content.field_policy_issue %}
+{% set date_info = bsa_date(node.created.value) %}
+{% set type = node.type.entity.label|trim|lower %}
+{% if type == 'landing page' %}
+  {% set type = '' %}
+{% endif %}
+{% set body = bsa_summary(content.body, 1) %}
+{% if content.field_sections %}
+  {% set body = bsa_trim(content.field_sections|render, 200, url) %}
+{% endif %}

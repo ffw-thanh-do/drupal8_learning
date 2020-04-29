@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * drupal_8_element.module file
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function drupal_8_element_theme() {
+  $theme = [];
+  $theme['people'] = [
+    'render element' => 'elements',
+    'file' => 'people.page.inc',
+    'template' => 'people',
+  ];
+  $theme['people_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'people.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+* Implements hook_theme_suggestions_HOOK().
+*/
+function drupal_8_element_theme_suggestions_people(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#people'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'people__' . $sanitized_view_mode;
+  $suggestions[] = 'people__' . $entity->bundle();
+  $suggestions[] = 'people__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'people__' . $entity->id();
+  $suggestions[] = 'people__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}

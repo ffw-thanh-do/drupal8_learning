@@ -1,0 +1,16 @@
+# Breakpoints - change based on site need
+bsa.small:
+  label: small
+  mediaQuery: 'all and (min-width: 25em)'
+bsa.small-med:
+  label: small-med
+  mediaQuery: 'all and (min-width: 26em)'
+bsa.small-large:
+  label: small-large
+  mediaQuery: 'all and (min-width: 41em)'
+bsa.medium:
+  label: medium
+  mediaQuery: 'all and (min-width: 48em)'
+bsa.large:
+  label: large
+  mediaQuery: 'all and (min-width: 61.25em)'

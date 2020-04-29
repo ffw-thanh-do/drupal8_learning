@@ -1,0 +1,31 @@
+{% extends "@molecules/_block_custom.twig" %}
+
+  {#{% set classes = 'simple-block ' ~ derivative_plugin_id ~ ' '%}#}
+
+{% block main %}
+  <div class="simple-block {{ classes|join(" ") }}">
+    {% block heading %}
+      <div class="heading">
+        {% include "@atoms/02-text/00-headings/_heading.twig" with {
+          "heading": heading|default(label|upper),
+          "heading_level": heading_level|default("2"),
+          "heading_base_class": heading_base_class|default("line-heading")
+        } %}
+      </div>
+    {% endblock %}
+    {% block content %}
+      {# Leaving empty as each block will have it's own content #}
+    {% endblock %}
+    {% if button_url and button_text %}
+      {% block button %}
+        {% include "@atoms/01-links/link/link.twig" with {
+          "link_base_class": "colored-link",
+          "link_modifiers": ["blue"],
+          "link_attributes": [],
+          "link_url": button_url,
+          "link_content": button_text
+        } %}
+      {% endblock %}
+    {% endif %}
+  </div>
+{% endblock %}

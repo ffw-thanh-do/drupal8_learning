@@ -1,0 +1,7 @@
+{% extends "@atoms/16-global-member/global-member.twig" %}
+
+{% set href = content.field_website.0['#url'] %}
+
+{% block img %}
+  {{ content.field_logo }}
+{% endblock %}

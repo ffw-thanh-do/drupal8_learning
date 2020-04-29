@@ -1,0 +1,72 @@
+label:
+  'BSA REGIONAL MEMBERS'
+heading_level:
+  3
+
+items:
+  0:
+    href:
+      "#"
+    target:
+      "_blank"
+    img_src:
+      "../../images/members-temp.jpg"
+    img_alt:
+      "member copy"
+    member_name:
+      "member copy"
+  1:
+    href:
+      "#"
+    target:
+      "_blank"
+    img_src:
+      "https://placeimg.com/100/100/animals/grayscale"
+    img_alt:
+      "member copy"
+    member_name:
+      "member copy"
+  2:
+    href:
+      "#"
+    target:
+      "_blank"
+    img_src:
+      "https://placeimg.com/100/100/tech/grayscale"
+    img_alt:
+      "member copy"
+    member_name:
+      "member copy"
+  3:
+    href:
+      "#"
+    target:
+      "_blank"
+    img_src:
+      "https://placeimg.com/100/100/tech"
+    img_alt:
+      "member copy"
+    member_name:
+      "member copy"
+  4:
+    href:
+      "#"
+    target:
+      "_blank"
+    img_src:
+      "https://placeimg.com/100/100/people"
+    img_alt:
+      "member copy"
+    member_name:
+      "member copy"
+  5:
+    href:
+      "#"
+    target:
+      "_blank"
+    img_src:
+      "https://placeimg.com/100/100/nature"
+    img_alt:
+      "member copy"
+    member_name:
+      "member copy"

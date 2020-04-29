@@ -1,0 +1,64 @@
+<div class="policy-filings-section">
+  <div class="tags">
+    {% block tags %}
+      {% for tag in tags %}
+        {% include "@atoms/12-colored-tag/colored-tag.twig" with {
+          "href": tag.href,
+          "background_color": tag.background_color,
+          "tag_content": tag.tag_content,
+          "target": tag.target
+        } %}
+      {% endfor %}
+    {% endblock %}
+  </div>
+  <div class="filing-date">
+    {% block date %}
+      {% include "@atoms/02-text/text/08-date.twig" with {
+        "date": date
+      } %}
+    {% endblock %}
+  </div>
+  <div class="filing-heading">
+    {% block heading %}
+      {% include "@atoms/02-text/text/09-line-heading-top.twig" with {
+        "heading_modifiers": ["top"],
+        "heading_content": heading_content,
+      } %}
+    {% endblock %}
+  </div>
+  {% block content %}
+    {% block main_copy %}
+      <div class="filing-main-copy">
+        {% include "@atoms/02-text/text/01-paragraph.twig" with {
+          "paragraph_content": paragraph_content
+        } %}
+      </div>
+    {% endblock %}
+    {% block button %}
+      {% include "@atoms/01-links/link/link.twig" with {
+        "link_base_class": "colored-link",
+        "link_modifiers": ["blue"],
+        "link_attributes": [],
+        "link_url": button_url,
+        "link_content": button_text
+      } %}
+    {% endblock %}
+  {% endblock %}
+  {% if filing_tag_copy %}
+    <div class="filing-bottom-tags">
+      <span class="filing-tags">{{ filing_tag_copy }}</span>
+      {% block filling_tags %}
+        {% for filing_tag in filing_tags %}
+          {% include "@atoms/01-links/link/link.twig" with {
+            "link_modifiers": filing_tag.link_modifiers,
+            "link_base_class": filing_tag.link_base_class,
+            "link_attributes": filing_tag.link_attributes,
+            "link_url": filing_tag.link_url,
+            "link_content": filing_tag.link_content
+          } %}
+        {% endfor %}
+      {% endblock %}
+    </div>
+  {% endif %}
+</div>
+

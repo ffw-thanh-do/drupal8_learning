@@ -1,0 +1,30 @@
+tags:
+  0:
+    href:
+      '#'
+    background_color:
+      '#0fd439'
+    tag_content:
+      'AI & Emerging Tech'
+    target:
+      '_blank'
+  1:
+    href:
+      '#'
+    background_color:
+      'purple'
+    tag_content:
+      'AI & Emerging Tech 2'
+    target:
+      '_blank'
+
+img_src:
+  "../../images/bsa-portraits/jim.jpg"
+heading_level:
+  3
+heading:
+  "Bobby Jenkins"
+position:
+  "Job Title"
+paragraph_content:
+  "Lorem ipsum uspendisse eu mi. Aliquam erat volutpat. Mauris lobortis tempus mauris. Sed euismod velit at diam…"

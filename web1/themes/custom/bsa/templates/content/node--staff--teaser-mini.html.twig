@@ -1,0 +1,14 @@
+{% extends "@molecules/bsa-staff/bsa-staff.twig" %}
+
+{% set heading = label %}
+{% set heading_level = 3 %}
+{% set position = node.field_position_title.value %}
+{% set img_src = content.field_profile_photo %}
+
+{% block photo %}
+  {{ content.field_profile_photo }}
+{% endblock %}
+
+{% block body %}
+  {{ bsa_summary(content.body) }}
+{% endblock %}

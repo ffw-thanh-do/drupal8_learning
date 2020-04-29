@@ -1,0 +1,9 @@
+{% for item in items %}
+  {% include "@atoms/01-links/link/link.twig" with {
+  "link_base_class": "colored-link",
+  "link_modifiers": ["blue"],
+  "link_attributes": [],
+  "link_url": item.content['#url'],
+  "link_content": item.content['#title']
+  } %}
+{% endfor %}

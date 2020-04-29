@@ -1,0 +1,102 @@
+@mixin button($bg:$black, $color:$white, $hoverBg: $gray, $hoverColor: $white) {
+  background-color: $bg;
+  border: none;
+  color: $color;
+  cursor: pointer;
+  line-height: 1.4;
+  padding: 1.3em 1.5em;
+  display: inline-block;
+  font-family: $montserrat;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color 0.1s ease-in, color 0.1s ease-in;
+  @include large {
+    font-size: 1rem;
+  }
+  &:visited {
+    color: $color;
+  }
+  &:hover {
+    background-color: $hoverBg;
+  }
+}
+
+@mixin button-alt {
+  @include button($gray, $white, $black);
+
+  font-weight: 600;
+  font-size: 0.7rem;
+  padding: 0.4em 0.6em 0.3em;
+}
+
+@mixin button-alt-2 {
+  @include button($gray-lightest, $black, $gray-lighter);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: none;
+}
+
+@mixin button-blue {
+  @include button($button-blue, $white, $blue-light);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.button {
+  @include button;
+
+  &--alt {
+    @include button;
+    @include button-alt;
+  }
+
+  &--alt-2 {
+    @include button;
+    @include button-alt-2;
+  }
+
+  &--blue {
+    @include button;
+    @include button-blue;
+  }
+}
+
+
+@mixin bordered-button($borderColor:$blue, $borderColorHover:$blue-light, $color:$blue, $colorHover:$blue-light) {
+  background: none;
+  border: 2px solid $borderColor;
+  color: $color;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 1.4;
+  font-family: $montserrat;
+  font-size: 1rem;
+  padding: .758em 1.5em;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:visited {
+    color: $color;
+  }
+
+  &:hover {
+    color: $colorHover;
+    border: 2px solid $borderColorHover;
+  }
+}
+
+.bordered-button {
+  @include bordered-button;
+
+  &--white {
+    @include bordered-button;
+    @include bordered-button($white, $white, $white, $white);
+  }
+
+}

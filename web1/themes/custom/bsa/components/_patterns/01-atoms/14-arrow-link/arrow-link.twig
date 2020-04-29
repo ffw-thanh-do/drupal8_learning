@@ -1,0 +1,31 @@
+{#
+/**
+ * Available variables:
+ * - link_content - the content of the link (typically text)
+ * - link_url - the url this link should poing to
+ * - link_attributes - array of attribute,value pairs
+ * - link_base_class - the base class name
+ * - link_modifiers - array of modifiers to add to the base classname
+ * - link_blockname - blockname prepended to the base classname
+ *
+ * Available blocks:
+ * - link_image_src - src for image link.
+ *
+ */
+#}
+{% set link_base_class = link_base_class|default('arrow-link') %}
+
+<a
+{{ bem(link_base_class, (link_modifiers), link_blockname) }}
+  {% for attribute,value in link_attributes %}
+{{ attribute }}="{{ value }}"
+{% endfor %}
+href="{{ link_url }}"
+>
+{% if link_content %}
+  <span>
+    {{ link_content }}
+  </span>
+{% endif %}
+<img src="{{ link_image_src }}">
+</a>

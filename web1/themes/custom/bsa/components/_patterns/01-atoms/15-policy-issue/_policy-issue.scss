@@ -1,0 +1,83 @@
+.policy-issue {
+  padding: 0;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 10px;
+  img,
+  picture {
+    width: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    img {
+      margin: 0 auto;
+    }
+    @include xl {
+      width: 72px;
+      margin-right: 20px;
+    }
+  }
+
+  .copy {
+    display: inline-block;
+    width: calc(100% - 80px);
+    @include xl {
+      width: calc(100% - 100px);
+    }
+  }
+
+  p {
+    vertical-align: middle;
+    font-family: $nunito;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: normal;
+    display: inline-block;
+    margin: 0;
+    @include medium {
+      font-size: 23px;
+    }
+
+  }
+
+
+  .issue-link {
+    color: $black;
+    text-decoration: none;
+    font-size: 1rem;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+
+}
+
+
+
+
+// Drupal specific.
+.policy-issues-block-home {
+  margin-bottom: 40px;
+
+  @include mobile {
+    text-align: center;
+    .heading,
+    .views-element-container {
+      text-align: left;
+    }
+    .colored-link {
+      margin: 0 auto;
+      padding: 15px 40px;
+    }
+  }
+
+  @include xl {
+    @include medium {
+      margin-bottom: 0;
+    }
+    .views-element-container {
+      margin-bottom: 35px;
+    }
+  }
+}

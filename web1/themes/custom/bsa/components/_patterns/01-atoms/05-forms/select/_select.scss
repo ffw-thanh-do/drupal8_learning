@@ -1,0 +1,231 @@
+select::-ms-expand {
+  display: none;
+}
+
+
+select {
+  min-width: 280px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  outline: none;
+  height: 44px;
+  padding: 5px 20px;
+  border: solid 1px rgba(42, 39, 35, 0.25);
+  border-radius: 0;
+  position: relative;
+  background: $white url('/themes/custom/bsa/images/select.png') no-repeat right 10px top 15px;
+  background-size: 19px auto;
+}
+
+.chosen-container {
+  min-width: 260px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  outline: none;
+  height: 42px;
+  padding: 5px 0;
+  border: solid 1px rgba(42, 39, 35, 0.25);
+  background: $white;
+  position: relative;
+
+  &:after {
+    display: none;
+  }
+
+  &:before {
+    content: '';
+    border: none;
+    outline: none;
+    display: block;
+    width: 20px;
+    height: 10px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: url('/themes/custom/bsa/images/select.png') no-repeat;
+    background-size: 100% auto;
+  }
+
+  &.chosen-container-active {
+    &:before {
+      transform: rotate(180deg);
+    }
+    &.chosen-with-drop .chosen-single {
+      background: none;
+      border: none;
+      box-shadow: none;
+    }
+  }
+
+  .chosen-results {
+    margin: 0;
+    padding: 0;
+  }
+
+  .chosen-single {
+    background: none;
+    border: none;
+    box-shadow: none;
+    height: 100%;
+    padding: 0 20px;
+
+    div b {
+      display: none;
+    }
+
+    span {
+      font-family: $nunito;
+      font-size: 16px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 26px;
+      letter-spacing: normal;
+      color: $black;
+      margin-right: 0;
+    }
+  }
+
+  ul.chosen-results {
+    display: block;
+    li.result-selected {
+      background-image: none;
+      background-color: #ececec;
+    }
+
+    li.active-result {
+      cursor: pointer;
+      font-family: $nunito;
+      font-size: 16px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: $black;
+      position: relative;
+      padding: 5px 16px;
+
+      &.highlighted {
+        background-image: none;
+        background-color: #ececec;
+      }
+    }
+  }
+}
+
+.chosen-container-active .chosen-choices {
+  box-shadow: none;
+}
+
+.chosen-container-multi .chosen-choices {
+  border: none;
+  height: 100%;
+  padding: 0 20px;
+  background: none;
+
+  li {
+    height: 100%;
+  }
+
+  li.search-field input[type="text"] {
+    font-family: $nunito;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $black;
+    padding-top: 4px;
+  }
+
+  li.search-choice {
+    margin: 0 4px 0 0;
+    border: none;
+    border-radius: 0;
+    background: $light-grey;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 30px 0 10px;
+
+    span {
+      font-family: $nunito;
+      font-size: 16px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #2a2723;
+    }
+
+    .search-choice-close {
+      top: 10px;
+      right: 8px;
+    }
+  }
+}
+
+
+.chosen-container.chosen-container-multi {
+  .chosen-drop .chosen-results {
+    .active-result {
+      position: relative;
+      padding-left: 53px;
+      display: block;
+
+      &:after {
+        position: absolute;
+        left: 20px;
+        top: 2px;
+        content: '';
+        width: 24px;
+        height: 24px;
+        display: block;
+        background: $white;
+        border: 1px solid rgba(42, 39, 35, 0.25);
+      }
+    }
+
+    .result-selected {
+      position: relative;
+      padding-left: 53px;
+      display: block;
+      font-family: $nunito;
+      font-size: 16px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #2a2723;
+
+      &:after {
+        position: absolute;
+        left: 20px;
+        top: 2px;
+        content: '';
+        width: 24px;
+        height: 24px;
+        display: block;
+        border: 1px solid rgba(42, 39, 35, 0.25);
+        background: $white url('/themes/custom/bsa/images/checkbox.png') no-repeat center;
+        background-size: 82% auto;
+      }
+    }
+  }
+
+
+}
+
+
+.chosen-container .chosen-drop {
+  padding-top: 5px;
+  border: none;
+  border-top: 1px solid #ccc;
+}

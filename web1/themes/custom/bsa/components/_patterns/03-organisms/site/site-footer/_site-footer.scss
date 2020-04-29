@@ -1,0 +1,140 @@
+.footer-wrapper {
+  background: $dark-blue;
+}
+.footer {
+  clear: both;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  padding-left: 0;
+  padding-right: 0;
+  @include medium {
+    padding: 40px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  @include large {
+    padding: 40px 135px;
+  }
+}
+
+.footer-button {
+  text-align: left;
+  margin: 10px auto;
+  order: 1;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @include medium {
+    margin: 0 0 10px 0;
+  }
+}
+
+nav#block-footer {
+  order: 2;
+  width: 100%;
+  ul {
+    width: 100%;
+    li {
+      margin: 0;
+      text-align: left;
+      border-bottom: 1px solid $white;
+      &:first-child {
+        border-top: 1px solid $white;
+      }
+      a {
+        color: $white;
+        text-transform: none;
+        font-size: 16px;
+        font-weight: 200;
+        padding: 10px;
+        display: inline-block;
+        letter-spacing: 0.3px;
+        &:hover {
+          color: $white;
+          text-decoration: none;
+        }
+      }
+      @include medium {
+        border: none;
+        &:first-child {
+          border: none;
+        }
+      }
+    }
+  }
+
+  @include medium {
+    order: 3;
+    ul {
+      text-align: left;
+      li {
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+#block-socialicons,
+.social-links {
+  order: 3;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  li {
+    padding: 0;
+    display: inline-block;
+    margin: 0 15px;
+    vertical-align: middle;
+  }
+  @include medium {
+    padding: 0;
+    order: 2;
+    li {
+      margin: 0 5px;
+    }
+  }
+  @include xl {
+    position: relative;
+    top: 25px;
+    li {
+      margin: 0 23px;
+    }
+  }
+}
+
+.footer-copyright {
+  order: 2;
+  margin: 10px 0;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  p {
+    color: $white;
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 200;
+  }
+
+  @include medium {
+    order: 4;
+  }
+}
+
+
+@include medium {
+  .footer-button,
+  nav#block-footer,
+  .footer-copyright {
+    width: 60%;
+  }
+
+  #block-socialicons {
+    width: 35%;
+  }
+}

@@ -1,0 +1,14 @@
+<div class="share-block-wrapper">
+  <div class="share-block">
+    <div class="copy">
+      {{ 'Share'|t }}
+    </div>
+    <div class="dropdown-items">
+      {% block content %}
+        <div class="share-item">{{ facebook }}</div>
+        <div class="share-item">{{ inst }}</div>
+        <div class="share-item">{{ google }}</div>
+      {% endblock %}
+    </div>
+  </div>
+</div>

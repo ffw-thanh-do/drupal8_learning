@@ -1,0 +1,7 @@
+{% extends "@organisms/press-releases/media-contact/media-contacts.twig" %}
+
+{% set section_heading_level = 2 %}
+
+{% block content %}
+  {{ content|without("field_country_region") }}
+{% endblock %}

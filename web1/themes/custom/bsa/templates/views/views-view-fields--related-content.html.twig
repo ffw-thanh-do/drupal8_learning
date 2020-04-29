@@ -1,0 +1,7 @@
+{% include "@molecules/related-content/related-content.twig" with {
+  "heading_url": fields.view_node.content|striptags,
+  "heading": fields.title.content,
+  "paragraph_content": fields.body.content,
+  "date": fields.created.content|striptags,
+  "type": fields.type.content|striptags
+} %}

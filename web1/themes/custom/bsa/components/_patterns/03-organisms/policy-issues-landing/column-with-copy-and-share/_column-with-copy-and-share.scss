@@ -1,0 +1,41 @@
+.copy-and-share{
+  background: $white;
+  width: 100%;
+  margin: 0 auto;
+  flex-direction: row;
+  @include wrapper;
+  .copy {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    p {
+      margin-bottom: 40px;
+      font-size: 1rem;
+    }
+    h2 {
+      font-family: $montserrat;
+      font-style: normal;
+      font-stretch: normal;
+      letter-spacing: normal;
+      color: #000000;
+    }
+  }
+  .share {
+    width: 100%;
+    text-align: center;
+  }
+  @include medium {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    .copy {
+      width: 55%;
+      text-align: left;
+    }
+    .share {
+      text-align: center;
+      width: 39%;
+    }
+  }
+}

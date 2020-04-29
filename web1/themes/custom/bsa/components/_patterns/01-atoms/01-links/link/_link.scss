@@ -1,0 +1,117 @@
+/// Link
+$color-link: $gray-darker;
+$color-link--hover: $gray-light;
+
+@mixin link {
+  color: $color-link;
+
+  &:hover {
+    color: $color-link--hover;
+  }
+}
+
+.link {
+  @include link;
+}
+
+
+@mixin bordered-link($borderColor:$dark-blue, $borderColorHover:$blue, $color:$blue, $colorHover:$blue) {
+  background: none;
+  border: 2px solid $borderColor;
+  color: $color;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 1.4;
+  padding: 13px 1.5em;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include large {
+    font-size: 1rem;
+  }
+
+  &:visited {
+    color: $color;
+  }
+
+  &:hover {
+    color: $colorHover;
+    border: 2px solid $borderColorHover;
+  }
+}
+
+.bordered-link {
+  @include bordered-link;
+
+  &--white {
+    @include bordered-link($white, $white, $white, $white);
+  }
+}
+
+@mixin colored-link($bg:$black, $color:$white, $hoverBg: $gray, $hoverColor: $white) {
+  background-color: $bg;
+  border: none;
+  color: $color;
+  cursor: pointer;
+  line-height: 1.4;
+  padding: 15px 45px;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color 0.1s ease-in, color 0.1s ease-in;
+  letter-spacing: 1px;
+  @include large {
+    font-size: 1rem;
+  }
+  &:visited {
+    color: $color;
+  }
+  &:hover {
+    background-color: $hoverBg;
+  }
+}
+
+.colored-link {
+  @include colored-link;
+
+  &--blue {
+    @include colored-link($blue, $white, $blue-light, $white);
+  }
+
+  &--blue-light {
+    @include colored-link($blue-light, $white, $blue-light, $white);
+  }
+
+}
+
+
+form.contact-form.contact-message-form {
+  .form-actions {
+    .js-form-submit {
+      @include colored-link($blue, $white, $blue-light, $white);
+    }
+  }
+}
+
+.slide-arrow {
+  display: block;
+  text-decoration: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  background: url('/themes/custom/bsa/images/white-arrow.png') no-repeat center;
+  background-size: 100%;
+
+  &:hover {
+    background: url('/themes/custom/bsa/images/black-arrow.png') no-repeat center;
+    background-size: 100%;
+    text-decoration: none;
+  }
+
+  &.slide-arrow--next {
+    transform: rotate(180deg);
+  }
+}

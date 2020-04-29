@@ -1,0 +1,12 @@
+{% extends "@molecules/_block_custom.twig" %}
+
+{% block main %}
+  <div class="block-with-filter {{ classes|join(" ") }}">
+    {% include "@atoms/02-text/00-headings/_heading.twig" with {
+      "heading": label,
+      "heading_level": 1
+    } %}
+    {% include "@atoms/20-filter-button/filter-button.twig" %}
+    {{ content }}
+  </div>
+{% endblock %}

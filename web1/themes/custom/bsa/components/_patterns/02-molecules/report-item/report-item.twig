@@ -1,0 +1,56 @@
+<div class="teaser-item">
+  {% if image_url %}
+    <div class="image">
+      <img src="{{ image_url }}" alt="">
+    </div>
+  {% endif %}
+  <div class="teaser-info">
+    <div class="teaser-tags">
+      {% block tags %}
+        {% for tag in tags %}
+          {% include "@atoms/12-colored-tag/colored-tag.twig" with {
+            "href": tag.href,
+            "background_color": tag.background_color,
+            "tag_content": tag.tag_content,
+            "target": tag.target
+          } %}
+        {% endfor %}
+      {% endblock %}
+    </div>
+    <div class="teaser-headline">
+      {% block headline %}
+        {% include "@atoms/02-text/00-headings/_heading.twig" with {
+          "heading_level": heading_level,
+          "heading": label,
+          "heading_url": url
+        } %}
+      {% endblock %}
+    </div>
+    <div class="teaser-date">
+      {% block date %}
+        {% include "@atoms/02-text/text/01-paragraph.twig" with {
+          "paragraph_content": date_content
+        } %}
+      {% endblock %}
+    </div>
+    <div class="teaser-copy">
+      {% block teaser %}
+        {% embed "@atoms/02-text/text/01-paragraph.twig" %}
+          {% block paragraph_content %}
+            {{ copy }}
+          {% endblock %}
+        {% endembed %}
+      {% endblock %}
+    </div>
+    <div class="teaser-actions">
+
+      {% for link in links %}
+        {% include "@atoms/01-links/link/link.twig" with {
+          "link_content": link.copy,
+          "link_attributes": link.link_attributes,
+        } %}
+      {% endfor %}
+
+    </div>
+  </div>
+</div>

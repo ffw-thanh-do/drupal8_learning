@@ -1,0 +1,17 @@
+{% extends "@organisms/bsa-bio/bsa-bio.twig" %}
+
+{% set article_heading = label %}
+{% set job_title = content.field_position_title.0 %}
+
+{% block bio_image %}
+  {{ content.field_profile_photo }}
+{% endblock %}
+
+{% block main_copy %}
+  {{ content.body }}
+{% endblock %}
+
+{% block social %}
+  {{ content.field_social_links }}
+  {{ content.field_high_res_img }}
+{% endblock %}

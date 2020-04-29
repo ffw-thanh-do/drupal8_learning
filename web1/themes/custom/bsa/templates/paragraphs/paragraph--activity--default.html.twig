@@ -1,0 +1,7 @@
+{% extends "@molecules/_teaser_generic.twig" %}
+
+{% set label = content.field_title.0 %}
+{% set image = content.field_image.0 %}
+{% set links = content.field_cta_link %}
+{% set date_info = bsa_date(content.field_date.0['#markup'], [content.field_tags.0['#plain_text']]) %}
+{% set body = content.field_paragraph_body %}

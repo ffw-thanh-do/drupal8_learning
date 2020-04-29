@@ -1,0 +1,21 @@
+{% extends "@molecules/_block_custom.twig" %}
+
+{% block main %}
+  <div class="media-contacts-section{{ region_class }}">
+    {% include "@atoms/02-text/00-headings/_heading.twig" with {
+      "heading_level": section_heading_level,
+      "heading": label|upper
+    } %}
+    <div class="contact-items">
+      {% block content %}
+        {% for item in items %}
+          {% include "@molecules/media-contact/media-contact.twig" with {
+            "heading_level": item.heading_level,
+            "label": item.label,
+            "copy": item.copy
+          } %}
+        {% endfor %}
+      {% endblock %}
+    </div>
+  </div>
+{% endblock %}

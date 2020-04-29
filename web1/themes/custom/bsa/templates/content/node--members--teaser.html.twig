@@ -1,0 +1,17 @@
+{% extends "@atoms/18-bsa-regional-member/bsa-regional-member.twig" %}
+
+{% if content.field_website.0['#title'] and content.field_website.0['#url'] %}
+  {% set member_name = link(content.field_website.0['#title'], content.field_website.0['#url'], {
+    'target': '_blank'
+  }) %}
+{% elseif content.field_website.0['#url'] %}
+  {% set member_name = link(node.getTitle(), content.field_website.0['#url'], {
+    'target': '_blank'
+  }) %}
+{% else %}
+  {% set member_name = node.getTitle() %}
+{% endif %}
+
+{% block member_icon %}
+  {{ content.field_logo }}
+{% endblock %}

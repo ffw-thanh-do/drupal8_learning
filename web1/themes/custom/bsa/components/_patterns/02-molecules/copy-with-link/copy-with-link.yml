@@ -1,0 +1,20 @@
+bg_color:
+  '#fff'
+font_color:
+  '#000'
+block_heading_copy:
+  "Nullam ante enim, sollicitudin at."
+block_paragraph_copy:
+  "Lorem psum uspendisse eu mi. Aliquam erat volutpat."
+link_class:
+  "arrow-link"
+link_image_alt:
+  "alt for image"
+link_target:
+    "_blank"
+link_href:
+  "https://github.com/fourkitchens/bsa"
+link_image_src:
+  "../../images/right-blue-arrow.png"
+link_content:
+  "Lorem Ipsums"

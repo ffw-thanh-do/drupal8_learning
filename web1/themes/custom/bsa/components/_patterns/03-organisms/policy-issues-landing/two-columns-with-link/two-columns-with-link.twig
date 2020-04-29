@@ -1,0 +1,33 @@
+{% block two_columns_with_link %}
+  <div class="two-columns-with-link">
+    <div class="left">
+      {% include "@molecules/copy-with-link/copy-with-link.twig" with {
+        "bg_color": bg_color,
+        "font_color": font_color,
+        "block_heading_copy": block_heading_copy,
+        "block_paragraph_copy": block_paragraph_copy,
+        "link_class": link_class,
+        "link_image_alt": link_image_alt,
+        "link_target": link_target,
+        "link_href": link_href,
+        "link_image_src": link_image_src,
+        "link_content": link_content
+      } %}
+    </div>
+    <div class="right">
+      {% include "@molecules/copy-with-button/copy-with-button.twig" with {
+        "copy_block_top_heading_base_class": right_top_heading_base_class,
+        "copy_block_heading_copy": right_heading_copy,
+        "copy_block_paragraph_copy": right_paragraph_copy,
+        "copy_block_more_link_base_class": more_link_base_class,
+        "copy_block_more_link_modifiers": more_link_modifiers,
+        "copy_block_more_link_attributes": more_link_attributes,
+        "copy_block_more_link_url": more_link_url,
+        "copy_block_more_link_content": more_link_content
+      } %}
+    </div>
+
+  </div>
+{% endblock %}
+
+

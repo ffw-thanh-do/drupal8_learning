@@ -1,0 +1,14 @@
+link_modifiers:
+  1:
+    right
+link_attributes:
+  target:
+    _blank
+  href:
+    "#"
+link_url:
+  https://github.com/fourkitchens/bsa
+link_image_src:
+  "../../images/right-blue-arrow.png"
+link_content:
+  "Lorem Ipsum"

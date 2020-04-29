@@ -1,0 +1,12 @@
+name: 'Acquia Lift Inspector (Development only)'
+description: 'Show information about the active visitor by using a convenient shortcut (CTRL+i)'
+package: Acquia
+core: 8.x
+type: module
+dependencies:
+  - acquia_lift:acquia_lift
+
+# Information added by Drupal.org packaging script on 2019-12-12
+version: '8.x-4.1'
+project: 'acquia_lift'
+datestamp: 1576112289

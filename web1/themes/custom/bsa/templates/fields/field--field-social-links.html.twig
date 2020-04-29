@@ -1,0 +1,19 @@
+<div class="social">
+  {% if not label_hidden %}
+    {% include "@atoms/02-text/00-headings/_heading.twig" with {
+      "heading": label,
+      "heading_level": 4
+    } %}
+  {% endif %}
+  <div class="links">
+    {% for item in items %}
+      <a href="{{ item.content['#url'] }}">
+        {% if item.icon_src %}
+          <img src="/{{ item.icon_src }}" alt="{{ item.content['#title'] }}">
+        {% else %}
+          {{ item.content['#title'] }}
+        {% endif %}
+      </a>
+    {% endfor %}
+  </div>
+</div>

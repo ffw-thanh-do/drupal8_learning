@@ -1,0 +1,18 @@
+{#
+/**
+ * Available variables:
+ * - date_base_class - the base classname
+ * - date_modifiers - array of modifiers to add to the base classname
+ * - date_blockname - blockname prepended to the base classname
+ * - date_content - the content of the paragraph (typically text)
+ *
+ * Available blocks:
+ * - date - used to replace the content of the paragraph with something other than plain text
+ *   for example: A formatted text field in Drupal
+ */
+#}
+{% set date_base_class = date_base_class|default('date') %}
+
+<p {{ bem(date_base_class, (date_modifiers), date_blockname) }}>
+    {{ date }}
+</p>

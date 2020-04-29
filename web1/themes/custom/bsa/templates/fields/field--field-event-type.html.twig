@@ -1,0 +1,6 @@
+{% for item in items %}
+  {% include "@atoms/12-colored-tag/colored-tag.twig" with {
+    "tag_content": item.content['#plain_text'],
+    "href": "#"
+  } %}
+{% endfor %}

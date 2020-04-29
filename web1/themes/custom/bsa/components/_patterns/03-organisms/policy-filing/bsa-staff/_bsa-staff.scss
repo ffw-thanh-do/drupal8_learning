@@ -1,0 +1,41 @@
+.bsa-staff-container {
+  @include wrapper;
+  background: $white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include medium {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @include large {
+    padding-top: 55px;
+    padding-bottom: 70px;
+  }
+}
+
+.staff-block-compliance,
+.staff-block-policy,
+.staff-block-legislative-strategy {
+  @include large {
+    padding-left: 55px;
+    h3.line-heading {
+      margin-top: 0;
+    }
+  }
+
+  .views-row.last {
+    .bsa-staff-item {
+      margin-bottom: 0;
+    }
+  }
+
+  .h3__link {
+    text-decoration: none;
+  }
+
+  .views-row.first {
+    .bsa-staff-item {
+      margin-top: 0;
+    }
+  }
+}

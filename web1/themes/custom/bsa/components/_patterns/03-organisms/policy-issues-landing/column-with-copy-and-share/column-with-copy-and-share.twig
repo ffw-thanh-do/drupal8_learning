@@ -1,0 +1,19 @@
+{% block bsa_members %}
+  <div class="copy-and-share">
+    <div class="copy">
+      {% include "@atoms/02-text/00-headings/_heading.twig" with {
+        "heading_level": heading_level,
+        "heading": heading
+      } %}
+      {% include "@atoms/02-text/text/01-paragraph.twig" with {
+        "paragraph_content": paragraph_content
+      } %}
+    </div>
+    <div class="share">
+      ToDo: need to replace with Share block. Temporary copy.
+    </div>
+  </div>
+
+{% endblock %}
+
+

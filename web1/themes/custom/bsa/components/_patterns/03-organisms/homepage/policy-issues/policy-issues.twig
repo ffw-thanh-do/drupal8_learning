@@ -1,0 +1,23 @@
+<div class="policy-issue-container">
+  {% include "@atoms/02-text/text/07-line-heading.twig" with {
+    "heading_base_class": top_heading_base_class,
+    "heading_content": top_heading_content
+  } %}
+  {% block block_content %}
+    {% for issue in issues %}
+      {% include "@atoms/15-policy-issue/policy-issue.twig" with {
+        "policy_issue_img_src": issue.item_img_src,
+        "policy_issue_img_alt": issue.item_img_alt,
+        "policy_issue_copy": issue.item_copy,
+        "policy_href": issue.policy_href
+      } %}
+    {% endfor %}
+    {% include "@atoms/01-links/link/link.twig" with {
+      "link_base_class": more_link_base_class,
+      "link_modifiers": more_link_modifiers,
+      "link_attributes": more_link_attributes,
+      "link_url": more_link_url,
+      "link_content": more_link_content
+    } %}
+  {% endblock %}
+</div>

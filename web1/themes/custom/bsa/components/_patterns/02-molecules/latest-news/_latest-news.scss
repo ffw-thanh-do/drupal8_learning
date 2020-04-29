@@ -1,0 +1,162 @@
+.latest-news {
+  .news-teaser {
+    > p,
+    > a {
+      display: inline;
+      color: $gray;
+      font-size: 0.9rem;
+      @include large {
+        font-size: 16px;
+        a {
+          font-size: inherit;
+        }
+      }
+    }
+  }
+
+  .news-tags {
+    a {
+      @include mobile {
+        //display: block;
+      }
+      margin-bottom: 5px;
+    }
+  }
+
+  .news-date {
+    text-transform: uppercase;
+
+    p {
+      margin: 5px 0;
+      color: rgba(42, 39, 35, 0.5);
+      font-family: $nunito;
+      line-height: 2.25;
+      letter-spacing: 2px;
+      font-size: 16px;
+    }
+  }
+
+  p,
+  .news-teaser {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: normal;
+
+    a {
+      font-size: inherit;
+      color: inherit;
+    }
+
+    @include large {
+      line-height: 1.24;
+    }
+    @include xl {
+      line-height: 26px;
+      font-size: 16px;
+    }
+  }
+
+
+  .h4 {
+    margin-bottom: 0;
+  }
+
+  h3 {
+    //margin: 10px 0 5px;
+    //font-size: 18px;
+    //line-height: normal;
+    a {
+      text-decoration: none;
+      font-family: $nunito;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  h4 {
+    //font-size: 20px;
+    //margin: 10px 0 5px;
+    //line-height: normal;
+    a {
+      text-decoration: none;
+      font-family: $nunito;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .news-headline {
+    .h3 {
+      font-size: 18px;
+      line-height: 1.2;
+      margin-bottom: 0;
+      @include xl {
+        font-size: 26px;
+        font-weight: 800;
+        line-height: 1.38;
+        letter-spacing: 0.3px;
+      }
+    }
+  }
+
+}
+
+
+// Drupal specific.
+.news-global-news {
+  @include medium {
+    padding-right: 20px;
+    margin-bottom: 0;
+  }
+  @include xl {
+    padding-right: 90px;
+  }
+
+  .views-row {
+    margin-bottom: 20px;
+  }
+}
+
+.news-block-techpost {
+  margin-bottom: 40px;
+
+  .news-date {
+    p {
+      margin: 0;
+    }
+  }
+
+  @include xl {
+    .news-headline {
+      h4 {
+        font-size: 26px;
+        font-weight: 800;
+        font-style: normal;
+        font-family: $nunito;
+        font-stretch: normal;
+        line-height: 1.31;
+      }
+    }
+  }
+
+
+  .node-report {
+    margin-bottom: 20px;
+
+    .views-row {
+      margin-bottom: 10px;
+    }
+  }
+
+  .teaser-headline {
+    h4.h4.node-report {
+      margin-bottom: 10px;
+    }
+  }
+
+
+}

@@ -1,0 +1,22 @@
+<div {{ bem('block') }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  <div class="copy-with-button">
+    {% include "@atoms/02-text/text/07-line-heading.twig" with {
+      "heading_base_class": copy_block_top_heading_base_class,
+      "heading_content": copy_block_heading_copy
+    } %}
+    {% block content %}
+      {% include "@atoms/02-text/text/01-paragraph.twig" with {
+        "paragraph_content": copy_block_paragraph_copy
+      } %}
+      {% include "@atoms/01-links/link/link.twig" with {
+        "link_base_class": copy_block_more_link_base_class,
+        "link_modifiers": copy_block_more_link_modifiers,
+        "link_attributes": copy_block_more_link_attributes,
+        "link_url": copy_block_more_link_url,
+        "link_content": copy_block_more_link_content
+      } %}
+    {% endblock %}
+  </div>
+</div>

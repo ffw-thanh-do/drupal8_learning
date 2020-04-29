@@ -1,0 +1,514 @@
+.header-wrapper {
+  @include medium {
+    &:before {
+      content: '';
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 44px;
+      display: block;
+      position: absolute;
+      background: #007ad7;
+      z-index: -1;
+    }
+    height: auto;
+    position: relative;
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.25);
+    margin-bottom: 3px;
+
+  }
+
+
+}
+.header {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  z-index: 2;
+  &.is-open {
+    .mobile-menu-trigger span {
+      background: $cyan;
+    }
+  }
+
+  .mobile-menu-trigger {
+    width: 27px;
+    height: auto;
+    position: absolute;
+    right: 10px;
+    top: 34px;
+
+    span {
+      width: 27px;
+      height: 4px;
+      background: $black;
+      border-right: 4px;
+      display: block;
+      margin-bottom: 5px;
+    }
+  }
+
+  .mobile-header {
+    height: 80px;
+    background: $white;
+    border-top: 5px solid $blue;
+    box-shadow: 0 2px 10px 0 rgba(42, 39, 35, 0.1);
+    @include medium {
+      display: none;
+    }
+  }
+
+  .logo {
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+
+    picture {
+      background: $white;
+    }
+
+    @include medium {
+      position: absolute;
+      left: 30px;
+      height: auto;
+      z-index: 2;
+      top: auto;
+      bottom: 0;
+      width: 115px;
+      picture {
+        height: 100%;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    @include large {
+      width: auto;
+      picture {
+        padding: 0 15px;
+
+        img {
+          width: 136px;
+          height: auto;
+        }
+      }
+    }
+    @include xl {
+      left: 80px;
+    }
+  }
+
+  #block-topmenu {
+    order: 4;
+  }
+
+  .header-main-menu {
+    order: 3;
+  }
+
+  #block-languageswitcher-2 {
+    order: 1;
+  }
+
+  #block-languageswitcher {
+    order: 2;
+  }
+
+}
+
+
+// ToDo: need to remove before push.
+#block-topmenu,
+.header-main-menu {
+  display: none;
+  @include medium {
+    display: block;
+  }
+}
+
+header.header {
+  &.is-open {
+    #block-topmenu,
+    .header-main-menu {
+      display: block;
+    }
+  }
+}
+
+// Drupal fixes.
+header {
+  h2#block-mainnavigation {
+    display: none;
+  }
+}
+
+
+// Header Search.
+
+
+header {
+  .search-trigger {
+    position: absolute;
+    cursor: pointer;
+    top: 31px;
+    right: 50px;
+    width: 26px;
+    height: 26px;
+    background: url('/themes/custom/bsa/images/search-icon.png') no-repeat center;
+    background-size: 100%;
+
+    &.is-open {
+      background: url('/themes/custom/bsa/images/search-icon-close.png') no-repeat center;
+      background-size: 100%;
+    }
+
+    @include medium {
+      width: 27px;
+      height: 27px;
+      top: 65px;
+      right: 25px;
+    }
+    @include large {
+      right: 80px;
+      top: 75px;
+    }
+  }
+
+}
+
+#block-search-form {
+  position: absolute;
+  top: 88px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in;
+  @include medium {
+    top: 120px;
+  }
+  @include large {
+    top: 140px;
+  }
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .form-item__label {
+    display: none;
+  }
+
+  .form-item,
+  form {
+    width: 100%;
+  }
+
+  #edit-search {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 100px;
+    font-family: $nunito;
+    font-weight: 800;
+    text-align: right;
+    color: $black;
+    @include medium {
+      padding: 10px 100px;
+      height: 50px;
+    }
+    @include xl {
+      font-size: 26px;
+
+    }
+  }
+
+  .js-form-submit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 34px;
+    line-height: 25px;
+    padding: 0 10px;
+    @include medium {
+      height: 50px;
+    }
+  }
+
+}
+
+
+#block-languageswitcher {
+  display: none !important;
+}
+
+
+// Header Language Switcher.
+.header.is-open {
+  #block-siteswitcher,
+  #block-languageswitcher-2 {
+    display: block;
+  }
+}
+
+nav#block-siteswitcher {
+  display: none;
+  padding: 11px 10px;
+  background: $blue;
+  position: relative;
+  @include medium {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 44px;
+    padding: 0;
+    width: 230px;
+  }
+  @include xl {
+    padding-right: 78px;
+    width: 350px;
+  }
+
+  h2 {
+    display: block !important;
+    position: relative !important;
+    clip: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 48px;
+    color: $white;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    line-height: 44px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #2a6abf;
+    @include medium {
+      font-size: 13px;
+    }
+    @include large {
+      font-size: 16px;
+    }
+    &:after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      border-top: 3px solid $white;
+      border-right: 3px solid $white;
+      position: absolute;
+      top: 14px;
+      display: block;
+      right: 18px;
+      transform: rotate(135deg);
+      transition: .4s all;
+    }
+    &.is-open {
+      &:after{
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  ul.menu {
+    display: none;
+    background: #2A6ABF;
+    margin: 0;
+    list-style: none;
+    padding: 14px 20px 10px;
+    z-index: 2;
+    position: relative;
+    top: 0;
+    width: 100%;
+
+    @include medium {
+      position: absolute;
+      top: 44px;
+      width: 230px;
+    }
+    @include xl {
+      width: 272px;
+    }
+
+    li {
+      a {
+        font-size: 16px;
+        color: $white;
+        font-weight: 300;
+        letter-spacing: 0.3px;
+        text-decoration: none;
+        padding: 5px 0;
+        display: block;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+#block-languageswitcher-2 {
+  position: relative;
+  display: none;
+  width: 100%;
+  height: auto;
+  background: $blue;
+  padding: 11px 10px;
+
+  @include medium {
+    display: block;
+    position: absolute;
+    right: 230px;
+    top: 0;
+    height: 44px;
+    padding: 0;
+    width: 200px;
+  }
+  @include large {
+    width: 220px;
+  }
+  @include xl {
+    width: 272px;
+    right: 349px;
+  }
+
+
+  .ls-display {
+    background-color: #2A6ABF;
+    width: 100%;
+    height: 44px;
+    font-size: 16px;
+    color: $white;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    line-height: 44px;
+    padding: 0 48px 0 20px;
+    position: relative;
+    cursor: pointer;
+    margin-right: 78px;
+    text-transform: uppercase;
+
+    @include medium {
+      width: 100%;
+      font-size: 13px;
+    }
+    @include large {
+      font-size: 16px;
+    }
+
+    &:after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      border-top: 3px solid $white;
+      border-right: 3px solid $white;
+      position: absolute;
+      top: 14px;
+      display: block;
+      right: 18px;
+      transform: rotate(135deg);
+      transition: .4s all;
+    }
+
+    &.is-open {
+      &:after {
+        transform: rotate(-45deg);
+        top: 16px;
+      }
+    }
+  }
+
+  ul.menu {
+    display: none;
+    background: #2A6ABF;
+    margin: 0;
+    list-style: none;
+    padding: 14px 20px 10px;
+    z-index: 2;
+    position: relative;
+    top: 0;
+    width: 100%;
+
+    @include medium {
+      position: absolute;
+      top: 44px;
+      width: 200px;
+    }
+    @include large {
+      width: 272px;
+    }
+
+    li {
+      a {
+        font-size: 16px;
+        color: $white;
+        font-weight: 300;
+        letter-spacing: 0.3px;
+        text-decoration: none;
+        padding: 5px 0;
+        display: block;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+
+
+@include medium {
+  .header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    position: relative;
+    //&:before {
+    //  content: '';
+    //  left: 0;
+    //  top: 0;
+    //  width: 100%;
+    //  height: 44px;
+    //  display: block;
+    //  position: absolute;
+    //  background: #007ad7;
+    //  z-index: -1;
+    //}
+    #block-topmenu {
+      order: 1;
+      z-index: 2;
+    }
+    #block-languageswitcher-2 {
+      position: static;
+      order: 2;
+      border-left: 1px solid #007ad7;
+    }
+    #block-siteswitcher {
+      position: static;
+      border-left: 1px solid #007ad7;
+      order: 3;
+    }
+    ul.header-main-menu {
+      order: 4;
+      width: 100%;
+    }
+
+
+  }
+}

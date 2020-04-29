@@ -1,0 +1,14 @@
+<div class="policy-item-section">
+  <div class="policy-items-container">
+    {% block content %}
+      {% for item in items %}
+        {% include "@atoms/11-policy-item/policy-item.twig" with {
+          "policy_item_img_src": item.item_img_src,
+          "policy_item_img_alt": item.item_img_alt,
+          "policy_item_copy": item.item_copy,
+          "policy_href": policy_href
+        } %}
+      {% endfor %}
+    {% endblock %}
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<?php
+
+use Drupal\acquia_contenthub_subscriber\SubscriberTracker;
+
+/**
+ * Sets entities as disconnected from Content Hub.
+ */
+function acquia_contenthub_unsubscribe_update_8201() {
+  // Bail out early if there are not disconnected entities.
+  $state = \Drupal::state();
+  $disconnected_entities = $state->get('acquia_contenthub_update_8201_disconnected_entities', []);
+  if (empty($disconnected_entities)) {
+    return;
+  }
+
+  /** @var \Drupal\acquia_contenthub_subscriber\SubscriberTracker $tracker */
+  $tracker = \Drupal::service('acquia_contenthub_subscriber.tracker');
+
+  /** @var \Drupal\acquia_contenthub\Client\ClientFactory $client_factory */
+  $client_factory = \Drupal::service('acquia_contenthub.client.factory');
+
+  // Obtaining the Webhook.
+  $webhook = \Drupal::configFactory()->get('acquia_contenthub.admin_settings')->get('webhook');
+  $webhook_uuid = $webhook['uuid'] ?? NULL;
+
+  foreach ($disconnected_entities as $key => $entity) {
+    // Adding it to interest list if webhook is registered.
+    if (!empty($webhook_uuid)) {
+      // Adding imported entities to interest list.
+      $client_factory
+        ->getClient()
+        ->addEntitiesToInterestList($webhook_uuid, $entity['entity_uuid']);
+    }
+    // Disconnecting it from the tracker.
+    $tracker->setStatusByTypeId($entity['entity_type'], $entity['entity_id'], SubscriberTracker::AUTO_UPDATE_DISABLED);
+  }
+
+  // Deleting state variable.
+  $state->delete('acquia_contenthub_update_8201_disconnected_entities');
+}

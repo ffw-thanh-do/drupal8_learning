@@ -1,0 +1,11 @@
+entity.people.add_form:
+  route_name: entity.people.add_page
+  title: 'Add People'
+  appears_on:
+    - entity.people.collection
+entity.people_type.add_form:
+  route_name: entity.people_type.add_form
+  title: 'Add People type'
+  appears_on:
+    - entity.people_type.collection
+

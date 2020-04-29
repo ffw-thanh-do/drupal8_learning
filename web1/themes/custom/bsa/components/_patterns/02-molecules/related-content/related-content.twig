@@ -1,0 +1,14 @@
+<div class="related-content-item">
+  {% include "@atoms/02-text/00-headings/_heading.twig" with {
+    "heading_level": heading_level|default(3),
+    "heading": heading,
+    "heading_url": heading_url|default("#")
+  } %}
+  {% include "@atoms/02-text/text/01-paragraph.twig" with {
+    "paragraph_content": paragraph_content
+  } %}
+  {% include "@atoms/02-text/text/08-date.twig" with {
+    "date": type ~ " | " ~ date
+  } %}
+</div>
+

@@ -1,0 +1,45 @@
+.report-article {
+  @include wrapper;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  .report-actions {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    a {
+      width: auto;
+      display: inline-block;
+      max-width: 320px;
+      margin: 0 auto 10px;
+    }
+    @include medium {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      justify-content: left;
+      a {
+        width: auto;
+        max-width: none;
+        margin: 0 15px 15px 0;
+      }
+    }
+  }
+
+  @include medium {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  .column-left {
+    width: 68%;
+  }
+  .column-right {
+    width: 30%;
+  }
+
+}

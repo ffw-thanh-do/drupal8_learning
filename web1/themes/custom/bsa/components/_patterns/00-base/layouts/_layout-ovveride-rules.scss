@@ -1,0 +1,551 @@
+body {
+  overflow-x: hidden;
+}
+
+.block-transparent-dark,
+.block-transparent-light {
+  > div {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+div.block-transparent-dark {
+  .content {
+    h1, h2, h3, h4, h5, h6, p, span {
+      color: black;
+    }
+  }
+  h1, h2, h3, h4, h5, h6, p, span {
+    color: black;
+  }
+}
+
+div.block-transparent-light {
+  .content {
+    h1, h2, h3, h4, h5, h6, p, span {
+      color: white;
+    }
+  }
+  h1, h2, h3, h4, h5, h6, p, span {
+    color: white;
+  }
+}
+
+.layout-bsa-twocols,
+.layout-bsa-onecol,
+.layout--onecol {
+  padding: 25px 1rem;
+  position: relative;
+  @include medium {
+    padding: 25px 20px;
+  }
+  @include large {
+    padding: 45px 75px 45px;
+  }
+}
+
+
+.layout-bsa-twocols,
+.layout-bsa-onecol,
+.layout--onecol {
+
+  .layout__region {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .layout-region-right {
+    margin-top: 30px;
+    @include medium {
+      margin-top: 0;
+      float: right;
+    }
+  }
+
+  &.secondary-content-menu,
+  &.breadcrumb {
+    padding: 20px;
+    @include medium {
+      padding: 25px 30px;
+    }
+    @include xl {
+      padding: 25px 75px;
+    }
+  }
+
+  &.reset-bottom-padding {
+    padding-bottom: 0;
+  }
+
+  &.reset-top-bottom-padding {
+    padding: 0;
+    @include medium {
+      padding: 0;
+    }
+    @include large {
+      padding: 0;
+    }
+    @include xl {
+      padding: 0;
+    }
+  }
+
+  &.section-shadow {
+    @include medium {
+      box-shadow: 0 2px 10px 0 rgba(42, 39, 35, 0.1);
+    }
+  }
+  &.section-mobile-background {
+    .layout-section-image {
+      display: none;
+    }
+  }
+  @include mobile {
+    &.layout.section-mobile-image {
+      background: none !important;
+      .layout-section-image {
+        text-align: center;
+        img {
+          display: inline-block;
+        }
+      }
+    }
+    &.layout.section-mobile-background {
+      .layout-section-image {
+        display: none;
+      }
+    }
+  }
+
+  .layout-section-image {
+    @include medium {
+      display: none;
+    }
+  }
+
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &.section-mobile-video-hide {
+    .background-video-wrapper {
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+
+}
+
+.internet-explorer, .edge {
+  .layout-bsa-twocols,
+  .layout-bsa-onecol,
+  .layout--onecol {
+
+
+    div.background-video-wrapper {
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+    }
+
+    video.background-video {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: 0 auto;
+      min-width: 50%;
+      min-height: 50%;
+      width: 1px;
+    }
+  }
+}
+
+.node-press_release,
+.node-policy_filing {
+  .layout.layout-bsa-twocols.bg-white.ratio-50-50 {
+    .width-50 {
+      .copy-with-link {
+        @include medium {
+          height: 100%;
+        }
+      }
+
+      .block {
+        height: 100%;
+        min-height: 100%;
+      }
+    }
+  }
+}
+
+
+// Change order for social sharing block and main content here. (for mobile only).
+
+.staff-bio-wrapper {
+  > .layout-region-content {
+    display: flex;
+    flex-direction: column;
+    > .share-block-wrapper {
+      order: 1;
+    }
+    > .block {
+      order: 2;
+    }
+    @include medium {
+      > .share-block-wrapper {
+        order: 2;
+      }
+      > .block {
+        order: 1;
+      }
+    }
+  }
+}
+
+.layout-bsa-twocols.block-with-social-share {
+  .layout-region-right {
+    margin-top: -15px;
+    order: 1;
+  }
+  .layout-region-left {
+    order: 2;
+  }
+  @include medium {
+    .layout-region-right {
+      order: 2;
+      margin-top: 0;
+    }
+    .layout-region-left {
+      order: 1;
+    }
+  }
+}
+
+
+.hp-cta-block {
+  border-top: 2px solid $section-bg;
+  border-bottom: 2px solid $section-bg;
+
+  @include medium {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @include xl {
+    padding: 45px 80px;
+  }
+
+  .width-50 {
+    //height: 100%;
+    //min-height: 100%;
+
+    .copy-with-link {
+      @include medium {
+        height: 100%;
+      }
+    }
+
+    .block {
+      height: 100%;
+      min-height: 100%;
+    }
+  }
+
+}
+
+
+.layout-bsa-onecol {
+  width: 100%;
+
+  .layout-region-content {
+    width: 100%;
+  }
+}
+
+.layout-bsa-onecol,
+.layout-bsa-twocols {
+  max-width: $max-width;
+  margin: 0 auto;
+  display: flex;
+  &.section-mobile-reverse {
+    flex-direction: column-reverse;
+    @include medium {
+      flex-direction: row;
+    }
+  }
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include medium {
+    .width-70 {
+      width: 70%;
+
+      > div {
+        max-width: 90%;
+      }
+      > div.new-block {
+        max-width: none;
+      }
+    }
+    .width-30 {
+      width: 30%;
+    }
+    .width-60 {
+      width: 60%;
+
+      > div {
+        max-width: 90%;
+      }
+    }
+    .width-40 {
+      width: 40%;
+    }
+    .width-50 {
+      width: 50%;
+    }
+  }
+}
+
+
+.bg-white {
+  background-color: $white;
+}
+
+.bg-blue {
+  background-color: $dark-blue;
+}
+
+.bg-grey {
+  background-color: rgba(42, 39, 35, 0.05);
+}
+
+.simple-block.copy-with-button {
+  margin-bottom: 20px;
+  @include medium {
+    margin-bottom: 0;
+  }
+}
+
+
+.policy-view-more-block {
+  @include xl {
+    padding-left: 20px;
+  }
+}
+
+.staff-block-related,
+.news-block-policy,
+.members-block-regional,
+.bsa-members-top-block,
+.news-block-techpost {
+  @include xl {
+    padding-left: 55px;
+  }
+}
+
+
+.layout.layout-bsa-onecol.bg-grey {
+  @include large {
+    .bsa-findings-and-resources {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+
+.layout-bsa-twocols {
+  .layout-region-left {
+    .copy-with-link {
+      margin-bottom: 15px;
+      @include medium {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.membership-and-copy {
+  margin-bottom: 20px;
+  @include medium {
+    margin-bottom: 0;
+  }
+
+  .copy-and-buttons {
+    @include medium {
+      max-width: 90%;
+      .copy {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.bottom-line {
+  border-bottom: 2px solid $section-bg;
+}
+
+.news-block-policy {
+  .colored-link {
+    height: 50px;
+    margin-top: -12px;
+    min-width: 165px;
+  }
+
+  .news-date {
+    p {
+      margin: 0;
+    }
+  }
+
+  .views-row {
+    margin-bottom: 20px;
+    @include medium {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.policies-block-full,
+.block-with-filter,
+.bsa-findings-and-resources {
+  position: relative;
+
+  .collapse-expand-filter {
+    display: inline-block;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: right;
+  }
+
+  @include medium {
+    .collapse-expand-filter {
+      width: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+  @include large {
+    .collapse-expand-filter {
+      right: 57px;
+    }
+
+  }
+}
+
+.node-landing_page {
+  @include large {
+    .bsa-leaders-section {
+      margin-top: -20px;
+    }
+  }
+}
+
+
+// policy-issues/ see all button.
+.layout-bsa-onecol.bg-grey {
+  .bsa-findings-and-resources {
+    .resources-block + .colored-link.colored-link--blue {
+      margin: 20px 0 0 0;
+      @include medium {
+        margin: 20px 0 0 20px;
+      }
+      @include large {
+        margin: 40px 0 0 60px;
+      }
+    }
+  }
+}
+
+
+body > .node-preview-container.container-inline {
+  position: relative;
+  margin-bottom: 20px;
+  box-shadow: 1px 2px 3px #ccc;
+  a {
+    color: $black2;
+  }
+}
+
+#layout-builder .layout-builder__section  {
+  .configure-section {
+    color: $black2;
+  }
+  .remove-section {
+    margin-left: 10px;
+  }
+
+  .layout-bsa-twocols,
+  .layout-bsa-onecol,
+  .layout--onecol {
+    .new-block {
+      max-width: initial;
+    }
+
+    .layout-region-right {
+      @include medium {
+        &.width-70 {
+          width: calc(60% - 12px);
+        }
+        &.width-60 {
+          width: calc(60% - 12px);
+        }
+        &.width-50 {
+          width: calc(50% - 12px);
+        }
+        &.width-40 {
+          width: calc(40% - 12px);
+        }
+        &.width-30 {
+          width: calc(30% - 12px);
+        }
+        margin-top: 0;
+        right: 2px;
+      }
+    }
+  }
+}
+
+.layout-bsa-twocols.layout.aligned-vertically {
+  @include medium {
+    align-items: center;
+  }
+}
+
+.reports-full,
+.news-block-news-full,
+.news-block-events-full,
+.news-block-press-full {
+  .views-row {
+    @include medium {
+      width: 60%;
+    }
+  }
+}
+
+.remove-region-right-margin-mobile {
+  .layout-region-right {
+    @include mobile {
+      margin-top: 0;
+    }
+  }
+}
+
+.remove-margin-bottom-mobile {
+  @include mobile {
+    margin-bottom: 0 !important;
+  }
+}

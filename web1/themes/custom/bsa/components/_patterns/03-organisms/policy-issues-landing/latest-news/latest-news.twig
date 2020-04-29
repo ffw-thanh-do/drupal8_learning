@@ -1,0 +1,29 @@
+<div class="latest-news-section">
+  {% include "@atoms/02-text/text/07-line-heading.twig" with {
+    "heading_base_class": top_heading_base_class,
+    "heading_content": top_heading_content
+  } %}
+  {% block content %}
+    {% for new in news %}
+      {% include "@molecules/latest-news/latest-news.twig" with {
+        "tags": new.tags,
+        "link_content": new.tag.link_content,
+        "heading_level": new.heading_level,
+        "heading": new.heading,
+        "date_content": new.date_content,
+        "country_region": new.country_region,
+        "news_teaser": new.news_teaser,
+        "read_more_link_content": new.read_more_link_content,
+        "read_more_link_attributes": new.read_more_link_attributes,
+        "read_more_link_url": new.read_more_link_url
+      } %}
+    {% endfor %}
+    {% include "@atoms/01-links/link/link.twig" with {
+      "link_base_class": more_link_base_class,
+      "link_modifiers": more_link_modifiers,
+      "link_attributes": more_link_attributes,
+      "link_url": more_link_url,
+      "link_content": more_link_content
+    } %}
+  {% endblock %}
+</div>

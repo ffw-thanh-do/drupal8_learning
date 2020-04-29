@@ -1,0 +1,57 @@
+tags:
+  0:
+    href:
+      '#'
+    background_color:
+      '#0fd439'
+    tag_content:
+      'tag name 1'
+    target:
+      '_blank'
+  1:
+    href:
+      '#'
+    background_color:
+      '#b32fda'
+    tag_content:
+      'tag name with 2'
+    target:
+      '_blank'
+heading_level:
+  3
+label:
+  "Report Title"
+date_content:
+  "Jan 25, 2019"
+copy:
+  "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. "
+links:
+  0:
+    copy:
+      'Download Report'
+    target:
+      '_blank'
+    link_attributes:
+      href:
+        "#"
+  1:
+    link_attributes:
+      href:
+        "#"
+    copy:
+      'Visit Site'
+    target:
+      '_blank'
+  2:
+    link_attributes:
+      href:
+        "#"
+      target:
+        '_blank'
+    copy:
+      'Read Blog Post'
+
+image_url:
+  "../../images/report.png"
+
+

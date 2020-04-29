@@ -1,0 +1,55 @@
+<div class="bsa-filing-resource-item">
+  <div class="left-column">
+    <div class="item-tags">
+      {% block tags_top %}
+        {% for tag in tags %}
+          {% include "@atoms/12-colored-tag/colored-tag.twig" with {
+            "href": tag.href,
+            "background_color": tag.background_color,
+            "tag_content": tag.tag_content,
+            "target": tag.target
+          } %}
+        {% endfor %}
+      {% endblock %}
+    </div>
+    <div class="item_heading">
+      {% block headline %}
+        {% include "@atoms/02-text/00-headings/_heading.twig" with {
+          "heading_level": heading_level,
+          "heading": heading,
+          "heading_url": url
+        } %}
+      {% endblock %}
+    </div>
+    <div class="item-tag-links">
+      {% block tags_bottom %}
+        {% for link_tag in link_tags %}
+          {% include "@atoms/01-links/link/link.twig" with {
+            "link_content": link_tag.tag_content,
+            "link_attributes": link_tag.tag_attr,
+            "link_url": link_tag.tag_url
+          } %}
+        {% endfor %}
+      {% endblock %}
+    </div>
+  </div>
+  <div class="right-column">
+    <div class="item-date">
+      {% block item_date %}
+        {% include "@atoms/02-text/text/08-date.twig" with {
+          "date": date
+        } %}
+        {% include "@atoms/02-text/text/01-paragraph.twig" with {
+          "paragraph_content": document_type
+        } %}
+      {% endblock %}
+    </div>
+    <div class="item-secondary-info">
+      {% block secondary_info %}
+        {% include "@atoms/02-text/text/01-paragraph.twig" with {
+          "paragraph_content": paragraph_content
+        } %}
+      {% endblock %}
+    </div>
+  </div>
+</div>

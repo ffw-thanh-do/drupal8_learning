@@ -1,0 +1,7 @@
+name: 'Rename Admin Paths'
+type: module
+description: 'Rename admin path /admin/.. and /user/.. to /something/..'
+package: Administration
+php: 7.1
+core_version_requirement: ^8 || ^9
+configure: rename_admin_paths.admin

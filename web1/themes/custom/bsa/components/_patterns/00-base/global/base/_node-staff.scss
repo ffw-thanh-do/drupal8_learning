@@ -1,0 +1,38 @@
+.node-staff {
+  .accordion {
+    .accordion-term,
+    .accordion-term.is-active {
+      &:before {
+        top: 15px;
+        @include medium {
+          top: 10px;
+        }
+        @include large {
+          top: 40px;
+        }
+      }
+      h3 {
+        padding-right: 25px;
+        margin-bottom: 45px;
+      }
+    }
+    .accordion-term:not(.is-active) {
+      h3 {
+        margin-bottom: 10px;
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    .accordion-def {
+      article {
+        margin-bottom: 20px;
+        @include medium {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+  }
+}

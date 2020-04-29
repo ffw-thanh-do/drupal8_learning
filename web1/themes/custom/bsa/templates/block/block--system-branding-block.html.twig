@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a branding block.
+ *
+ * Each branding element variable (logo, name, slogan) is only available if
+ * enabled in the block configuration.
+ *
+ * Available variables:
+ * - site_logo: Logo for site as defined in Appearance or theme settings.
+ * - site_name: Name for site as defined in Site information settings.
+ * - site_slogan: Slogan for site as defined in Site information settings.
+ *
+ * @ingroup themeable
+ */
+#}
+{% include "@atoms/10-logo/logo.twig" with {
+  "logo_src": site_logo,
+  "logo_alt": site_name,
+  "logo_url": path('<front>'),
+  "logo_figure_base_class": 'logo',
+  "logo_link_blockname": 'logo'
+} %}

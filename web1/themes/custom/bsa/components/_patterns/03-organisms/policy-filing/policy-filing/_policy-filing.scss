@@ -1,0 +1,131 @@
+.policy-filings-section {
+  overflow: hidden;
+
+  .tags {
+    a {
+      margin-bottom: 5px;
+    }
+  }
+
+  .filing_date {
+    .date {
+      line-height: normal;
+    }
+  }
+
+  .filing-heading {
+    h2 {
+      text-transform: none;
+      @include large {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  .filing-main-copy {
+    @include large {
+      margin-bottom: 25px;
+    }
+  }
+
+  hr {
+    display: none;
+  }
+
+  .text-long {
+    p {
+      @include medium {
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 0.25px;
+      }
+    }
+  }
+
+  .filing-bottom-tags {
+    position: relative;
+    margin-top: 30px;
+    padding-top: 30px;
+
+    &:before {
+      content: '';
+      width: 100vw;
+      height: 1px;
+      background: $section-bg;
+      position: absolute;
+      top: 0;
+      display: block;
+      max-width: 1174px;
+      left: 0;
+
+    }
+
+    span, a {
+      display: inline-block;
+      vertical-align: middle;
+      text-transform: uppercase;
+    }
+
+    span {
+      font-family: $nunito;
+      font-weight: 800;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.75;
+      letter-spacing: 0.5px;
+      margin-right: 10px;
+      text-transform: uppercase;
+    }
+
+    a {
+      text-transform: uppercase;
+      margin-right: 5px;
+    }
+
+
+  }
+
+  .colored-link {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    min-width: 220px;
+  }
+
+  .bottom-tags {
+    @include mobile {
+      //display: block;
+    }
+    display: inline-block;
+  }
+
+}
+
+
+.node-press_release {
+  .layout.layout-bsa-twocols.ratio-60-40,
+  .layout.layout-bsa-twocols.bg-white.ratio-70-30 {
+    @include medium {
+      padding-top: 40px;
+      padding-bottom: 30px;
+    }
+  }
+
+  .policy-filings-section .filing-bottom-tags {
+    padding-top: 30px;
+    padding-bottom: 28px;
+  }
+
+  @include xl {
+    .copy-with-link {
+      p {
+        font-size: 25px;
+      }
+    }
+    .related-content-block-related {
+      padding-left: 55px;
+    }
+  }
+
+
+}
+

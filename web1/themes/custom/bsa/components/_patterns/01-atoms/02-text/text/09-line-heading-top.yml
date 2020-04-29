@@ -1,0 +1,7 @@
+heading_base_class:
+  "line-heading"
+heading_content:
+  "Heading with top line"
+heading_modifiers:
+  0:
+    'top'

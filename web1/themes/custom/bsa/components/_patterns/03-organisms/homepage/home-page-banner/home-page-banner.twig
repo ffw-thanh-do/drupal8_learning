@@ -1,0 +1,17 @@
+<div class="home-page-banner">
+  <div class="heading">
+    {% include "@atoms/02-text/00-headings/_heading.twig" with {
+      "heading": heading,
+      "heading_level": heading_level
+    } %}
+  </div>
+  <div class="picture">
+    {% include "@atoms/17-pictures/pictures.twig" with {
+      "picture_src":  picture_src,
+      "picture_alt" : picture_alt,
+      "pictureSrcDesktop":  pictureSrcDesktop,
+      "pictureSrcTablet" : pictureSrcTablet,
+      "pictureSrcMobile":  pictureSrcMobile
+    } %}
+  </div>
+</div>

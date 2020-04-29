@@ -1,0 +1,40 @@
+{% extends "@molecules/_block_custom.twig" %}
+
+{% block main %}
+  {%  if content.field_font_color  %}
+    {{ content.field_font_color }}
+  {% endif %}
+  <div class="copy-and-buttons">
+    {% block img %}
+      {% if img and align %}
+        <div class="image image-align-{{ align }}">
+          {{ img }}
+        </div>
+      {% endif %}
+    {% endblock %}
+    <div class="copy">
+      {% block copy %}
+        {% include "@atoms/02-text/00-headings/_heading.twig" with {
+          "heading_level": heading_level,
+          "heading": heading
+        } %}
+        {% include "@atoms/02-text/text/01-paragraph.twig" with {
+          "paragraph_content": paragraph_content
+        } %}
+      {% endblock %}
+      <div class="links">
+        {% block links %}
+          {% for link in links %}
+            {% include "@atoms/01-links/link/link.twig" with {
+              "link_base_class": link.link_base_class,
+              "link_modifiers": link.link_modifiers,
+              "link_attributes": link.link_attributes,
+              "link_url": link.link_url,
+              "link_content": link.link_content
+            } %}
+          {% endfor %}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

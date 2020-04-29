@@ -1,0 +1,110 @@
+.bsa-global-members {
+  @include wrapper;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  //justify-content: space-between;
+  overflow: hidden;
+  padding-left: 0;
+  padding-right: 0;
+  @include small {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .bsa-member-item {
+    width: 50%;
+    border-bottom: 1px solid rgba(42, 39, 35, 0.1);
+    background: $white;
+    padding: 10px;
+
+    &:nth-child(2n+1) {
+      border-right: 1px solid rgba(42, 39, 35, 0.1);
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 90%;
+    }
+  }
+
+  @include medium {
+    .bsa-member-item {
+      width: 33.3%;
+      border-right: 1px solid rgba(42, 39, 35, 0.1);
+
+      &:nth-child(3n + 0) {
+        border-right: none;
+      }
+    }
+  }
+
+  @include large {
+    .bsa-member-item:nth-child(3n + 0),
+    .bsa-member-item {
+      width: 16.666666%;
+      border-right: 1px solid rgba(42, 39, 35, 0.1);
+      padding: 25px;
+
+      //&:nth-child(6n + 0) {
+      //  border-right: none;
+      //}
+    }
+  }
+
+  .heading {
+    width: 100%;
+    h2 {
+      text-align: left;
+      letter-spacing: 3px;
+      margin-bottom: 25px;
+    }
+  }
+
+}
+
+
+// Drupal specific.
+.bsa-global-members {
+  .views-element-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    //justify-content: space-between;
+    align-content: center;
+    position: relative;
+    width: 100%;
+    .bsa-member-item {
+      display: flex;
+      align-content: center;
+      align-items: center;
+      img {
+        display: block;
+        position: relative;
+        transform: translateY(0) scale(1);
+        transition: transform 1.3s;
+      }
+      @include large {
+        &:hover {
+          img {
+            transform: translateY(0) scale(1.2);
+          }
+        }
+      }
+      a {
+        width: 100%;
+      }
+      a[href="/membership"] {
+        text-decoration: none;
+        text-align: center;
+        p {
+          line-height: normal;
+        }
+        img {
+          margin: 10px auto;
+        }
+      }
+    }
+
+  }
+}

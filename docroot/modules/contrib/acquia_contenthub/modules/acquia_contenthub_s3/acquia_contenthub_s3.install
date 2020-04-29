@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Acquia Content Hub S3 integration.
+ *
+ * Installs acquia_contenthub_s3 file amp table for tracking files originated
+ * from s3.
+ */
+
+use Drupal\acquia_contenthub_s3\S3FileMap;
+
+/**
+ * Implements hook_schema().
+ */
+function acquia_contenthub_s3_schema() {
+  $schema[S3FileMap::TABLE_NAME] = S3FileMap::schema();
+  return $schema;
+}

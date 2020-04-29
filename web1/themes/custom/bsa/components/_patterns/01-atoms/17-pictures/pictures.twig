@@ -1,0 +1,28 @@
+{% set picture_base_class = picture_base_class|default('picture-item') %}
+{% set sources = [
+  {
+    url: pictureSrcDesktop,
+    media: "screen and (min-width: 1140px)",
+  },
+  {
+    url: pictureSrcTablet,
+    media: "screen and (min-width: 768px)",
+  },
+  {
+    url: pictureSrcMobile,
+    media: "screen and (min-width: 0)",
+  },
+]
+%}
+
+<picture  {{ bem(picture_base_class, (picture_modifiers), picture_blockname) }} >
+  {% for source in sources %}
+    {% if source.url and source.media %}
+      <source media="{{ source.media }}" srcset="{{ source.url }}">
+    {% endif %}
+  {% endfor %}
+  {% if picture_src %}
+    <img src="{{ picture_src }}" alt="{{ picture_alt }}">
+  {% endif %}
+</picture>
+

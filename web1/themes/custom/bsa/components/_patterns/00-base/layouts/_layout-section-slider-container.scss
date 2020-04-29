@@ -1,0 +1,167 @@
+#layout-builder {
+  .layout-section-slider-container {
+    overflow: hidden;
+
+    @include medium {
+      .layout-bsa-onecol .width-50,
+      .layout-bsa-twocols .width-50 {
+        float: left;
+      }
+    }
+
+  }
+
+  .order-link {
+    color: #2a2723;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 4px 4px;
+    margin: 0;
+    padding: 0.25em;
+    text-align: left;
+    white-space: nowrap;
+    display: inline-block;
+    text-decoration: none;
+    &.order-slides {
+
+
+    }
+    &.order-slides-save {
+      position: fixed;
+      background-color: #00e676;
+      top: 40vh;
+      left: 1px;
+    }
+
+    &.order-slides-cancel {
+      position: fixed;
+      top: 47vh;
+      left: 1px;
+    }
+  }
+
+
+
+
+  .sections-sort-progress {
+    .use-ajax, .new-block {
+      display: none;
+    }
+    .layout-section-slider {
+      border: 2px dashed #970f00;
+      cursor: ns-resize;
+      >a {
+        display: none;
+      }
+      .layout-builder__layout {
+        zoom: 0.3;
+      }
+    }
+  }
+}
+
+.layout-section-hidden {
+  border: 3px dashed #eaeaea;
+  &:before {
+    content: 'Hidden Section';
+    background: #eaeaea;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 3px 10px;
+    color: #0e0e0e;
+    text-transform: uppercase;
+    font-size: 10px;
+    z-index: 9;
+  }
+}
+
+
+.layout-section-slider-container {
+  overflow: hidden;
+  padding-bottom: 50px;
+
+  // Remove default section padding.
+  // Will be used padding from blocks.
+  .layout--onecol,
+  .layout-bsa-onecol,
+  .layout-bsa-twocols {
+    padding: 40px 10px;
+  }
+
+  .arrow-link img {
+    display: inline-block;
+  }
+
+  .slick-dots {
+    bottom: 15px;
+
+    li {
+      button {
+        border-radius: 100%;
+        width: 20px;
+        height: 20px;
+        background: $light-grey;
+        font-size: 0;
+        color: rgba(0, 0, 0, 0);
+
+        &:before {
+          display: none;
+        }
+      }
+
+      &.slick-active {
+        button {
+          background: $cyan;
+        }
+      }
+    }
+  }
+
+  //background: $white url('/themes/custom/bsa/images/checkbox.png') no-repeat center;
+
+  .slick-arrow {
+    @include mobile {
+      display: none !important;
+    }
+
+    width: 22px;
+    height: 35px;
+    z-index: 2;
+    cursor: pointer;
+    position: absolute;
+    top: calc(50% - 15px);
+    &:before {
+      display: none;
+    }
+
+    &.slick-next {
+      right: 30px;
+      background: url('/themes/custom/bsa/images/slider-arrow.png') no-repeat center;
+      background-size: 100% auto;
+    }
+
+    &.slick-prev {
+      left: 30px;
+      background: url('/themes/custom/bsa/images/slider-arrow-prev.png') no-repeat center;
+      background-size: 100% auto;
+    }
+
+  }
+
+
+
+  @include medium {
+    .layout-section-slider {
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      > div {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+  }
+
+}

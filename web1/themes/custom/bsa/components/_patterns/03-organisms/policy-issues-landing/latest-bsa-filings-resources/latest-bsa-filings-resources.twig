@@ -1,0 +1,36 @@
+{% extends "@molecules/_block_custom.twig" %}
+
+{% block main %}
+  <div class="bsa-findings-and-resources">
+    <div class="section-heading">
+      {% include "@atoms/02-text/00-headings/_heading.twig" with {
+        "heading_level": section_heading_level,
+        "heading": section_heading
+      } %}
+    </div>
+    {% include "@atoms/20-filter-button/filter-button.twig" %}
+    <div class="resources-block">
+      {% block views_rows %}
+        {% for item in items %}
+          {% include "@molecules/latest-bsa-filling-resource/latest-bsa-filling-resource.twig" with {
+            "tags": item.tags,
+            "heading_level": item.heading_level,
+            "heading": item.heading,
+            "link_tags": item.link_tags,
+            "date": item.date,
+            "paragraph_content": item.paragraph_content
+          } %}
+        {% endfor %}
+      {% endblock %}
+    </div>
+    {% block views_more %}
+      {% include "@atoms/01-links/link/link.twig" with {
+        "link_base_class": more_link_base_class,
+        "link_modifiers": more_link_modifiers,
+        "link_attributes": more_link_attributes,
+        "link_url": more_link_url,
+        "link_content": more_link_content
+      } %}
+    {% endblock %}
+  </div>
+{% endblock %}

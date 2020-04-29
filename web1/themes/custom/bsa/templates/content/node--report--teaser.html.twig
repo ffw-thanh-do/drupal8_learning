@@ -1,0 +1,20 @@
+{% extends "node--teaser.html.twig" %}
+
+{% set links = (content.field_links or content.field_attachment) %}
+{% set body = body|default(bsa_summary(content.body, 1, 0)) %}
+
+{% block links %}
+  {% if content.field_attachment.0 is defined %}
+    {% include "@atoms/01-links/link/link.twig" with {
+      "link_url": file_url(content.field_attachment.0['#file'].getFileUri()),
+      "link_content": "Download Report"|t,
+      "link_attributes": {"target": "_blank"},
+    } %}
+  {% endif %}
+  {% for i,link in node.field_links.value %}
+    {% include "@atoms/01-links/link/link.twig" with {
+      "link_url": content.field_links[i]["#url"],
+      "link_content": content.field_links[i]["#title"]
+    } %}
+  {% endfor %}
+{% endblock %}

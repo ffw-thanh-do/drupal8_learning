@@ -1,0 +1,51 @@
+{% extends "@molecules/_block_custom.twig" %}
+
+{% block main %}
+  {{ attach_library('bsa/sliderlib') }}
+  {{ attach_library('bsa/slider') }}
+  <div class="article-slide-container">
+    <div>
+      {% include "@atoms/02-text/00-headings/_heading.twig" with {
+        "heading": heading,
+        "heading_level": heading_level
+      } %}
+    </div>
+    <div class="article-slider-wrapper">
+      {% block content %}
+        <div class="article-slider">
+          {% for slide in slides %}
+            {% include "@molecules/article-slide/article-slide.twig" with {
+              "heading": slide.heading,
+              "heading_level": slide.heading_level,
+              "img_url": slide.img_url,
+              "img_src": slide.img_src,
+              "img_alt": slide.img_alt,
+              "img_caption": slide.img_caption,
+              "output_image_tag": slide.output_image_tag,
+              "tags": slide.tags,
+              "date": slide.date,
+              "paragraph_content": slide.paragraph_content,
+              "link_base_class": slide.link_base_class,
+              "link_modifiers": slide.link_modifiers,
+              "link_url": slide.link_url,
+              "link_attributes": slide.link_attributes,
+              "link_content": slide.link_content,
+              "article_heading": slide.article_heading,
+              "article_heading_level": slide.article_heading_level
+            } %}
+          {% endfor %}
+        </div>
+      {% endblock %}
+    </div>
+    <div class="slider-navigation">
+      {% include "@atoms/01-links/link/link.twig" with {
+        "link_base_class": slider_arrow_class,
+        "link_modifiers": link_modifiers_prev
+      } %}
+      {% include "@atoms/01-links/link/link.twig" with {
+        "link_base_class": slider_arrow_class,
+        "link_modifiers": link_modifiers_next
+      } %}
+    </div>
+  </div>
+{% endblock %}

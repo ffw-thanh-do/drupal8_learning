@@ -1,0 +1,16 @@
+{% extends "@molecules/_block_simple.twig" %}
+
+{% set classes = ["related-content-container"] %}
+
+{% block content %}
+  {% for item in items %}
+
+    {% include "@molecules/related-content/related-content.twig" with {
+      "heading_level": item.heading_level,
+      "heading": item.heading,
+      "paragraph_content": item.paragraph_content,
+      "date": item.date
+    } %}
+
+  {% endfor %}
+{% endblock %}

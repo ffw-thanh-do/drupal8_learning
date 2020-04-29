@@ -1,0 +1,9 @@
+button_base_class:
+  "bordered-button"
+button_url:
+  "#"
+button_content:
+  "Button with border"
+button_modifiers:
+  1:
+    "blue"

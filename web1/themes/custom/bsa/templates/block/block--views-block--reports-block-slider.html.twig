@@ -1,0 +1,11 @@
+{% extends "@organisms/policy-issues-landing/article-slider/article-slider.twig" %}
+
+{% set heading = label['#markup']|default(label)|upper %}
+{% set heading_level = 2 %}
+{% set slider_arrow_class = "slide-arrow" %}
+{% set link_modifiers_next = ["next"] %}
+{% set link_modifiers_prev = ["prev"] %}
+
+{% block content %}
+  {{ content }}
+{% endblock %}

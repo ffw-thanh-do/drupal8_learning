@@ -1,0 +1,163 @@
+.toggled-policy-items-section .is-open {
+  .policy-items-container {
+    display: flex;
+  }
+}
+
+.policy-items-container {
+  padding-top: 20px;
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px 0 rgba(42, 39, 35, 0.1);
+  background: $white;
+  @include medium {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.26);
+    display: flex !important;
+  }
+
+
+  .policy-item-block {
+    width: 100%;
+    @include medium {
+      display: flex !important;
+      width: calc(100% / 3);
+      background: $white;
+      .policy-link {
+        display: block;
+      }
+    }
+    @include large {
+      width: 20%;
+    }
+  }
+
+  .policy-item-block:last-child {
+    @media screen and (max-width: 767px) {
+      .policy-item {
+        text-align: center;
+      }
+
+      a {
+        background: $cyan;
+        display: inline-block;
+        height: auto;
+        line-height: 40px;
+        margin: 0 auto;
+        padding: 0 33px;
+        text-align: center;
+
+        picture,
+        img {
+          display: none;
+        }
+
+        p {
+          text-transform: uppercase;
+          color: $white;
+          text-align: center;
+          font-family: $nunito;
+          font-size: 16px;
+          font-weight: 400;
+          font-style: normal;
+          font-stretch: normal;
+          display: block;
+          width: 100%;
+          letter-spacing: 1px;
+          line-height: 40px;
+        }
+      }
+    }
+    @include medium {
+      a {
+        padding-top: 15px;
+      }
+      picture {
+        margin-bottom: 33px;
+      }
+    }
+  }
+}
+
+.policy-item-section {
+  @include wrapper;
+  padding: 0;
+  @include medium {
+    //background-color: $section-bg;
+  }
+}
+
+.policy-item-block {
+  display: flex;
+  align-content: center;
+  align-items: flex-start;
+  @include medium {
+    border-right: 1px solid $near-white;
+    border-bottom: 1px solid $near-white;
+  }
+
+
+  &:nth-child(5) {
+    border-right: none;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .policy-item {
+    width: 100%;
+  }
+}
+
+
+.toggled-policy-items-section {
+  .toggle-section {
+    @include medium {
+      display: none;
+    }
+    a {
+      font-family: $montserrat;
+      font-size: 16px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.75;
+      letter-spacing: 0.5px;
+      color: $black;
+      text-decoration: none;
+      display: inline-block;
+      padding-right: 25px;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        width: 19px;
+        height: 8px;
+        background: url('/themes/custom/bsa/images/select-transeparent.png') no-repeat right 0 center;
+        background-size: 17px auto;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.toggled-policy-items-section .is-open {
+  .toggle-section {
+    margin-bottom: 15px;
+    a {
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

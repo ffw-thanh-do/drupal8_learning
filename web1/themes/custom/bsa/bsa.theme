@@ -1,0 +1,281 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Pattern Lab theme.
+ */
+
+use Drupal\views\Plugin\views\display\DisplayPluginBase;
+use Drupal\Core\Url;
+use Drupal\node\NodeInterface;
+use Drupal\bsa_core\EventSubscriber\BsaCoreSubscriber;
+
+/**
+ * Implements template_preprocess_block()
+ */
+function bsa_preprocess_block(&$vars) {
+  $vars['classes'] = [];
+  if ($vars['configuration']['provider'] == 'views' && !empty($vars['content']['#view'])) {
+    $view = $vars['content']['#view'];
+    $vars['classes'][] = str_replace("_", "-", $vars['derivative_plugin_id']);
+    if (isset($view->display_handler) &&
+      $view->display_handler instanceof DisplayPluginBase &&
+      $view->display_handler->isMoreEnabled()) {
+      $more = $view->display_handler->renderMoreLink();
+      $vars['more_link']['title'] = $more['#title'];
+      $vars['more_link']['url'] = $more['#url']->toString();
+    }
+  }
+  if (isset($vars['content']['field_country_region'])) {
+    $regions = $vars['content']['#block_content']->get('field_country_region')->getValue();
+    $vars['region_class'] = '';
+    if (count($regions) > 0) {
+      $vars['region_class'] = ' geoip-block-item';
+      foreach ($regions as $region) {
+        $ancestors = \Drupal::service('entity_type.manager')
+          ->getStorage("taxonomy_term")
+          ->loadAllParents($region['target_id']);
+        if (count($ancestors) > 0) {
+          foreach ($ancestors as $term) {
+            $vars['region_class'] .= ' geoip-block-id-' . $term->id();
+          }
+        }
+        else {
+          $vars['region_class'] .= ' geoip-block-id-' . $region['target_id'];
+        }
+      }
+    }
+  }
+  if ($vars['base_plugin_id'] == 'system_main_block' &&
+    $vars['plugin_id'] == 'system_main_block' &&
+    \Drupal::routeMatch()->getRouteName() == 'entity.taxonomy_term.canonical') {
+    $vars['attributes']['class'][] = 'taxonomy-term-full';
+  }
+}
+
+/**
+ * Implements template_theme_suggestions_field_alter()
+ */
+function bsa_theme_suggestions_field_alter(&$suggestions, $variables) {
+  $suggestions[] = 'field__' .
+    $variables['element']['#field_name'] . '__' .
+    $variables['element']['#view_mode'];
+}
+
+/**
+ * Implements template_preprocess_field()
+ */
+function bsa_preprocess_field(&$vars) {
+  if ($vars['element']['#bundle'] == 'report' &&
+    $vars['element']['#field_name'] == 'field_links' &&
+    $vars['element']['#view_mode'] == '_custom') {
+    // @TODO ideally this should be set using layout builder.
+    $vars['link_color'] = 'white';
+  }
+  if ($vars['element']['#field_name'] == 'field_social_links') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node instanceof NodeInterface) {
+      $vars['label'] = t("@staff's Blogs & Social Media", ["@staff" => $node->getTitle()]);
+      foreach ($vars['items'] as $i => $item) {
+        $parse = explode('.', parse_url($item['content']['#url']->toString(), PHP_URL_HOST));
+        $icon = ($parse[0] == 'www') ? $parse[1] : $parse[0];
+        $src = drupal_get_path('theme', 'bsa') . '/components/images/social-icons/staff/' . $icon . '.png';
+        if (file_exists($src)) {
+          $vars['items'][$i]['icon_src'] = $src;
+        }
+      }
+    }
+  }
+  if ($vars['element']['#field_name'] == 'field_tags') {
+    $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+    $langcode = $vars['element']['#language'];
+    // Hardcode nid for policy page.
+    $p_nid = 8431;
+    $p_node = $node_storage->load($p_nid);
+    if ($p_node->hasTranslation($langcode)) {
+      $p_path = $p_node->getTranslation($langcode)->url();
+    }
+    else {
+      $p_path = $p_node->getTranslation('en')->url();
+    }
+    foreach ($vars['items'] as &$item) {
+      $tid = $item['content']['#options']['entity']->id();
+      $item['list_path'] = $p_path . '?langcode[]=' . $langcode . '&tags[]=' . $tid;
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_node()
+ */
+function bsa_preprocess_node(&$vars) {
+  $vars['attributes']['class'][] = "node-" . $vars['node']->getType();
+}
+
+/**
+ * Implements template_preprocess_node()
+ */
+function bsa_preprocess_html(&$variables) {
+  if (!is_null(Drupal::requestStack()->getCurrentRequest()->attributes->get('exception'))) {
+    $status_code = Drupal::requestStack()->getCurrentRequest()->attributes->get('exception')->getStatusCode();
+    switch ($status_code) {
+      case 404:
+      case 403:
+        $variables['attributes']['class'][] = 'page-404';
+        break;
+
+      default:
+        break;
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_HOOK().
+ */
+function bsa_preprocess_menu(&$variables) {
+  if ($variables['menu_name'] == 'language-switcher') {
+    $route_name = \Drupal::service('path.matcher')
+      ->isFrontPage() ? '<front>' : '<current>';
+    $current_language = \Drupal::languageManager()
+      ->getCurrentLanguage()
+      ->getId();
+    foreach ($variables['items'] as &$lang) {
+      $code = $lang['original_link']->getDescription();
+      if ($code) {
+        $language = Drupal::languageManager()->getLanguage($code);
+        if ($language) {
+          $url = Url::fromRoute($route_name, [], ['language' => $language])
+            ->toString();
+          $lang['url'] = $url;
+          if ($code == $current_language) {
+            $lang['in_active_trail'] = TRUE;
+          }
+          else {
+            $lang['in_active_trail'] = FALSE;
+          }
+        }
+        else {
+          \Drupal::messenger()
+            ->addMessage(t('No language with code %code.', ['%code' => $code]), 'error');
+        }
+      }
+
+    }
+    return;
+  }
+  $variables['#cache']['contexts'][] = 'url.path';
+
+  if (!\Drupal::service('path.matcher')->isFrontPage()) {
+    return;
+  }
+
+  $homepagePath = \Drupal::config('system.site')->get('page.front');
+  $homepageUrl = \Drupal::service('path.validator')->getUrlIfValid($homepagePath);
+
+  if (!$homepageUrl instanceof Url) {
+    return;
+  }
+
+  $validHomepageRoutes = ['<front>', $homepageUrl->getInternalPath()];
+
+  if ($homepageUrl->getRouteName() != 'entity.node.canonical') {
+    $validHomepageRoutes[] = $homepageUrl->getRouteName();
+  }
+
+  foreach ($variables['items'] as $key => $item) {
+    $variables['items'][$key]['in_active_trail'] = FALSE;
+
+    /** @var \Drupal\Core\Url $url */
+    $url = $item['url'];
+
+    if (
+      $url instanceof Url &&
+      $url->isRouted() &&
+      (
+        \in_array($url->getRouteName(), $validHomepageRoutes, TRUE) ||
+        \in_array($url->getInternalPath(), $validHomepageRoutes, TRUE)
+      )
+    ) {
+      $variables['items'][$key]['in_active_trail'] = TRUE;
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_HOOK().
+ */
+function bsa_preprocess_menu__main(&$variables) {
+  $route_match = \Drupal::routeMatch();
+  $storage = \Drupal::entityTypeManager()->getStorage('node');
+
+  foreach ($variables['items'] as &$item) {
+    /** @var \Drupal\Core\Url $url */
+    $url = $item['url'];
+
+    if ($url->toString() != '/reports') {
+      continue;
+    }
+
+    if ($route_match->getRouteName() != 'entity.node.canonical') {
+      continue;
+    }
+
+    $id = $route_match->getRawParameter('node');
+    $node = $storage->load($id);
+
+    $item['in_active_trail'] = $item['in_active_trail'] ?: ($node->bundle() == 'report');
+  }
+}
+
+/**
+ * Implements template_preprocess_HOOK().
+ */
+function bsa_preprocess_layout(&$variables) {
+  // Hide entire section if no accordion created for report.
+  if ($variables['theme_hook_original'] == 'bsa_one_column') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node instanceof NodeInterface && $node->getType() == 'report') {
+      $sections = \Drupal::entityTypeManager()
+        ->getStorage('entity_view_display')
+        ->load('node.report.full')
+        ->getThirdPartySetting('layout_builder', 'sections');
+      foreach ($sections as $section) {
+        if ($section->getLayoutId() == 'bsa_one_column') {
+          foreach ($section->getComponents() as $component) {
+            if ($component->getPluginId() == 'field_block:node:report:field_sections') {
+              $uuid = $component->getUuid();
+              break;
+            }
+          }
+        }
+      }
+      if (isset($variables['content']['content'][$uuid]) && empty($variables['content']['content'][$uuid]['content'])) {
+        $variables['content'] = [];
+      }
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_input__radio()
+ */
+function bsa_preprocess_input__radio(&$variables) {
+  if ($variables['element']['#name'] == 'created') {
+    $parts = [
+      'edit',
+      $variables['element']['#name'],
+      strtolower($variables['element']['#return_value']),
+    ];
+    $variables['attributes']['data-drupal-selector'] = implode('-', $parts);
+  }
+}
+
+/**
+ * Implements template_preprocess_block()
+ */
+function bsa_preprocess_node__report(&$variables) {
+  if ($variables['view_mode'] !== 'full' && $redirect = BsaCoreSubscriber::getReportRedirectLink($variables['node'])) {
+    $variables['url'] = $redirect;
+  }
+}

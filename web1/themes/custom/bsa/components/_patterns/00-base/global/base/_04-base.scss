@@ -1,0 +1,99 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.main {
+  @include wrapper;
+
+  display: block; // Fix for IE weirdness
+}
+
+
+#block-cookiepolicy {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: $max-width;
+  background: #292723;
+  padding: 10px 30px 10px 10px;
+  z-index: 50;
+  max-height: 20%;
+  overflow: auto;
+  display: none;
+  @include medium {
+    padding-left: 20px;
+    padding-right: 60px;
+  }
+  @include large {
+    padding: 25px 140px 25px 40px;
+  }
+  @include xl {
+    padding: 30px 305px 30px 135px
+  }
+  p {
+    color: $white;
+    margin: 0;
+    font-size: 12px;
+    line-height: normal;
+    @include medium {
+      font-size: 14px;
+    }
+    @include large {
+      font-size: 16px;
+    }
+    a {
+      color: $white;
+    }
+  }
+
+  #cookie-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: url('/themes/custom/bsa/images/icons/modal-close.png') no-repeat center center;
+    background-size: 100% auto;
+    display: block;
+    width: 15px;
+    height: 15px;
+    text-decoration: none;
+    font-size: 0;
+    @include medium {
+      top: 20px;
+      right: 20px;
+      width: 25px;
+      height: 25px;
+    }
+    @include large {
+      right: 80px;
+    }
+    @include xl {
+      right: 135px;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+}
+
+.cke_editable {
+  b, strong {
+    font-weight: bold;
+  }
+}
+
+.do-not-hide {
+  display: none;
+
+  &--show {
+    display: block;
+  }
+}

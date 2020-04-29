@@ -1,0 +1,9 @@
+.social-icon {
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+  }
+}

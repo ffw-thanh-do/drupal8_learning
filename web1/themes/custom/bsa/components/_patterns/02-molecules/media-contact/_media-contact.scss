@@ -1,0 +1,46 @@
+.media-contact-item {
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  padding: 20px 15px;
+  @include medium {
+    padding: 30px;
+  }
+  @include large {
+    padding: 50px 20px;
+  }
+
+  h3 {
+    color: $black;
+    font-family: $nunito;
+    letter-spacing: 0.25px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 0;
+    margin-bottom: 15px;
+    @include medium {
+      font-size: 24px;
+    }
+    @include large {
+      font-size: 26px;
+      line-height: 26px;
+    }
+  }
+
+  .copy {
+    font-family: $nunito;
+    letter-spacing: 0.25px;
+    font-size: 16px;
+    margin: 0;
+    a {
+      font: inherit;
+      color: inherit;
+    }
+  }
+
+}
+

@@ -1,0 +1,55 @@
+{#
+/**
+ * Available variables:
+ * - bg_color: background color for section
+ * - font_color: color for content
+ * - block_heading_copy: headline copy
+ * - block_paragraph_copy: paragraph copy
+ * - link_class: class for arrow link
+ * - link_href: link href
+ * - link_target: link target
+ * - link_content: lunk copy
+ * - link_image_src: link image
+ * - link_image_alt: alt copy for link image
+ */
+#}
+{% extends "@molecules/_block_custom.twig" %}
+{% set view_mode_class = view_mode_class|default('default') %}
+{% block main %}
+  {{ content.field_font_color }}
+  <div{{ bem('copy-with-link', [view_mode_class]) }}>
+    <div class="content">
+      {% block copy %}
+        {% if block_heading_copy %}
+          <h1>
+            {{ block_heading_copy }}
+          </h1>
+        {% endif %}
+        {% block img %}
+          {% if img|render and align %}
+            <div class="image image-align-{{ align }}">
+              {{ img }}
+            </div>
+          {% endif %}
+        {% endblock %}
+        <div class="block-copy">
+          {{ block_paragraph_copy }}
+        </div>
+      {% endblock %}
+      {% block link %}
+        <div class="arrow-link-block">
+          <a class="{{ link_class }}"
+             href="{{ link_href }}"
+             target="{{ link_target }}">
+          <span>
+            {{ link_content }}
+          </span>
+            <img
+                src="{{ link_image_src }}"
+                alt="{{ link_image_alt }}">
+          </a>
+        </div>
+      {% endblock %}
+    </div>
+  </div>
+{% endblock %}

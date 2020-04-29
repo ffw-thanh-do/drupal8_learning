@@ -1,0 +1,52 @@
+<div class="article-slide">
+  <div class="article-image">
+    {% block image %}
+      {% include "@atoms/04-images/00-image/_picture.twig" with {
+        "img_url": img_url,
+        "img_src": img_src,
+        "img_alt": img_alt,
+        "img_caption": img_caption,
+        "output_image_tag": output_image_tag
+      } %}
+    {% endblock %}
+  </div>
+  <div class="article-content">
+    <div class="article-tags">
+      {% block tags %}
+        {% for tag in tags %}
+          {% include "@atoms/12-colored-tag/colored-tag.twig" with {
+            "href": tag.href,
+            "background_color": tag.background_color,
+            "tag_content": tag.tag_content,
+            "target": tag.target
+          } %}
+        {% endfor %}
+      {% endblock %}
+    </div>
+    {% block label %}
+      {% include "@atoms/02-text/00-headings/_heading.twig" with {
+        "heading": article_heading,
+        "heading_level": article_heading_level
+      } %}
+    {% endblock %}
+    {% block date %}
+      {% include "@atoms/02-text/text/08-date.twig" with {
+        "date": date
+      } %}
+    {% endblock %}
+    {% block body %}
+      {% include "@atoms/02-text/text/01-paragraph.twig" with {
+        "paragraph_content": paragraph_content
+      } %}
+    {% endblock %}
+    {% block link %}
+      {% include "@atoms/01-links/link/link.twig" with {
+        "link_base_class": link_base_class,
+        "link_modifiers": link_modifiers,
+        "link_url": link_url,
+        "link_attributes": link_attributes,
+        "link_content": link_content
+      }%}
+    {% endblock %}
+  </div>
+</div>

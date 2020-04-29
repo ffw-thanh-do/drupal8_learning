@@ -1,0 +1,42 @@
+<div class="bsa-staff-item">
+  {% if img_src %}
+    <div class="staff-image">
+      {% block photo %}
+        <img src="{{ img_src }}" alt="">
+      {% endblock %}
+    </div>
+  {% endif %}
+  <div class="staff-content">
+    <div class="staff-name">
+      {% block headline %}
+        {% include "@atoms/02-text/00-headings/_heading.twig" with {
+          "heading_level": heading_level,
+          "heading": heading,
+          "heading_url": url,
+        } %}
+      {% endblock %}
+    </div>
+    <p class="staff-position">
+      {{ position }}
+    </p>
+    <div class="staff-copy">
+      {% block body %}
+        {% include "@atoms/02-text/text/01-paragraph.twig" with {
+          "paragraph_content": paragraph_content
+        } %}
+      {% endblock %}
+    </div>
+    <div class="staff-tags">
+      {% block tags %}
+        {% for tag in tags %}
+          {% include "@atoms/12-colored-tag/colored-tag.twig" with {
+          "href": tag.href,
+          "background_color": tag.background_color,
+          "tag_content": tag.tag_content,
+          "target": tag.target
+          } %}
+        {% endfor %}
+      {% endblock %}
+    </div>
+  </div>
+</div>

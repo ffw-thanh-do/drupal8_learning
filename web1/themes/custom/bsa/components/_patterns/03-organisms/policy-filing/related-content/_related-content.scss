@@ -1,0 +1,12 @@
+.related-content-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include medium {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @include large {
+    padding-top: 55px;
+    padding-bottom: 70px;
+  }
+}

@@ -1,0 +1,10 @@
+services:
+  # Expose class as service and pass in config.
+  paragraphs_report.report:
+    class: Drupal\paragraphs_report\ParagraphsReport
+    arguments:
+      - '@config.factory'
+      - '@entity_field.manager'
+      - '@entity_type.manager'
+      - '@path.current'
+      - '@path.alias_manager'

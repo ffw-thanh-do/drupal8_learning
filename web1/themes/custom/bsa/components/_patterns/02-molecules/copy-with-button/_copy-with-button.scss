@@ -1,0 +1,45 @@
+.copy-with-button {
+  padding: 20px;
+  a {
+    color: $black;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 26px;
+    margin-bottom: 15px;
+  }
+  a {
+    font-family: $nunito;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.63;
+    letter-spacing: 0.3px;
+    color: $black2
+  }
+  .colored-link {
+    margin-top: 15px;
+    min-width: 260px;
+  }
+  .colored-link {
+    color: $white;
+  }
+  @include large {
+    padding: 0 50px;
+  }
+
+  .text-long {
+    p {
+      font-size: 16px;
+      font-family: $nunito;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.63;
+      letter-spacing: 0.3px;
+      color: $black2
+    }
+  }
+
+}

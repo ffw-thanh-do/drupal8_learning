@@ -1,0 +1,60 @@
+.header-top-menu {
+  @include list-reset;
+  text-align: left;
+  background: none;
+  padding: 15px 10px;
+  box-shadow: 0 2px 10px 0 rgba(42, 39, 35, 0.1);
+  @include medium {
+    padding: 0;
+    height: 44px;
+    padding-right: 20px;
+    text-align: right;
+    background: $blue;
+  }
+  @include xl {
+    padding-right: 90px;
+  }
+
+  .header-top-menu__item {
+    margin: 0;
+    @include medium {
+      margin: 0 1.5em 0 0;
+      display: inline-block;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .header-top-menu__link {
+    @include link;
+    font-size: 0.75rem;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    font-family: $nunito;
+    text-transform: uppercase;
+    color: $dark-grey-one;
+
+    &:hover {
+      @include medium {
+        color: $white;
+        text-decoration: underline;
+      }
+    }
+
+    @include medium {
+      color: $white;
+      line-height: 44px;
+    }
+    @include large {
+      height: 44px;
+      display: inline-block;
+    }
+    @include xl {
+      font-size: 1rem;
+    }
+  }
+
+}
+
+

@@ -1,0 +1,7 @@
+{% extends "@molecules/_teaser_generic.twig" %}
+
+{% set image = image|default(content.field_image) %}
+{% set tags = tags|default(content.field_policy_issue) %}
+{% set links = links|default(content.field_tags) %}
+{% set date_info = date_info|default(bsa_date(node.created.value, bsa_region(node))) %}
+{% set body = body|default(bsa_summary(content.body)) %}

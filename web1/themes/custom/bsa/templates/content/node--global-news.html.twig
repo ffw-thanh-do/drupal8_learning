@@ -1,0 +1,6 @@
+{% extends "node--teaser.html.twig" %}
+{%  if node.bundle == 'events' %}
+  {% set date_info = bsa_date(node.field_start_date.value|date('U'), [node.type.entity.label]|merge(bsa_region(node))) %}
+{%  else %}
+  {% set date_info = bsa_date(node.created.value, [node.type.entity.label]|merge(bsa_region(node))) %}
+{%  endif %}

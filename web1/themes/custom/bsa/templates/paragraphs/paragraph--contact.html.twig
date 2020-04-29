@@ -1,0 +1,5 @@
+{% include "@molecules/media-contact/media-contact.twig" with {
+  "heading_level": 3,
+  "label": content.field_title|render,
+  "copy": content|without("field_title")|render
+} %}
