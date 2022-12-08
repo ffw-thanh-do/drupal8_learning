@@ -1,1 +1,5 @@
 /* Styles file */
+.title-underline {
+  border-bottom: 5px solid black;
+  display: inline-block;
+}
