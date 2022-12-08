@@ -4,3 +4,12 @@
  * @file
  * drupal_8_core.module file
  */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function drupal_8_core_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['#attached']['library'][] = 'drupal_8_core/fonticonpicker';
+}

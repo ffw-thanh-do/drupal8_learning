@@ -1,0 +1,27 @@
+uuid: aebe4572-c5de-41e7-8912-e0eb061a41a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_icons
+field_name: field_icons
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'fab fa-facebook'
+      label: Facebook
+    -
+      value: 'fab fa-twitter'
+      label: Twitter
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
