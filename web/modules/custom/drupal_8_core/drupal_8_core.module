@@ -4,3 +4,15 @@
  * @file
  * drupal_8_core.module file
  */
+
+use Drupal\Core\Form\FormStateInterface;
+
+function drupal_8_core_form_redirect_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Reference https://hamrant.com/post/entity-autocomplete-customization
+  $list_bundles = array(
+    'article',
+  );
+  $form['redirect_redirect']['widget'][0]['uri']['#selection_settings'] = array(
+    'target_bundles' => $list_bundles,
+  );
+}
